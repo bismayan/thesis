@@ -1,14 +1,105 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+
+% aliases begin
+\newcommand{\Ps}{\Psi}
+\newcommand{\ps}{\psi}
+\newcommand{\da}{\dagger}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\rmb}{\mathbf{r}}
+% aliases end
+
+
 \begin{document}
 
-\title{PhD thesis for Bismayan Chakrabarti}
-
+\title{PhD Thesis Draft}
+\date{}
 \author{Bismayan Chakrabarti}
 \maketitle
+\pagebreak
+
+\section{Introduction}
+
+Condensed Matter Physics involves the scientific study of the macroscopic properties of materials. In a rich history spanning a century since the birth of quantum mechanics, Condensed Matter physics has grown into one of the most active fields of physics which has had a direct role in enabling the technological revolution that the human species is currently living through. The basic philosophy of the field is perhaps best summarized by the oft-quoted phrase coined by P.W Anderson- "More is different". It captures the idea that a macroscopic collection of molecules exhibits properties which are hard to predict based on merely the microscopic equations governing the individual constituents. This idea, which is known "emergence", is what condensed matter physicists strive to understand in the realm of the quantum properties of materials. The principles that have been uncovered in this domain have given us a keen understanding of why a material might behave as a metal,insulator, semiconductor,magnet, superconductor or a variety of other complex phases known to us. The ability to understand and thereby control these material properties have resulted in condensed matter physics having a great impact in engineering and technology, making it a field of physics which has a pronounced real-world impact in society.
+\linebreak
+
+Within condensed matter, one of the most active and fascinating field is the study of strongly correlated systems. In most materials( like those with open s and p shells), the somewhat naive yet powerful approximation that the electrons in the material act as independent particles moving in an effective medium (the independent electron approximation) works surprisingly well. This effect, which is explained by the Landau Fermi Liquid Theory, occurs due to these itinerant electrons screening each other highly effectively. However this approximation usually breaks down in materials with incomplete d and shells, where the electrons in these shells are localized to a much greater extent to their parent atoms. These electrons cannot effectively screen each other, unlike the much more itinerant s and p electrons and therefore retain some of the atomic properties of the parent atom. In addition, there is often strong mixing (hybridization) between the itinerant and localized shells, leading to a large interplay between itinerant and localized degrees of freedom. Such materials, commonly known as \textit{strongly correlated systems}, also often have highly complex phase diagrams with many different phases across which transitions can be tuned by tweaking some external \textit{knob}. This makes these systems particularly useful from a material science/engineering standpoint.
+
+Finding a coherent theoretical framework which can capture the essential properties of such complex materials has proved to be immensely challenging and continues to be an area of active research. Computational simulations have played an important role in this effort and have enabled us to study and predict real material properties instead of restricting ourselves to model Hamiltonians. In the field of weakly correlated materials, Density Functional Theory (DFT) has led to a revolution in material simulation, and has given us the power to compute properties using relatively modest computational resources. However, DFT is often completely inadequate when applied to strongly correlated systems, as it contains only rudimentary treatments of the electronic correlations which are essential to understanding the physics of these compounds.
+
+Dynamical Mean Field Theory (DMFT) aims to address some of these shortcomings. DMFT gives us a way to simulate strongly correlated systems using controlled approximations which reduce the computational complexity while retaining most of the essential physics of the system, including the interplay between itinerant and localized degrees of freedom. This method, which was initially became popular as a method to solve model Hamiltonians such as the Hubbard Model, has proved to be a valuable tool to capture the properties of d and f shell systems. This has especially been true in the last decade after the successful merger of DMFT with DFT to yield a framework which is capable of dealing with both the weak correlated shells (which DFT is well suited to) and the localized orbitals, where DMFT shines. This approach, known as DFT+DMFT has proved to be one of the most successful methods in reproducing experimentally verifiable properties of correlated systems.
+
+As result of these and other highly advanced computational techniques available, computational condensed matter today is one of the most exiting fields of physics to be part of. The current algorithms allow us for perhaps the first time in history, to perform "computational experiments", where we can simulate materials reliably and quickly given sufficient computational resources. It is hoped that soon this would give us the power to perform computational material design, which is perhaps one of the ultimate aims of condensed matter physics. We could soon be at a stage where we can solve the inverse problem of, having been given a certain set of desired properties, of being able to predict which exact chemical system would satisfy those requirements from first principles without necessarily having to resort to actual experimentation. Methods such as DFT+DMFT are at the cutting edge of such efforts. 
+
+In this thesis, we shall study some of the fundamental theoretical aspects of the DMFT method as well as its applications to real material systems. The thesis is arranged in the following manner: In Chapter 2, we shall aim to present a description of the theory behind DFT+DMFT. In chapter 2 we shall give a brief introduction to Density functional Theory (DFT) and the equations which govern the method. In chapter 3, we shall explain the DMFT method, providing details of the exact approximations and explain how the merger of DFT+DMFT works in practice. In Chapter 4 we shall provide more technical details of the Computational algorithm which lies at the heart of our implementation of DFT+DMFT, the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver. Having laid out the major theoretical building blocks of our framework, we shall move on to particular problems which have been investigated in the course of this doctoral study. Chapter 4 details the investigation of the magnetic spectral function of f-shell compounds such as $\alpha$ Cerium, $\gamma$ Cerium and $\delta$ plutonium. Chapter 6 describes a study of the the importance of structural parameters and electronic entropy in the spin state transition in $LaCoO_3$ using DFT+ DMFT. Chapter 7 contains the investigation of the inadequacy of the Constrained Random Phase Approximation(cRPA), one of the most popular methods to estimate screening in strongly correlated systems. Chapter 8 contains the conclusion and is followed by the Bibliography and Appendices.
+
+
+\pagebreak
+\section{Density Functional Theory}
+
+Density Functional Theory(DFT) is perhaps one of the most successful theories in the world of modern physics. Its immense popularity can be gauged from the fact that the seminal papers \textbf{cite} by Hohenberg and Kohn, and Kohn and Sham are the two most heavily cited papers in modern times. Density functional theory allows for ab-initio (with no arbitrary tunable free parameters) calculations of the zero-temperature material properties of the vast majority of weakly correlated compounds. With the growth of modern algorithms in this field, one can now employ off-the-shelf packages to obtain highly accurate results for a large variety of experimental observables while spending very little computational resources. In this section, we shall concentrate on giving a brief introduction to the principles of DFT, while also mentioning some of the limitations that have led to the search for more advanced methods.
+
+As a starting point for the discussion, we begin with the "Theory of everything" for condensed matter systems, describing a non-relativistic lattice system of nucleii and the accompanying electrons:
+\begin{equation}\label{DFT_1}
+Placeholder
+\end{equation}
+In this equation, the first two terms describe the kinetic energy of the nucleii and the electrons respectively while the next three terms describe the inter-nuclear, nuclei-electron and electron-electron Coulomb interactions. Note that this equation neglects relativistic corrections such as spin orbit coupling which can become important in some systems (and which all advanced DFT packages are able to treat). We first simplify this equation by adopting the so-called Born-Oppenheimer approximation, whereby the nucleii are assumed to be fixed. This is exceptionally accurate due to the relatively much higher mass of the nucleii compared to the electrons. This approximation dispenses with the nuclear kinetic energy term and leaves us with a Hamiltonian for the electrons moving in an effective field created by the lattice of nucleii. This resulting Hamiltonian is-
+\begin{equation}
+PlaceHolder
+\end{equation}
+
+Where $V_{ion}$ is the constant inter-nuclear Coulomb term and $V_{ext}$ is the nucleii-electron repulsion given by-
+
+\begin{equation}\label{DFT_2}
+ Placeholder
+ \end{equation} 
+
+However, even this simplified many-electron Schrodinger equation is essentially impossible to solve for more than O(10) electrons. The major breakthrough, first proposed by Hohenberg and Kohn \textbf{cite} was to show that, at least for the calculation ground state properties, it is sufficient to work with the charge density rather than the wave function itself. Or in other words, the ground state wavefunction and other observables are uniquely determined  by the charge density-
+\begin{equation}
+n(\rmb)= \la \Ps|\ps^\da (\rmb) \ps(\rmb) | \Ps\ra 
+\end{equation}
+Note that this leads to enormous decrease in computational complexity, $n(r)$ is a 3 dimensional scalar instead of the original 3N dimensional $\Ps$.  The result is proved easiest by contradiction. Let us assume that two different external potentials $V_{ext} (r)$ and $V'_{ext} (r)$ produce the same charge density $n(r)$
+when plugged into \ref{DFT_2}. If we denote these two Hamiltonians $H$ and $H'$ and their ground state wavefunctions $\Ps$ and $\Ps'$ and the corresponding energies $E$ and $E'$, then without loss of generality we can say
+\begin{equation}
+E'=\la \Ps' | H' |\Ps' \ra < \la \Ps | H' |\Ps \ra = \la \Ps | H' + V'_{ext} (\rmb) -V_{ext} (\rmb)   |\Ps \ra
+\end{equation}
+where the inequality comes from the fact that $\Ps$ is not the ground state of $H'$. From this, we get
+\begin{equation}
+E < E' + \int d\rmb \left( V'_{ext} (\rmb) -V_{ext}(\rmb) \right) n(\rmb)
+\end{equation}
+Since both external potentials give the same charge density, exchanging the primed and unprimed dummy indices, we get
+\begin{equation}
+E' < E + \int d\rmb \left( V_{ext} (\rmb) -V'_{ext} \right) n(\rmb)
+\end{equation}
+Adding these two equations, we get the obvious contradiction
+\begin{equation}
+E+E' < E+E'
+\end{equation}
+ Which proves that $V_{ext}$ (and therefore $\Ps$) is uniquely determined by the charge density.
+
+The other theorem proved by the authors in their paper proves the existence of   a universal functional of the charge density $F[n]$ for which the functional
+\begin{equation}
+E[n]=F[n] +\int d \rmb n(r) V_{ext}(\rmb) + E_{ion} 
+\end{equation}
+attains a minimum for the ground state density, and has the value corresponding to the ground state energy at this point. The proof is relatively simple and can be identifying $F[n]$ as the part of the Hamiltonian \ref{DFT_2} containing the electronic Kinetic and Coulomb interaction term. Knowledge of the exact formulation of this functional would reduce the solution of any chemical system (at least the ground state properties) to a minimization problem involving only one 3-dimensional quantity (the charge density). The only component of $F[n]$ for which an exact formulation can be found is the "Hartree" component. The functional is then redefined as:
+\begin{equation}
+ F[n]= \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|r-r'|} + I[n]
+ \end{equation} 
+Where $I[n]$ contains everything in $F[n]$ not including the Hartree term, including the kinetic energy and the non-Hartree potential energy contributions. Therefore the central problem of solving any chemical system is the formulation of an accurate $I[n]$.
+
+The first successful attempt at approximating $I[n]$, without which the findings of Hohenberg and Kohn would have remained a mere theoretical exercise, was first 
+
+
+	 
+ 
+
+
+ 
 
 \end{document}
+%\P 
