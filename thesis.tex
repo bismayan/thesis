@@ -12,6 +12,7 @@
 \newcommand{\la}{\langle}
 \newcommand{\ra}{\rangle}
 \newcommand{\rmb}{\mathbf{r}}
+\newcommand{\dens}{n(\rmb)}
 % aliases end
 
 
@@ -92,7 +93,17 @@ attains a minimum for the ground state density, and has the value corresponding 
  \end{equation} 
 Where $I[n]$ contains everything in $F[n]$ not including the Hartree term, including the kinetic energy and the non-Hartree potential energy contributions. Therefore the central problem of solving any chemical system is the formulation of an accurate $I[n]$.
 
-The first successful attempt at approximating $I[n]$, without which the findings of Hohenberg and Kohn would have remained a mere theoretical exercise, was first 
+The first successful attempt at approximating $I[n]$, without which the findings of Hohenberg and Kohn would have remained a mere theoretical exercise, was achieved by Kohn and Sham \textbf{cite} in their seminal paper. They proposed breaking up $I[n]$ as follows:
+\begin{equation}
+ I[n]=T_s[n]+E_{XC}[n]
+ \end{equation} 
+where $T_s[n]$ is the kinetic energy of an auxiliiary non-interacting electron system and $E_{XC}[n]$ is known as the "exchange-correlation" energy of the interacting system. $E_{XC}[n]•$ was approximated as:
+\begin{equation}
+E_{XC}[n]=\int d\rmb \dens \epsilon_{XC}(\dens)
+\end{equation}
+$\epsilon_{XC}(\dens)$ is the exchange correlation energy per electron of a uniform electron gas which can be computed highly accurately using Quantum Monte Carlo simulations. This approximation of using a uniform electron gas is Local Density Approximation(LDA) and is perhaps single handedly revolutionizing computational solid state Physics. 
+
+
 
 
 	 
