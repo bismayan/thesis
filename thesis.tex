@@ -47,17 +47,17 @@ Density Functional Theory(DFT) is perhaps one of the most successful theories in
 
 As a starting point for the discussion, we begin with the "Theory of everything" for condensed matter systems, describing a non-relativistic lattice system of nucleii and the accompanying electrons:
 \begin{equation}\label{DFT_1}
-Placeholder
+H=-\dfrac{\hbar^2}{2m_e}\sum_i\nabla_i^2  -\dfrac{\hbar^2}{2M_e}\sum_I\nabla_I^2 +\dfrac{1}{2}\sum_{i\neq j} \dfrac{e^2}{|\rmb_i -\rmb_j|}-\dfrac{1}{2}\sum_{i, I} \dfrac{e^2Z_I}{|\rmb_i -\mathbf{R}_I|} + \dfrac{1}{2}\sum_{I\neq J} \dfrac{e^2Z_I Z_J}{|\mathbf{R}_I -\mathbf{R}_J|} 
 \end{equation}
 In this equation, the first two terms describe the kinetic energy of the nucleii and the electrons respectively while the next three terms describe the inter-nuclear, nuclei-electron and electron-electron Coulomb interactions. Note that this equation neglects relativistic corrections such as spin orbit coupling which can become important in some systems (and which all advanced DFT packages are able to treat). We first simplify this equation by adopting the so-called Born-Oppenheimer approximation, whereby the nucleii are assumed to be fixed. This is exceptionally accurate due to the relatively much higher mass of the nucleii compared to the electrons. This approximation dispenses with the nuclear kinetic energy term and leaves us with a Hamiltonian for the electrons moving in an effective field created by the lattice of nucleii. This resulting Hamiltonian is-
 \begin{equation}
-PlaceHolder
+H=-\dfrac{\hbar^2}{2m_e}\sum_i\nabla_i^2 + \dfrac{1}{2}\sum_{i\neq j} \dfrac{e^2}{|\rmb_i -\rmb_j|} +\sum_i V_{ext}(\rmb_i) +E_{ion}
 \end{equation}
 
 Where $V_{ion}$ is the constant inter-nuclear Coulomb term and $V_{ext}$ is the nucleii-electron repulsion given by-
 
 \begin{equation}\label{DFT_2}
- Placeholder
+ V_{ext}(\rmb)= \sum_{I} \dfrac{e^2 Z_I}{|\rmb-\mathbf{R}_I|}
  \end{equation} 
 
 However, even this simplified many-electron Schrodinger equation is essentially impossible to solve for more than O(10) electrons. The major breakthrough, first proposed by Hohenberg and Kohn \textbf{cite} was to show that, at least for the calculation ground state properties, it is sufficient to work with the charge density rather than the wave function itself. Or in other words, the ground state wavefunction and other observables are uniquely determined  by the charge density-
@@ -65,7 +65,7 @@ However, even this simplified many-electron Schrodinger equation is essentially 
 n(\rmb)= \la \Ps|\ps^\da (\rmb) \ps(\rmb) | \Ps\ra 
 \end{equation}
 Note that this leads to enormous decrease in computational complexity, $n(r)$ is a 3 dimensional scalar instead of the original 3N dimensional $\Ps$.  The result is proved easiest by contradiction. Let us assume that two different external potentials $V_{ext} (r)$ and $V'_{ext} (r)$ produce the same charge density $n(r)$
-when plugged into \ref{DFT_2}. If we denote these two Hamiltonians $H$ and $H'$ and their ground state wavefunctions $\Ps$ and $\Ps'$ and the corresponding energies $E$ and $E'$, then without loss of generality we can say
+when plugged into Eq. \ref{DFT_2}. If we denote these two Hamiltonians $H$ and $H'$ and their ground state wavefunctions $\Ps$ and $\Ps'$ and the corresponding energies $E$ and $E'$, then without loss of generality we can say
 \begin{equation}
 E'=\la \Ps' | H' |\Ps' \ra < \la \Ps | H' |\Ps \ra = \la \Ps | H' + V'_{ext} (\rmb) -V_{ext} (\rmb)   |\Ps \ra
 \end{equation}
@@ -87,7 +87,7 @@ The other theorem proved by the authors in their paper proves the existence of  
 \begin{equation}
 E[n]=F[n] +\int d \rmb n(r) V_{ext}(\rmb) + E_{ion} 
 \end{equation}
-attains a minimum for the ground state density, and has the value corresponding to the ground state energy at this point. The proof is relatively simple and can be identifying $F[n]$ as the part of the Hamiltonian \ref{DFT_2} containing the electronic Kinetic and Coulomb interaction term. Knowledge of the exact formulation of this functional would reduce the solution of any chemical system (at least the ground state properties) to a minimization problem involving only one 3-dimensional quantity (the charge density). The only component of $F[n]$ for which an exact formulation can be found is the "Hartree" component. The functional is then redefined as:
+attains a minimum for the ground state density, and has the value corresponding to the ground state energy at this point. The proof is relatively simple and can be identifying $F[n]$ as the part of the Hamiltonian given by Eq. \ref{DFT_2} containing the electronic Kinetic and Coulomb interaction term. Knowledge of the exact formulation of this functional would reduce the solution of any chemical system (at least the ground state properties) to a minimization problem involving only one 3-dimensional quantity (the charge density). The only component of $F[n]$ for which an exact formulation can be found is the "Hartree" component. The functional is then redefined as:
 \begin{equation}
  F[n]= \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|r-r'|} + I[n]
  \end{equation} 
@@ -101,7 +101,51 @@ where $T_s[n]$ is the kinetic energy of an auxiliiary non-interacting electron s
 \begin{equation}
 E_{XC}[n]=\int d\rmb \dens \epsilon_{XC}(\dens)
 \end{equation}
-$\epsilon_{XC}(\dens)$ is the exchange correlation energy per electron of a uniform electron gas which can be computed highly accurately using Quantum Monte Carlo simulations. This approximation of using a uniform electron gas is Local Density Approximation(LDA) and is perhaps single handedly revolutionizing computational solid state Physics. 
+$\epsilon_{XC}(\dens)$ is the exchange correlation energy per electron of a uniform electron gas which can be computed highly accurately using Quantum Monte Carlo simulations. This approximation of using the charge density of a uniform electron gas is Local Density Approximation(LDA) and is perhaps single handedly revolutionizing computational solid state Physics. 
+
+In practice, DFT is implemented by  assuming the following Hamiltonian for N independent electrons:
+
+\begin{equation} \label{KS1}
+H=\sum_{i}^{N} \left[ -\dfrac{\hbar^2}{2m_e}\nabla_i^2 +V_{KS}(\rmb_i)\right]
+\end{equation}
+
+ where $V_{KS}$ is the Kohn-Sham Potential which will be derived later. We then find the N lowest eigenstates and eigenenergies of this hamiltonian, which we denote by $|\psi_i\ra$
+ and $|\epsilon_i\ra$ respectively. These $\psi_i$'s allow us to calculate the charge density given by:
+ \begin{equation}\label{den}
+ \dens=\sum_{i=1}^{N} |\psi_i|^2
+ \end{equation}
+  Note that this charge density is still the charge density of the auxilliary non-interacting system defined by Eq. \ref{KS1}. This formulation though allows us to calculate $T_s[n]$ for this system using the auxilliary wavefunctions $\psi_i$'s by using the standard expression
+ \begin{equation}
+ T_s[n]=-\dfrac{\hbar^2}{2m_e} \sum_{i=1}^{N} \int d\rmb \psi^*_i(\rmb) \nabla^2 \psi_i(\rmb)
+ \end{equation}
+ 
+ Now we have to ensure that $V_{KS}$ is chosen such that the ground state energy of the Hamiltonian defined in Eq. \ref{KS1} corresponds to the stationary value of the Hohenberg-Kohn functional. To ensure this, we vary the functional against  $\psi$:
+ \begin{equation}
+  \dfrac{\delta}{\delta \psi_i^*}\left( E[n] - \sum_{j=1}^{N} \epsilon_j (\psi^*_j \psi_j -1) \right)=0
+  \end{equation} 
+  where $\epsilon_j$ ensures normalization of the wavefunctions. The solutions to this equation correspond to Eq. \ref{KS1} as long as the Kohn-Sham potential is defined to be
+ \begin{equation}\label{KS_2}
+ V_{KS}(\rmb)=V_{ext}(\rmb) + \int d\rmb' \dfrac{e^2}{|\rmb -\rmb'|} n(\rmb') + \dfrac{d E_{XC}(\rmb)}{d\dens}
+ \end{equation}
+
+Therefore we have successfully transformed the solution of the original interacting system to the solution of an auxilliary non-interacting eigenvalue problem. The problem however is nonlinear due to the implicit dependence of $V_{KS}$ on $\dens$ and thereby on the eigenfunctions themselves. The solution is therefore found iteratively, where we perform the following steps till self-consistency:
+\begin{enumerate}
+\item start with an initial guess for the density $\dens$
+\item use it to construct $V_{KS}$ using Eq. \ref{KS_2}
+\item Solve the eigenvalue problem for the Hamiltonian given by Eq. \ref{KS1} to obtain $\psi_i$ and $\epsilon_i$ 
+\item Construct new $\dens$ using Eq. \ref{den} and go back to step 2
+\end{enumerate}
+
+From the converged solution, we calculate the ground state energy by :
+\begin{equation}
+E=\sum_i \epsilon_i - \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|r-r'|} +E_{XC}[n] -\int d \rmb n(\rmb) V_{XC}(\rmb)
+\end{equation}
+It is to be noted that that apart from the ground state, the eigenvalues and eigenfunctions of the Kohn Sham Hamiltonian are meaningless, strictly speaking. However in practice they are often found to be in good agreement with experimental bandstructures and are used as such.
+
+
+
+
+
 
 
 
