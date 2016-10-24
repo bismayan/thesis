@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 OCT 2016 02:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 OCT 2016 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,21 +340,25 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -417,72 +421,107 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for OT1+helvet on input line 2
+5.
+LaTeX Font Info:    No file OT1helvet.fd. on input line 25.
 
+
+LaTeX Font Warning: Font shape `OT1/helvet/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 25.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./thes
+is.toc
 
- []
+LaTeX Font Warning: Font shape `OT1/helvet/bx/n' undefined
+(Font)              using `OT1/helvet/m/n' instead on input line 1.
 
-[2] [3] [4]
-Overfull \hbox (35.52824pt too wide) detected at line 51
-\OML/cmm/m/it/12 H \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[] [] r[] ^^@ [] [] r[
-] \OT1/cmr/m/n/12 + [] [] [] \OMS/cmsy/m/n/12 ^^@ [] [] [] \OT1/cmr/m/n/12 + []
- [] []
- []
-
-[5] [6]
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 100.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 100.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
 
 
-LaTeX Warning: Command \textbullet invalid in math mode on input line 100.
+LaTeX Font Warning: Font shape `OT1/helvet/m/it' undefined
+(Font)              using `OT1/helvet/m/n' instead on input line 41.
 
-[7] [8] [9] (./thesis.aux)
+[3] [4] [5]
+Overfull \hbox (35.52824pt too wide) detected at line 60
+\OML/cmm/m/it/12 H \OT1/helvet/m/it/12 = \OMS/cmsy/m/n/12 ^^@[] [] r[] ^^@ [] [
+] r[] \OT1/helvet/m/it/12 + [] [] [] \OMS/cmsy/m/n/12 ^^@ [] [] [] \OT1/helvet/
+m/it/12 + [] [] []
+ []
+
+[6] [7] [8] [9] [10] [11] [12] [13]
+
+LaTeX Warning: Command \i invalid in math mode on input line 209.
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 209.
+
+LaTeX Font Info:    Try loading font information for OMS+helvet on input line 2
+30.
+LaTeX Font Info:    No file OMShelvet.fd. on input line 230.
+
+LaTeX Font Warning: Font shape `OMS/helvet/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 230.
+
+[14] [15] [16] [17] [18] [19]
+Overfull \hbox (71.59146pt too wide) detected at line 386
+[]\OMS/helvet/m/n/12 h\OML/cmm/m/it/12 ^^^[]\OMS/helvet/m/n/12 j\OML/cmm/m/it/1
+2  []\OMS/helvet/m/n/12 i [][] h\OML/cmm/m/it/12  []\OMS/helvet/m/n/12 j\OML/cm
+m/m/it/12 ^^^[]\OMS/helvet/m/n/12 i \OT1/helvet/m/it/12 = [][]
+ []
+
+[20] [21] (./thesis.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2618 strings out of 493089
- 33856 string characters out of 6134842
- 96792 words of memory out of 5000000
- 6059 multiletter control sequences out of 15000+600000
- 13064 words of font info for 50 fonts, out of 8000000 for 9000
+ 2631 strings out of 493089
+ 33874 string characters out of 6134842
+ 96883 words of memory out of 5000000
+ 6069 multiletter control sequences out of 15000+600000
+ 13024 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,24p,1565b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,24p,1557b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (9 pages, 128569 bytes).
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (21 pages, 201518 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

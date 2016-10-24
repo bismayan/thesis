@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,letter]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -13,59 +13,68 @@
 \newcommand{\ra}{\rangle}
 \newcommand{\rmb}{\mathbf{r}}
 \newcommand{\dens}{n(\rmb)}
+\newcommand{\cdag}{c^{\dagger}}
+\newcommand{\upa}{\uparrow}
+\newcommand{\dow}{\downarrow}
+\newcommand{\sig}{\sigma}
+\newcommand{\ib}{\int_{0}^{\beta}}
 % aliases end
 
 
 \begin{document}
-
+\fontfamily{helvet}\selectfont
 \title{PhD Thesis Draft}
 \date{}
 \author{Bismayan Chakrabarti}
 \maketitle
 \pagebreak
 
+\tableofcontents
+
+\pagebreak
+
 \section{Introduction}
 
-Condensed Matter Physics involves the scientific study of the macroscopic properties of materials. In a rich history spanning a century since the birth of quantum mechanics, Condensed Matter physics has grown into one of the most active fields of physics which has had a direct role in enabling the technological revolution that the human species is currently living through. The basic philosophy of the field is perhaps best summarized by the oft-quoted phrase coined by P.W Anderson- "More is different". It captures the idea that a macroscopic collection of molecules exhibits properties which are hard to predict based on merely the microscopic equations governing the individual constituents. This idea, which is known "emergence", is what condensed matter physicists strive to understand in the realm of the quantum properties of materials. The principles that have been uncovered in this domain have given us a keen understanding of why a material might behave as a metal,insulator, semiconductor,magnet, superconductor or a variety of other complex phases known to us. The ability to understand and thereby control these material properties have resulted in condensed matter physics having a great impact in engineering and technology, making it a field of physics which has a pronounced real-world impact in society.
+Condensed Matter Physics involves the scientific study of the macroscopic properties of materials. In a rich history spanning a century since the birth of quantum mechanics, Condensed Matter physics has grown into one of the most active fields of physics and has had a direct role in enabling the technological revolution that the human species is currently living through. The basic philosophy of the field is perhaps best summarized by the oft-quoted phrase coined by P.W Anderson- "More is different". It captures the idea that a macroscopic collection of particles exhibits properties which are hard to predict based on merely the microscopic equations governing the individual constituents. This idea, which is known "emergence", is what condensed matter physicists strive to understand in the realm of the quantum properties of materials. The principles that have been uncovered in this domain have given us a keen understanding of why a material might behave as a metal,insulator, semiconductor,magnet, superconductor or a variety of other complex phases known to us. The ability to understand and thereby control these material properties have resulted in condensed matter physics having a great impact in engineering and technology, making it a field of physics which has a pronounced real-world impact in society.
 \linebreak
 
-Within condensed matter, one of the most active and fascinating field is the study of strongly correlated systems. In most materials( like those with open s and p shells), the somewhat naive yet powerful approximation that the electrons in the material act as independent particles moving in an effective medium (the independent electron approximation) works surprisingly well. This effect, which is explained by the Landau Fermi Liquid Theory, occurs due to these itinerant electrons screening each other highly effectively. However this approximation usually breaks down in materials with incomplete d and shells, where the electrons in these shells are localized to a much greater extent to their parent atoms. These electrons cannot effectively screen each other, unlike the much more itinerant s and p electrons and therefore retain some of the atomic properties of the parent atom. In addition, there is often strong mixing (hybridization) between the itinerant and localized shells, leading to a large interplay between itinerant and localized degrees of freedom. Such materials, commonly known as \textit{strongly correlated systems}, also often have highly complex phase diagrams with many different phases across which transitions can be tuned by tweaking some external \textit{knob}. This makes these systems particularly useful from a material science/engineering standpoint.
+Within condensed matter, one of the most active and fascinating fields is the study of strongly correlated systems. In most materials (like those with open s and p shells), the somewhat naive yet powerful approximation that the electrons in the material act as independent particles moving in an effective medium (the independent electron approximation) works surprisingly well. This effect, which is explained by the Landau Fermi Liquid Theory, occurs due to these extremely mobile itinerant electrons screening each other highly effectively. However this approximation usually breaks down in materials with incomplete d and f shells, because the electrons in these shells are localized to a much greater extent around their parent atoms. These electrons cannot effectively screen each other, unlike the much more itinerant s and p electrons and therefore retain some of their atomic properties. In addition, there is often strong mixing (hybridization) between them and the outer s and p electrons, leading to a large interplay between itinerant and localized degrees of freedom. Such materials, commonly known as \textit{strongly correlated systems}, often have highly complex phase diagrams with many different phases across which transitions can be tuned by tweaking some external \textit{knob} such as temperature or pressure. This makes these systems particularly useful from a material science/engineering standpoint.
 
-Finding a coherent theoretical framework which can capture the essential properties of such complex materials has proved to be immensely challenging and continues to be an area of active research. Computational simulations have played an important role in this effort and have enabled us to study and predict real material properties instead of restricting ourselves to model Hamiltonians. In the field of weakly correlated materials, Density Functional Theory (DFT) has led to a revolution in material simulation, and has given us the power to compute properties using relatively modest computational resources. However, DFT is often completely inadequate when applied to strongly correlated systems, as it contains only rudimentary treatments of the electronic correlations which are essential to understanding the physics of these compounds.
+Finding a coherent theoretical framework which can capture the essential properties of such complex materials has proved to be immensely challenging and continues to be an area of active research. Computational simulations have played an important role in this effort and have enabled us to study and predict properties of real materials instead of restricting ourselves to model Hamiltonians. In the field of weakly correlated materials, Density Functional Theory (DFT) has led to a revolution in material simulation, and has given us the power to compute properties using relatively modest computational resources. However, DFT is often completely inadequate when applied to strongly correlated systems, as it contains only rudimentary treatments of the electronic correlations which are essential to understanding the physics of these compounds.
 
-Dynamical Mean Field Theory (DMFT) aims to address some of these shortcomings. DMFT gives us a way to simulate strongly correlated systems using controlled approximations which reduce the computational complexity while retaining most of the essential physics of the system, including the interplay between itinerant and localized degrees of freedom. This method, which was initially became popular as a method to solve model Hamiltonians such as the Hubbard Model, has proved to be a valuable tool to capture the properties of d and f shell systems. This has especially been true in the last decade after the successful merger of DMFT with DFT to yield a framework which is capable of dealing with both the weak correlated shells (which DFT is well suited to) and the localized orbitals, where DMFT shines. This approach, known as DFT+DMFT has proved to be one of the most successful methods in reproducing experimentally verifiable properties of correlated systems.
+Dynamical Mean Field Theory (DMFT) aims to address some of these shortcomings. DMFT gives us a way to simulate strongly correlated systems using controlled approximations which reduce the computational complexity while retaining most of the essential physics of the system, including the interplay between itinerant and localized degrees of freedom. This method, which initially became popular as a method to solve model Hamiltonians such as the Hubbard Model, has proved to be a valuable tool to capture the properties of d and f shell systems. This has especially been true in the last decade after the successful merger of DMFT with DFT to yield a framework which is capable of dealing with both the weakly correlated shells (which DFT is well suited to) and the localized orbitals, where DMFT shines. This approach, known as DFT+DMFT has proved to be one of the most successful methods in reproducing experimentally verifiable properties of correlated systems.
 
-As result of these and other highly advanced computational techniques available, computational condensed matter today is one of the most exiting fields of physics to be part of. The current algorithms allow us for perhaps the first time in history, to perform "computational experiments", where we can simulate materials reliably and quickly given sufficient computational resources. It is hoped that soon this would give us the power to perform computational material design, which is perhaps one of the ultimate aims of condensed matter physics. We could soon be at a stage where we can solve the inverse problem of, having been given a certain set of desired properties, of being able to predict which exact chemical system would satisfy those requirements from first principles without necessarily having to resort to actual experimentation. Methods such as DFT+DMFT are at the cutting edge of such efforts. 
+As result of these and other highly advanced computational techniques available, computational condensed matter today is one of the most exiting fields of physics to be part of. The current algorithms allow us, for perhaps the first time in history, to perform "computational experiments", where we can simulate materials reliably and quickly given sufficient computational resources. It is hoped that soon this would give us the power to perform computational material design, which is perhaps one of the ultimate aims of condensed matter physics. We could soon be at a stage where we can solve the inverse problem of, having been given a certain set of desired properties, of being able to predict which exact chemical system would satisfy those requirements from first principles without necessarily having to resort to actual experimentation. Methods such as DFT+DMFT are at the cutting edge of such efforts. 
 
-In this thesis, we shall study some of the fundamental theoretical aspects of the DMFT method as well as its applications to real material systems. The thesis is arranged in the following manner: In Chapter 2, we shall aim to present a description of the theory behind DFT+DMFT. In chapter 2 we shall give a brief introduction to Density functional Theory (DFT) and the equations which govern the method. In chapter 3, we shall explain the DMFT method, providing details of the exact approximations and explain how the merger of DFT+DMFT works in practice. In Chapter 4 we shall provide more technical details of the Computational algorithm which lies at the heart of our implementation of DFT+DMFT, the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver. Having laid out the major theoretical building blocks of our framework, we shall move on to particular problems which have been investigated in the course of this doctoral study. Chapter 4 details the investigation of the magnetic spectral function of f-shell compounds such as $\alpha$ Cerium, $\gamma$ Cerium and $\delta$ plutonium. Chapter 6 describes a study of the the importance of structural parameters and electronic entropy in the spin state transition in $LaCoO_3$ using DFT+ DMFT. Chapter 7 contains the investigation of the inadequacy of the Constrained Random Phase Approximation(cRPA), one of the most popular methods to estimate screening in strongly correlated systems. Chapter 8 contains the conclusion and is followed by the Bibliography and Appendices.
+In this thesis, we shall study some of the fundamental theoretical aspects of the DMFT method as well as its applications to real material systems. The thesis is arranged in the following manner: In Part 1 , we shall aim to present a description of the theory behind DFT+DMFT. In chapter 2 we shall give a brief introduction to Density functional Theory (DFT) and the equations which govern the method. In chapter 3, we shall explain the DMFT method, providing details of the exact approximations and explain how the merger of DFT+DMFT works in practice. In Chapter 4 we shall provide more technical details of the Computational algorithm which lies at the heart of our implementation of DFT+DMFT, the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver. Having laid out the major theoretical building blocks of our framework, in Part 2 we shall move on to particular problems which have been investigated in the course of this doctoral study. Chapter 4 details the investigation of the magnetic spectral function of f-shell compounds such as $\alpha$ Cerium, $\gamma$ Cerium and $\delta$ plutonium. Chapter 5 describes a study of the the importance of structural parameters and electronic entropy in the spin state transition in $LaCoO_3$ using DFT+ DMFT. Chapter 7 contains the investigation of the inadequacy of the Constrained Random Phase Approximation(cRPA), one of the most popular methods to estimate screening in strongly correlated systems. Chapter 8 contains the conclusion and is followed by the Bibliography and Appendices.
 
 
 \pagebreak
 \section{Density Functional Theory}
 
-Density Functional Theory(DFT) is perhaps one of the most successful theories in the world of modern physics. Its immense popularity can be gauged from the fact that the seminal papers \textbf{cite} by Hohenberg and Kohn, and Kohn and Sham are the two most heavily cited papers in modern times. Density functional theory allows for ab-initio (with no arbitrary tunable free parameters) calculations of the zero-temperature material properties of the vast majority of weakly correlated compounds. With the growth of modern algorithms in this field, one can now employ off-the-shelf packages to obtain highly accurate results for a large variety of experimental observables while spending very little computational resources. In this section, we shall concentrate on giving a brief introduction to the principles of DFT, while also mentioning some of the limitations that have led to the search for more advanced methods.
+Density Functional Theory(DFT) is one of the most successful theories in the world of modern physics. Its immense popularity can be gauged from the fact that the seminal papers  by Hohenberg and Kohn \textbf{cite}, and Kohn and Sham \textbf{cite} are the two most heavily cited papers in modern times. Density functional theory allows for ab-initio (with no arbitrary tunable free parameters) calculations of the zero-temperature ground state material properties of the vast majority of weakly correlated compounds. With the growth of modern algorithms in this field, one can now employ off-the-shelf packages to obtain highly accurate results for a large variety of experimental observables while spending very little computational resources. In this section, we shall concentrate on giving a brief introduction to the principles of DFT, while also mentioning some of the limitations that have led to the search for more advanced methods.
 
 As a starting point for the discussion, we begin with the "Theory of everything" for condensed matter systems, describing a non-relativistic lattice system of nucleii and the accompanying electrons:
 \begin{equation}\label{DFT_1}
 H=-\dfrac{\hbar^2}{2m_e}\sum_i\nabla_i^2  -\dfrac{\hbar^2}{2M_e}\sum_I\nabla_I^2 +\dfrac{1}{2}\sum_{i\neq j} \dfrac{e^2}{|\rmb_i -\rmb_j|}-\dfrac{1}{2}\sum_{i, I} \dfrac{e^2Z_I}{|\rmb_i -\mathbf{R}_I|} + \dfrac{1}{2}\sum_{I\neq J} \dfrac{e^2Z_I Z_J}{|\mathbf{R}_I -\mathbf{R}_J|} 
 \end{equation}
-In this equation, the first two terms describe the kinetic energy of the nucleii and the electrons respectively while the next three terms describe the inter-nuclear, nuclei-electron and electron-electron Coulomb interactions. Note that this equation neglects relativistic corrections such as spin orbit coupling which can become important in some systems (and which all advanced DFT packages are able to treat). We first simplify this equation by adopting the so-called Born-Oppenheimer approximation, whereby the nucleii are assumed to be fixed. This is exceptionally accurate due to the relatively much higher mass of the nucleii compared to the electrons. This approximation dispenses with the nuclear kinetic energy term and leaves us with a Hamiltonian for the electrons moving in an effective field created by the lattice of nucleii. This resulting Hamiltonian is-
-\begin{equation}
+In this equation, the first two terms describe the kinetic energy of the nucleii and the electrons respectively while the next three terms describe the inter-nuclear, nuclei-electron and electron-electron Coulomb interactions. Note that this equation neglects relativistic corrections such as spin orbit coupling which can become important in some systems (and which most advanced DFT packages are able to treat to some degree). We first simplify this equation by adopting the so-called Born-Oppenheimer approximation, whereby the nucleii are assumed to be fixed. This is exceptionally accurate due to the relatively much higher mass of the nucleii compared to the electrons. This approximation dispenses with the nuclear kinetic energy term and leaves us with a Hamiltonian for the electrons moving in an effective field created by the lattice of nucleii. This resulting Hamiltonian is-
+\begin{equation}\label{DFT_2}
 H=-\dfrac{\hbar^2}{2m_e}\sum_i\nabla_i^2 + \dfrac{1}{2}\sum_{i\neq j} \dfrac{e^2}{|\rmb_i -\rmb_j|} +\sum_i V_{ext}(\rmb_i) +E_{ion}
 \end{equation}
 
-Where $V_{ion}$ is the constant inter-nuclear Coulomb term and $V_{ext}$ is the nucleii-electron repulsion given by-
+Where $E_{ion}$ is the constant inter-nuclear Coulomb term and $V_{ext}$ is the nucleii-electron repulsion given by-
 
-\begin{equation}\label{DFT_2}
+\begin{equation}
  V_{ext}(\rmb)= \sum_{I} \dfrac{e^2 Z_I}{|\rmb-\mathbf{R}_I|}
  \end{equation} 
 
-However, even this simplified many-electron Schrodinger equation is essentially impossible to solve for more than O(10) electrons. The major breakthrough, first proposed by Hohenberg and Kohn \textbf{cite} was to show that, at least for the calculation ground state properties, it is sufficient to work with the charge density rather than the wave function itself. Or in other words, the ground state wavefunction and other observables are uniquely determined  by the charge density-
+However, even this simplified many-electron Schrodinger equation is essentially impossible to solve for more than O(10) electrons. The major breakthrough, first proposed by Hohenberg and Kohn \textbf{cite} was to show that, at least for the calculation of ground state properties, it is sufficient to work with the charge density rather than the wave function itself. Or in other words, the ground state wavefunction and other observables are uniquely determined  by the charge density-
 \begin{equation}
 n(\rmb)= \la \Ps|\ps^\da (\rmb) \ps(\rmb) | \Ps\ra 
 \end{equation}
-Note that this leads to enormous decrease in computational complexity, $n(r)$ is a 3 dimensional scalar instead of the original 3N dimensional $\Ps$.  The result is proved easiest by contradiction. Let us assume that two different external potentials $V_{ext} (r)$ and $V'_{ext} (r)$ produce the same charge density $n(r)$
-when plugged into Eq. \ref{DFT_2}. If we denote these two Hamiltonians $H$ and $H'$ and their ground state wavefunctions $\Ps$ and $\Ps'$ and the corresponding energies $E$ and $E'$, then without loss of generality we can say
+Note that this leads to enormous decrease in computational complexity, $n(r)$ is a 3 dimensional scalar instead of the original 3N dimensional vector $\Ps$.  The result is proved most easily by contradiction. Let us assume that two different external potentials $V_{ext} (r)$ and $V'_{ext} (r)$ produce the same charge density $n(r)$
+when plugged into Eq. \ref{DFT_2}. If we denote these two Hamiltonians $H$ and $H'$ ,their ground state wavefunctions $\Ps$ and $\Ps'$ and the corresponding ground state energies $E$ and $E'$, then without loss of generality we can say
 \begin{equation}
 E'=\la \Ps' | H' |\Ps' \ra < \la \Ps | H' |\Ps \ra = \la \Ps | H' + V'_{ext} (\rmb) -V_{ext} (\rmb)   |\Ps \ra
 \end{equation}
@@ -87,9 +96,9 @@ The other theorem proved by the authors in their paper proves the existence of  
 \begin{equation}
 E[n]=F[n] +\int d \rmb n(r) V_{ext}(\rmb) + E_{ion} 
 \end{equation}
-attains a minimum for the ground state density, and has the value corresponding to the ground state energy at this point. The proof is relatively simple and can be identifying $F[n]$ as the part of the Hamiltonian given by Eq. \ref{DFT_2} containing the electronic Kinetic and Coulomb interaction term. Knowledge of the exact formulation of this functional would reduce the solution of any chemical system (at least the ground state properties) to a minimization problem involving only one 3-dimensional quantity (the charge density). The only component of $F[n]$ for which an exact formulation can be found is the "Hartree" component. The functional is then redefined as:
+attains a minimum for the ground state density, and has the value corresponding to the ground state energy at this point. The proof is relatively simple and can be formulated by identifying $F[n]$ as the part of the Hamiltonian given by Eq. \ref{DFT_2} containing the electronic kinetic and Coulomb interaction terms. Knowledge of the exact formulation of this functional would reduce the solution of any chemical system (at least the ground state properties) to a minimization problem involving only one 3-dimensional quantity (the charge density). The only component of $F[n]$ for which an exact formulation can be found is the "Hartree" component. The functional is then redefined as:
 \begin{equation}
- F[n]= \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|r-r'|} + I[n]
+ F[n]= \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|\rmb-\rmb'|} + I[n]
  \end{equation} 
 Where $I[n]$ contains everything in $F[n]$ not including the Hartree term, including the kinetic energy and the non-Hartree potential energy contributions. Therefore the central problem of solving any chemical system is the formulation of an accurate $I[n]$.
 
@@ -97,7 +106,7 @@ The first successful attempt at approximating $I[n]$, without which the findings
 \begin{equation}
  I[n]=T_s[n]+E_{XC}[n]
  \end{equation} 
-where $T_s[n]$ is the kinetic energy of an auxiliiary non-interacting electron system and $E_{XC}[n]$ is known as the "exchange-correlation" energy of the interacting system. $E_{XC}[n]•$ was approximated as:
+where $T_s[n]$ is the kinetic energy of an auxiliiary non-interacting electron system and $E_{XC}[n]$ is known as the "exchange-correlation" energy of the interacting system. $E_{XC}[n]$ was approximated as:
 \begin{equation}
 E_{XC}[n]=\int d\rmb \dens \epsilon_{XC}(\dens)
 \end{equation}
@@ -142,17 +151,249 @@ E=\sum_i \epsilon_i - \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|
 \end{equation}
 It is to be noted that that apart from the ground state, the eigenvalues and eigenfunctions of the Kohn Sham Hamiltonian are meaningless, strictly speaking. However in practice they are often found to be in good agreement with experimental bandstructures and are used as such.
 
+\pagebreak
+\section{Dynamical Mean Field Theory}
 
 
 
 
 
+In the previous section, we looked at Density Functional Theory (DFT), which is the current workhorse for materials simulation in Condensed Matter Physics. While exceedingly successful in simulating \textit{weakly correlated} systems (those with open s and p shells), DFT is known to be deficient when simulating open d anf f shell materials, where the highly localized d and f electrons play an important role determining the physics of the compound. The main issue is the rather rudimentary treatment of electronic correlations in DFT. In the last section, we explained the Local Density Approximation(LDA) where the uniform electron density of a free electron gas is used to estimate the Exchange Correlation functional. There have been improvements to this approximation where we include higher order corrections to the exchange correlation Kernel or otherwise tweak to functional to include terms which allow better agreement with experiment. We therefore have a wide variety of functionals such as GGA, PBE, PBESol and Hybrid functionals which are currently the state of the art in DFT material simulations. Most of the implementations of DFT in off-the-shelf packages also include treatments of spin orbit coupling and other relativistic corrections as well as spin-dependent interactions to some degree which allows us to simulate magnetic phases in weakly correlated systems.
 
+However, all of these treatments are unable to capture the strongly correlated behaviour of materials with highly localized electrons. Mott Physics for example, whereby certain compounds such as become insulators even though they have half-filled electronic shells, is completely beyond the scope of standard DFT. These effects often stem from the fact that the electrons in these materials are correlated, i.e- the behavior of one electron on that of other electrons in similarly correlated shells. This effect cannot be described by any scheme which assumes pointwise locality (or some weaker form thereof) like DFT does. In addition, the correlated objects can be more complicated than simple atomic orbitals, they can be dimers or some higher aggregation of atoms like in $VO_2$ or molecular orbitals in molecules. So we can have electronic correlations appear in a wide variety of chemical systems where a simple DFT-like treatment is inadequate.
 
+It should be evident that simulations of such highly correlated systems would be highly expensive because in principle we have to solve the true many body quantum mechanical equation such as \ref{DFT_2}, which is computationally intractable as mentioned earlier. One of the most promising approaches to simulating such systems is Dynamical Mean Field Theory(DMFT). Within DMFT, we simulate the correlated system as an impurity containing the correlated degrees of freedom, embedded in a self-consistently determined effective medium which represents the non-correlated itinerant orbitals. The approach is \textit{mean field} in the sense that we freeze out some of the spatial extent of electronic correlations. However the resulting \textit{mean field} coupling the impurity and the bath is still time-dependent, allowing us to preserve dynamic fluctuations. The True power of the method however comes from the fact that highly efficient computational \textit{impurity solvers} such as Continuous Time Quantuam Monte Carlo (CTQMC) described in the next chapter, which make the formulation computationally tractable. DMFT can also be very efficiently merged with DFT to create DFT+DMFT, wherein the itinerant bath (which represents the weakly correlated s and p shells) can be solved using DFT while the correlated subspace of d and f orbitals is left to the DMFT impurity solvers and self-consistency conditions.
 
-	 
+\subsection{Basics of DMFT}
+
+The simplest model for studying correlated systems is the famous Hubbard Model-
+\begin{equation}
+H=- \sum_{\la i,j \ra, \sigma} t_{ij} \cdag_{i \sigma} c_{j\sigma} + U \sum_{i} n_{i\upa} n_{i \dow}
+\end{equation}
+ where $t_{ij} $ is the hopping between adjacent sites and U is the on-site Coulomb repulsion.  We can write the partition function of this model in the path integral formulation 
+ \begin{equation}\label{Part}
+ Z=\int \prod_{i\sig} D \cdag_{i\sig} D c_{i\sig} e^{-S}
+ \end{equation}
+
+Within DMFT, we simplify the problem by introducing an impurity which we label by site \textit{0}. We then rewrite the action S for the lattice problem as an effective action where the the on-site fermionic degrees of freedom on the impurity site are treated exactly. These on-site degrees of freedom are then coupled to an effective time dependent "dynamic" Weiss field which captures the hybridization with the lattice degrees of freedom.  This effective action $S_{eff}$ is given by:
+\begin{equation} \label{S_eff}
+ S_{eff}= \ib d\tau \ib d \tau' \sum_{\sig} \cdag_{0\sig}(\tau) \mathcal{G}_{0}^{-1}(\tau -\tau') c_{0\sig}(\tau') +U \ib d\tau n_{0\upa} n_{0 \dow}
+ \end{equation} 
+where 
+ \begin{equation}\label{G0_imp}
+  \mathcal{G}_{0}^{-1}(\tau)= -\dfrac{\partial} {\partial \tau} -\sum_{ij} t_{j0} G^{(0)} _{ij} (\tau) t_{ik}
+ \end{equation} 
+  
+Here $\mathcal{G}_0$ plays the role of a bare Greens function for the effective impurity problem and can also be thought of as a time-dependent Weiss field. However it is different from the Bare Green's function for the original lattice model and captures just the interaction between the lattice bath and the impurity we have constructed. Under this formulation, we can calculate the the impurity Green's function under this effective action by :
+\begin{equation}
+G_{imp}(i \omega_n)=\ib d(\tau - \tau') G_{imp}(\tau - \tau') e^{i\omega_n \tau - \tau') }
+\end{equation}
+where $\omega_n$ are the fermionic matsubara frequencies and
+\begin{equation}
+G_{imp}(\tau - \tau')= - \la T_{\tau} c_0(\tau) \cdag_0(\tau') \ra _{S_{eff}}
+\end{equation}
+
+This part of the process is achieved by applying impurity solvers such as CTQMC which calculate the impurity Green's function. Now we write the Greens function of the original Lattice model as :
+\begin{equation}
+G(k,i\omega_n)=\dfrac{1}{i\omega -\epsilon_k +\mu -\Sigma(i\omega_n)}
+\end{equation}
+ where $\Sigma(i\omega_n)$ is the self energy. Note that in general the self energy is k-dependent. However within the DMFT approximation is approximated to be the local part of the self energy. This approximation is at the heart of DMFT. Detailed accounts of when it can be applied can be found in \textbf{cite}. Like most mean field treatments, it becomes exact in the limit of infinite dimensions or more exactly in the limit of infinite co-ordination number. In order to see this one has to look at the diagrammatic expansion for the self energy. By looking at the scaling of the Greens function as the co-ordination number grows, we see that all non-local diagrams between sites i and j scale at least as $1/\sqrt{d_{||i-j||}^3}$ where $d_{||i-j||}$ is the number of equivalent atoms at a manhattan distance of $||i-j||$. However all local diagrams in the self energy scale as $1/\sqrt{d}$. Therefore as the coordination number (or the number of dimensions) approaches $d \rightarrow \infty$, only the local diagrams survive. 
  
+ Now we have to connect the impurity greens function calculated by the impurity Greens function to the Lattice Greens function of the original system. In the infinite dimensional limit, it can be shown that that $\mathcal{G}_0$ in Eq. \ref{S_eff} is related to the lattice greens function of the original system by:
+ \begin{equation}
+  \mathcal{G}_0^{-1]= i\omega_n +\mu -\sum_{ij} t_{i0}t{0j}|G_[ij} -\dfrac{G_{i0}G_{0j}}{G_{00}}|(i \omega_n)
+  \end{equation}
+  
+  where $G_{00}$ denotes the local (k-summed) Greens function of the lattice.
+\begin{equation}
+  G_{00}(\i\omega_n)=\sum_k G(k,\i\omega_n)
+ \end{equation} 
 
+  The term subtracted from Eq. \ref{G0_imp} comes due to the so called "cavity construction" formulation where one takes out the impurity and treats it as a "cavity", and is one of the simplest ways to arrive at the DMFT equations (the reader can find a more detailed proof in \textbf{cite Held and RMP1}). Now using the properties of Fourier transforms (check this part), we arrive at the following identities-
+  \begin{equation}
+  \sum_{i} t_{0i} G_{i0}= \sum_{k}\epsilon_k G_k= (i\omega +\mu -\Sigma)G_{00} -1
+  \end{equation}
+ 
+  \begin{equation}
+  \sum_{i} t_{0i} G_{ij} t_{j0} = \sum_{k}\epsilon^2_k G_k= (i\omega +\mu -\Sigma)^2G_{00} -(i\omega +\mu -\Sigma)
+  \end{equation} 
+  
+  Using these expressions, we arrive at the final expression for $\mathcal{G}_0$:
+  \begin{equation}
+  \mathcal{G}_0=\Sigma + G_{00}^{-1}
+  \end{equation}
+  
+ We can therefore now rewrite the DMFT action in Eq. \ref{S_eff} in terms of local quantities of the original lattice. Therefore for any band dispersion(if necessary from DFT) and Coulomb interaction, we can calculate the lattice Greens function by mapping it to an impurity problem and then using the impurity Greens function to extract the Local Self energy which is plugged into the lattice problem. 
+The solution to the problem is usually attempted iteratively, whereby one first chooses a self energy (zero is often a good starting point or we take a previously converged run for a similar system) and then the follwing steps are performed:
+
+\begin{itemize}
+\item The Local Greens function of the lattice is computed by summing over \textbf{k}
+\begin{equation}
+G_{00}(i\omega_n)= \sum_k \dfrac{1}{i\omega -\epsilon_k +\mu -\Sigma(i\omega_n)}
+\end{equation}
+\item Compute $\mathcal{G}_0$ for the impurity solver by:
+
+\begin{equation}
+\mathcal{G}_0=\Sigma + G_{00}^{-1}
+\end{equation}
+
+\item Solve the impurity problem using the effective action in Eq. \ref{S_eff} using an impurity solver to obtain $G_{00}$
+
+\item Calculate the new self energy by using the Dyson Equation:
+\begin{equation}
+\Sigma= \mathcal{G}_0^{-1} -G_{00}^{-1}
+\end{equation}
+
+\item Go back to the first step and iterate till  $\Sigma$ is converged.
+
+In practice we often think of the auxilliary impurity problem problem as an Anderson Impurity Model. Then we can rewrite the impurity Greens function in the form:
+\begin{equation}
+G_{00}(i \omega_n)= \dfrac{1}{i \omega_n -E_{imp}+ \Delta- \Sigma}
+\end{equation}
+
+where $E_{imp}$ is the static energy level of the impurity states and $\Delta$ is the hybridization term which captures the dynamic hopping between the impurity and the bath. In this formulation, the DMFT self consistency condition is expressed as the twin assumptions-
+\begin{equation}
+\dfrac{1}{i \omega_n -E_{imp}+ \Delta- \Sigma}=  \sum_k \dfrac{1}{i\omega -\epsilon_k +\mu -\Sigma(i\omega_n)}
+\end{equation}
+and that the impurity  $\Sigma$ is the same as the (purely local) lattice $\Sigma$
+\end{itemize}  
+%
+
+\pagebreak
+\section{DFT+DMFT}
+
+In the previous two sections we have outlines the two major theoretical components which form the core of the simulation algorithm used in this thesis. In chapter 2 we outlined Density Functional Theory, which excels at simulating weakly correlated materials. In chapter 3 we looked at Dynamical Mean Field Theory (DMFT), which is well-suited to simulating more localized electrons in the d and f shells. As mentioned earlier, the development which has revolutionized the field of computational simulation of strongly correlated systems is the successful merger of these two techniques. This merger , usually known as "LDA+DMFT" or more correctly "DFT+DMFT" (because in general we can use other exchange correlation functionals than LDA) is what we shall look at in this chapter. However, before looking at how these two methods are merged, we shall reformulate DMFT in terms of functionals, which shall allow for a easier way to merge DFT with the DMFT method.
+
+\subsection{A functional Reformulation of DMFT}
+
+The formulation of any theory in a functional form is an elegant way to understand the basic nature of the equations governing the theory. The formulation usually involves defining an observable X and defining a functional $\Gamma[X]$ which has the following properties:
+\begin{itemize}
+\item $\Gamma[X]$ is extremized at the true value of X for the physical solution of the system
+\item At the extremum, $\Gamma[X]$ attains the value of the Free Energy $F$ of the system.
+\end{itemize}
+ When X is chosen to be the Green's function $G$ of the system, the functional so defined is known as the Baym-Kadanoff functional. In this section we shall formulate the Baym-Kadanoff functional for a condensed matter system and see how DMFT can be thought of as a particular approximation to this functional.
+ 
+We start with rewriting Eq \ref{Part} in terms of the Free Energy:
+\begin{equation}
+ e^{-\beta F}=\int  D [\psi^\dagger \psi] e^{-S}
+\end{equation}
+
+Where the sum over sites and spins is assumed. We also know that the Green's function is given by 
+\begin{equation}
+G(\rmb' \tau', \rmb \tau) = -\la T_{\tau} \psi(\rmb' \tau') \psi ^\dagger (\rmb' \tau') \ra 
+\end{equation}
+
+We now add a source term for the Green's function in the expression for the partition function :
+\begin{equation}
+ e^{-\beta F}=\int  D [\psi^\dagger \psi] exp(-S -\int d\rmb' d\tau' d\rmb d\tau \psi(\rmb' \tau') J(\rmb' \tau', \rmb \tau)\psi ^\dagger (\rmb' \tau') 
+ \end{equation}
+
+such that 
+\begin{equation}
+\dfrac{\partial F[J]}{\partial J}= G[J]
+\end{equation}
+The physical Green's function is obtained by setting $ J=0$, and the actual Free energy is $F[J=0]=F^{(0)}$. 
+
+We now perform a Legendre Transform to invert the functional to express the equation in terms of G rather than J, such that $J[G^{(0)}]=0$ at the physical value of $G=G^{(0)}$. 
+Therefore, we get a formulation in terms of $F[J[G]]$. The new functional obtained as a result of this is the Baym-Kadanoff functional, which has the form:
+\begin{equation}
+\Gamma[G]= F[J[G]] -Tr J[G]G
+\end{equation}
+ We can easily prove that
+ \begin{equation}
+ \dfrac{\Gamma[G]}{\partial G}\big|_{G^{(0)}}= J[G^{(0)}]=0 
+ \end{equation}
+ and at this point
+ \begin{equation}
+ \Gamma[ J[G^{(0)}]]= F^{(0)}
+ \end{equation}
+ 
+ Now for any non-interacting system, the action is quadratic therefore the Free Energy can be written as $F=Tr(log(-G))$. Therefore in the presence of the quadratic Source term, the Free energy $F_0$ for a non-interacting system is still:
+ \begin{equation}
+ F_{0}= -Tr(log(-G_0^{-1} +J))
+ \end{equation}
+Where $G_{0}$ is the non-interacting Green's function. Now as defined above, by taking a derivative w.r.t $ J$, we get $G[J]= 1/ (G_0^{-1} -J)$, or equivalently for the non-interacting source term $J_0[G]$
+\begin{equation}
+ J_0[G]=G_0^{-1}- G^{-1}
+ \end{equation} 
+But we know that for the Physical system, the R.H.S of the above equation is equal to the Self Energy $\Sigma$ of the system. This allows us to identify that $J_0[G]=\Sigma[G]$ for the non-interacting system. Therefore to sum up, for the non-interacting system we have formulated the Baym-Kadanoff functional $\Gamma_0[G]$ given by:
+\begin{equation}
+\Gamma_0[G]= Tr(log(-G)) -Tr \Sigma[G]G
+\end{equation}
+ 
+\begin{equation}\label{Dyson}
+ \Sigma[G]= G_0^{-1}- G^{-1}
+\end{equation}
+In general, in the presence of interactions there will be corrections to this functional. We lump together all of these into one term denoted as $\Phi[G]$, also known as the Luttinger Ward Functional. So this new interacting Baym-Kadanoff functional is defined by:
+\begin{equation}
+\Gamma[G]=\Gamma_0[G]+\Phi[G]
+\end{equation}
+
+By using the basic stationarity properties of $\Gamma[G]$, we get
+\begin{equation}
+\dfrac{\partial \Gamma[G]}{\partial G}= G^{-1} -G \dfrac{\partial \Sigma}{\partial G} -\Sigma[G] +\dfrac{\partial \Phi[G]}{\partial G}=0
+\end{equation}
+ where using Eq \ref{Dyson}, we get
+ \begin{equation}\label{Luttinger-Sigma}
+ \dfrac{\partial \Phi[G]}{\partial G}=\Sigma[G]
+ \end{equation}
+ 
+ Now we know from the formulation of the Dyson equation that the self energy contains all one particle irreducible diagrams. As the process of taking a functional derivative w.r.t $G$ can be interpreted as cutting a Green's function line from a diagram, we see that $\Phi[G]$ must contain all two-particle irreducible skeleton diagrams. 
+ 
+Within this framework, the DMFT can be formulated in an extremely elegant manner: We restrict $\Phi[G]$ to contain only local diagrams:
+\begin{equation}
+ \dfrac{\partial \Phi^{DMFT}[G]}{\partial G_{ij}} =\Sigma^{DMFT} \neq 0 iff i=j
+\end{equation}
+
+where i,j are lattice sites. By using Eq. \ref{Luttinger-Sigma}, we see that this implies that the self energy is purely local. Note that that we have made no no appeal to any infinite-dimensional limits. All we require for DMFT to work is that that dominant terms in $\Phi$ are the local diagrams. In practice we map the problem to an impurity problem by setting  $\Gamma^{DMFT}=\Gamma_{Imp}$ and assume $G^{DMFT}_{local}= G_{imp}$, which ensures $\Sigma^{DMFT}= \Sigma_{imp}$.
+ 
+\subsection{Merging DFT with DMFT} 
+
+Now that we have expressed the DMFT approximation in terms of the the Baym-Kadanoff functional, we can easily extend the framework to elucidate the DFT+DMFT algorithm. As we have seen, we can express the Free energy of any system as a functional of the Green's function as :
+\begin{equation}
+\Gamma[G]= Tr(log(-G)) -Tr \Sigma[G]G +\Phi[G]
+\end{equation}
+Where $\Gamma[G]$ and $\Phi[G]$ are the Baym-Kadanoff and Luttinger-Ward functional respectively. As we saw, the DMFT approximation is obtained by restricting $\Phi[G]$ to only the skeleton diagrams formed by the local Greens function. In order to include DFT within this framework, we need to make $\Gamma$ a functional of both the Greens function and charge density $\rho$. We reformulate the equation as:
+\begin{equation}
+ \Gamma[G,\rho]= Tr(log(-G)) -Tr \Sigma[G]G +\Phi[G,\rho]
+\end{equation}  
+ 
+ where the Luttinger ward functional has now been modified to :
+ \begin{equation}
+ \Phi[G,\rho]=\Phi_{H}[\rho]+\Phi_{XC}[\rho]+\Phi_{DMFT}[G]+\Phi_{DC}[G]
+ \end{equation}
+ In the above equation the Luttinger-Ward functional has been decomposed into its Hartree, Exchange correlation, DMFT and "Double Counting" parts.  An identical extremization operation as carried out earlier gives us the following relationships-
+\begin{equation}\label{DMFT_SC}
+ \Sigma-V_{DC}=  \dfrac{\partial \Phi_{DMFT}[G]}{\partial G}- \dfrac{\partial \Phi_{DC}[G]}{\partial G}
+ \end{equation} 
+ 
+ Where the derivatives are only non-zero for the local Greens function, and-
+ \begin{equation}
+V_H+V_{XC}=\dfrac{\partial \Phi_{H}[G]}{\partial \rho}- \dfrac{\partial \Phi_{XC}[G]}{\partial \rho}
+ \end{equation}
+ and the charge density $\rho$ is calculated by summing the Green's function over all frequencies. It is to be noted that the $G$ is the total Green's function. It is only while taking the partial derivatives in Eq. \ref{DMFT_SC} that we we have terms only where $G=G_loc$. So we see that we can use the Hartree and Exchange correlation potentials computed with DFT and the self energy computed within DMFT and merge them in one framework. One of the issues that arises is that we have to take care of the double counting term , which contains the part of the DMFT self energy which is already accounted for in the DFT calculations. This issue has been one of the main talking points in DFT+DMFT research and different groups differ on how exactly to deal with it. \textbf{cite a Millis Paper and Anisimov paper and check intro to kristjan's paper}. However, recently Haule has proposed an efficient method to compute highly accurate values of $V_{DC} $.
+ 
+ Within this new formulation, we still use the impurity Green's function as our Local Greens function and the impurity self energy as the self energy of the system. The energy levels of the lattice system are expressed as Kohn sham eigen energies, and then the Greens function of the lattice system is built up by inserting the Self energy and Double counting corrections . 
+ 
+One of the main challenges involved in formulations of DFT+DMFT is how to go from the full-lattice system, for which we solve the DFT equations to obtain the Kohn-sham levels, to the correlated subspace, where we can apply the impurity models from which we obtain the DMFT self energy. In actual material calculations this would involve formulating a method to project our Greens function onto the d or f shell degrees of freedom. Different implementations of DFT+DMFT differ in their methods of identification of these correlated states. Moreover, they also have different methods to project the Greens function on to these localized states (The "Projection" scheme) and in how they embed the impurity self energy back into the Lattice Greens function (The "Embedding" Scheme). Various Projection functions such as LMTO's, Nth-order Muffin Tin orbitals, as well as the highly popular Maximally localized Wannier functions. However the most accurate results are obtained (\textbf{This might be dicey}) by using quasi-localized atomic orbitals $|\phi^m \ra$, which are defined as:
+\begin{equation}
+\la \rmb |\phi_m^\mu \ra= u_l(|r-R_\mu|) Y_{lm}(\widehat{r-R_\mu})
+\end{equation}
+
+where $\mu$ is a lattice site index, $u_l$ are the radial solutions to the schrodinger equation for angular momentum $l$ and  $Y_{lm}$ are spherical harmonics. This formulation has the benefit that it allows us to solve the Dyson equation in real space where the correlations are actually very localized and hence the DMFT equations are valid, instead of downfolding to an effective Hubbard Model by  downfolding to a few Wannier orbitals, which are not typically localized completely on a particular correlated atom. Using this definition we can define the  DMFT self consistency condition in the Kohn Sham space as :
+\begin{equation}
+\sum_{\mathbf{k},ij} \la \phi^\mu_m|\psi_{\mathbf{k} i} \ra \left( i\omega +\mu -\epsilon_{\mathbf{k}} -\overline{\Sigma(\mathbf{k} ,\omega)} \right)^{-1}_{ij}\la\psi_{\mathbf{k} j}  |\phi^{\mu'}_{m'} \ra = \left( \dfrac{1}{i\omega -E^{\mu}_{imp}-\Sigma^{mu}(i\omega)-\Delta^{\mu}(i\omega)} \right) _{mm'}
+\end{equation}
+Where $\psi_i$ are Kohn sham states, $\mathbf{k}$ is a reciprocal state vector, and 
+\begin{equation}
+\overline{\Sigma_{ij}(\mathbf{k} ,\omega)}= \sum_{R_\mu} \la\psi_{\mathbf{k} i}  |\phi^{\mu'}_{m} \ra (\Sigma^{\mu}_{mm'} (i\omega) -V^{mu}_{DC} )\la \phi^\mu_{m'}|\psi_{\mathbf{k} ij} \ra
+\end{equation}
+
+is how the self energy is embedded into the Kohn-Sham space from the correlated subspace. It is to be noted that the Projection and embedding operators are the same basic operators (or the same tensors), but we just flip the indices to either go from Kohn Sham space to correlated space or vice versa.
+
+With these steps outlined we shall now present a pictorial representation of the full charge self consistent DFT+DMFT charge self consistency loop
+
+ 
 
  
 

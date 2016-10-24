@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Density Functional Theory}{6}
+\contentsline {section}{\numberline {3}Dynamical Mean Field Theory}{11}
+\contentsline {subsection}{\numberline {3.1}Basics of DMFT}{12}
+\contentsline {section}{\numberline {4}DFT+DMFT}{16}
+\contentsline {subsection}{\numberline {4.1}A functional Reformulation of DMFT}{16}
+\contentsline {subsection}{\numberline {4.2}Merging DFT with DMFT}{19}
