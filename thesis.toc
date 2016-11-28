@@ -20,22 +20,32 @@
 \contentsline {section}{\numberline {6.2}Applications to Real Materials}{29}
 \contentsline {subsection}{\numberline {6.2.1}Analyzing the Volume Collapse transition in Cerium}{29}
 \contentsline {subsubsection}{Introduction}{29}
-\contentsline {chapter}{\numberline {7}Spin State Transition in $\mathbf {LaCoO_3}$}{36}
-\contentsline {section}{\numberline {7.1}Introduction}{36}
-\contentsline {section}{\numberline {7.2}Crystal Structure of LaCoO$_3$}{37}
-\contentsline {section}{\numberline {7.3}The spin state transition}{40}
-\contentsline {section}{\numberline {7.4}Nature of the excited spin state}{42}
-\contentsline {section}{\numberline {7.5}Contribution of Electronic Entropy}{44}
-\contentsline {section}{\numberline {7.6}Summary}{45}
-\contentsline {chapter}{\numberline {8}Investigation into the inadequacy of cRPA in reproducing screening in strongly correlated systems}{46}
-\contentsline {section}{\numberline {8.1}Introduction}{46}
-\contentsline {section}{\numberline {8.2}Models and Methods}{48}
-\contentsline {subsection}{\numberline {8.2.1}Model Hamiltonians}{48}
-\contentsline {subsection}{\numberline {8.2.2}constrained Random Phase Approximation(cRPA)}{49}
-\contentsline {subsection}{\numberline {8.2.3}DMFT calculations}{50}
-\contentsline {section}{\numberline {8.3}Results}{51}
-\contentsline {subsection}{\numberline {8.3.1}Density of states}{51}
-\contentsline {subsection}{\numberline {8.3.2}Quasiparticle Residue}{53}
-\contentsline {subsection}{\numberline {8.3.3} Estimation of Screening using Local Polarization}{53}
-\contentsline {section}{\numberline {8.4}Discussion and Conclusion}{55}
-\contentsline {chapter}{\numberline {9}Conclusion}{65}
+\contentsline {subsubsection}{Details of method}{30}
+\contentsline {subsubsection}{Magnetic Form Factor}{30}
+\contentsline {subsubsection}{ Dynamic Magnetic Susceptibility}{32}
+\contentsline {subsubsection}{Magnetic spectral Function $S(q,\omega )$}{34}
+\contentsline {subsubsection}{Conclusions}{35}
+\contentsline {subsection}{\numberline {6.2.2}The valence fluctuating ground state of Plutonium}{36}
+\contentsline {subsubsection}{Introduction}{36}
+\contentsline {subsubsection}{Details of Method}{37}
+\contentsline {subsubsection}{Magnetic Formfactor}{37}
+\contentsline {subsubsection}{Dynamic Suceptibility and $S(q,\omega )$}{38}
+\contentsline {chapter}{\numberline {7}Spin State Transition in $\mathbf {LaCoO_3}$}{39}
+\contentsline {section}{\numberline {7.1}Introduction}{39}
+\contentsline {section}{\numberline {7.2}Crystal Structure of LaCoO$_3$}{40}
+\contentsline {section}{\numberline {7.3}The spin state transition}{43}
+\contentsline {section}{\numberline {7.4}Nature of the excited spin state}{45}
+\contentsline {section}{\numberline {7.5}Contribution of Electronic Entropy}{47}
+\contentsline {section}{\numberline {7.6}Summary}{48}
+\contentsline {chapter}{\numberline {8}Investigation into the inadequacy of cRPA in reproducing screening in strongly correlated systems}{49}
+\contentsline {section}{\numberline {8.1}Introduction}{49}
+\contentsline {section}{\numberline {8.2}Models and Methods}{51}
+\contentsline {subsection}{\numberline {8.2.1}Model Hamiltonians}{51}
+\contentsline {subsection}{\numberline {8.2.2}constrained Random Phase Approximation(cRPA)}{52}
+\contentsline {subsection}{\numberline {8.2.3}DMFT calculations}{53}
+\contentsline {section}{\numberline {8.3}Results}{54}
+\contentsline {subsection}{\numberline {8.3.1}Density of states}{54}
+\contentsline {subsection}{\numberline {8.3.2}Quasiparticle Residue}{56}
+\contentsline {subsection}{\numberline {8.3.3} Estimation of Screening using Local Polarization}{56}
+\contentsline {section}{\numberline {8.4}Discussion and Conclusion}{58}
+\contentsline {chapter}{\numberline {9}Conclusion}{68}

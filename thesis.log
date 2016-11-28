@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 NOV 2016 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  28 NOV 2016 01:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,10 +345,10 @@ Chapter 6.
 
 ] [25] [26] [27] [28] [29]
 
-LaTeX Warning: Command \r invalid in math mode on input line 836.
+LaTeX Warning: Command \r invalid in math mode on input line 834.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 837.
+LaTeX Warning: Command \r invalid in math mode on input line 835.
 
 Package epstopdf Info: Source file: <Fig1.eps>
 (epstopdf)                    date: 2016-11-17 20:23:10
@@ -358,13 +358,13 @@ Package epstopdf Info: Source file: <Fig1.eps>
 (epstopdf)                    size: 30829 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig1-eps-converted-to.pdf 
 Fig1.eps>
-(epstopdf)             \includegraphics on input line 845.
+(epstopdf)             \includegraphics on input line 843.
 Package epstopdf Info: Output file is already uptodate.
 <Fig1-eps-converted-to.pdf, id=134, 578.16pt x 433.62pt>
 File: Fig1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig1-eps-converted-to.pdf>
-Package pdftex.def Info: Fig1-eps-converted-to.pdf used on input line 845.
+Package pdftex.def Info: Fig1-eps-converted-to.pdf used on input line 843.
 (pdftex.def)             Requested size: 429.28616pt x 321.9655pt.
  [30] [31 <./Fig1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Fig2.eps>
@@ -375,14 +375,14 @@ Package epstopdf Info: Source file: <Fig2.eps>
 (epstopdf)                    size: 30586 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig2-eps-converted-to.pdf 
 Fig2.eps>
-(epstopdf)             \includegraphics on input line 941.
+(epstopdf)             \includegraphics on input line 939.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig2-eps-converted-to.pdf, id=188, 578.16pt x 433.62pt>
 File: Fig2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig2-eps-converted-to.pdf>
-Package pdftex.def Info: Fig2-eps-converted-to.pdf used on input line 941.
+Package pdftex.def Info: Fig2-eps-converted-to.pdf used on input line 939.
 (pdftex.def)             Requested size: 429.28616pt x 321.9655pt.
  [32] [33 <./Fig2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Fig3a.eps>
@@ -393,218 +393,227 @@ Package epstopdf Info: Source file: <Fig3a.eps>
 (epstopdf)                    size: 56069 bytes
 (epstopdf)             Command: <repstopdf --outfile=Fig3a-eps-converted-to.pdf
  Fig3a.eps>
-(epstopdf)             \includegraphics on input line 1055.
+(epstopdf)             \includegraphics on input line 1053.
 Package epstopdf Info: Output file is already uptodate.
 
 <Fig3a-eps-converted-to.pdf, id=250, 578.16pt x 433.62pt>
 File: Fig3a-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig3a-eps-converted-to.pdf>
-Package pdftex.def Info: Fig3a-eps-converted-to.pdf used on input line 1055.
+Package pdftex.def Info: Fig3a-eps-converted-to.pdf used on input line 1053.
 (pdftex.def)             Requested size: 216.81pt x 162.6071pt.
  <Fig3b.png, id=251, 347.2975pt x 385.44pt>
 File: Fig3b.png Graphic file (type png)
 
 <use Fig3b.png>
-Package pdftex.def Info: Fig3b.png used on input line 1056.
+Package pdftex.def Info: Fig3b.png used on input line 1054.
 (pdftex.def)             Requested size: 216.81pt x 240.62886pt.
- [34] [35 <./Fig3a-eps-converted-to.pdf> <./Fig3b.png>]
-Chapter 7.
-[36
+ [34] [35 <./Fig3a-eps-converted-to.pdf> <./Fig3b.png>] [36]
+[37]
+Overfull \hbox (7.43646pt too wide) in paragraph at lines 1120--1121
+[]\OT1/cmr/m/n/10 Finally we show in fig-ure \OT1/cmr/bx/n/10 put in fig-ures t
+he-ory and expt \OT1/cmr/m/n/10 the $\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 q; !\OT1/cmr/m/n/10 )$ for $\OML/cmm/m/it/10 ^^N$\OT1/cmr/m/n/10 -Pu 
+us-ing DFT+DMFT
+ []
 
-] [37]
-<plots_final/supplement_plots/perovskite_struct.jpg, id=305, 708.6475pt x 725.7
+[38]
+Chapter 7.
+[39
+
+] [40]
+<plots_final/supplement_plots/perovskite_struct.jpg, id=314, 708.6475pt x 725.7
 1124pt>
 File: plots_final/supplement_plots/perovskite_struct.jpg Graphic file (type jpg
 )
  <use plots_final/supplement_plots/perovskite_struct.jpg>
 Package pdftex.def Info: plots_final/supplement_plots/perovskite_struct.jpg use
-d on input line 1136.
+d on input line 1149.
 (pdftex.def)             Requested size: 211.70921pt x 216.81pt.
 
-<plots_final/supplement_plots/a-a-a-_struct.jpg, id=306, 715.67375pt x 638.385p
+<plots_final/supplement_plots/a-a-a-_struct.jpg, id=315, 715.67375pt x 638.385p
 t>
 File: plots_final/supplement_plots/a-a-a-_struct.jpg Graphic file (type jpg)
  <use plots_final/supplement_plots/a-a-a-_struct.jpg>
 Package pdftex.def Info: plots_final/supplement_plots/a-a-a-_struct.jpg used on
- input line 1144.
+ input line 1157.
 (pdftex.def)             Requested size: 243.05284pt x 216.81pt.
- [38 <./plots_final/supplement_plots/perovskite_struct.jpg>]
-<plots_final/output/New_Dos.png, id=311, 1104.2856pt x 630.1944pt>
+ [41 <./plots_final/supplement_plots/perovskite_struct.jpg>]
+<plots_final/output/New_Dos.png, id=320, 1104.2856pt x 630.1944pt>
 File: plots_final/output/New_Dos.png Graphic file (type png)
 
 <use plots_final/output/New_Dos.png>
-Package pdftex.def Info: plots_final/output/New_Dos.png used on input line 1160
+Package pdftex.def Info: plots_final/output/New_Dos.png used on input line 1173
 .
 (pdftex.def)             Requested size: 433.62pt x 247.45761pt.
 
-<plots_final/output/fig2.png, id=312, 618.6312pt x 429.2838pt>
+<plots_final/output/fig2.png, id=321, 618.6312pt x 429.2838pt>
 File: plots_final/output/fig2.png Graphic file (type png)
 
 <use plots_final/output/fig2.png>
-Package pdftex.def Info: plots_final/output/fig2.png used on input line 1167.
+Package pdftex.def Info: plots_final/output/fig2.png used on input line 1180.
 (pdftex.def)             Requested size: 433.62pt x 300.89618pt.
- [39 <./plots_final/supplement_plots/a-a-a-_struct.jpg>] [40 <./plots_final/out
-put/New_Dos.png>] [41 <./plots_final/output/fig2.png>] <./plots_final/output/Ne
-w_Sz.png, id=324, 919.9971pt x 1047.915pt>
+ [42 <./plots_final/supplement_plots/a-a-a-_struct.jpg>] [43 <./plots_final/out
+put/New_Dos.png>] [44 <./plots_final/output/fig2.png>] <./plots_final/output/Ne
+w_Sz.png, id=334, 919.9971pt x 1047.915pt>
 File: ./plots_final/output/New_Sz.png Graphic file (type png)
 
 <use ./plots_final/output/New_Sz.png>
-Package pdftex.def Info: ./plots_final/output/New_Sz.png used on input line 119
-3.
+Package pdftex.def Info: ./plots_final/output/New_Sz.png used on input line 120
+6.
 (pdftex.def)             Requested size: 433.62pt x 493.91124pt.
 
-<./plots_final/output/hist_final.png, id=325, 2340.8253pt x 1232.2035pt>
+<./plots_final/output/hist_final.png, id=335, 2340.8253pt x 1232.2035pt>
 File: ./plots_final/output/hist_final.png Graphic file (type png)
 
 <use ./plots_final/output/hist_final.png>
 Package pdftex.def Info: ./plots_final/output/hist_final.png used on input line
- 1200.
+ 1213.
 (pdftex.def)             Requested size: 433.62pt x 228.25491pt.
- [42] [43 <./plots_final/output/New_Sz.png>]
-Overfull \hbox (18.01967pt too wide) in paragraph at lines 1208--1209
+ [45] [46 <./plots_final/output/New_Sz.png>]
+Overfull \hbox (18.01967pt too wide) in paragraph at lines 1221--1222
 \OT1/cmr/m/n/10 According to the en-tropy driven tran-si-tion scene-rio, which 
 is sup-ported by calori-met-ric measurements[[]],
  []
 
-[44 <./plots_final/output/hist_final.png>] [45]
+[47 <./plots_final/output/hist_final.png>] [48]
 Chapter 8.
-[46
+[49
 
-] [47]
-<./plotForpublishing/pd+dps_band_struc.png, id=347, 650.43pt x 650.43pt>
+] [50]
+<./plotForpublishing/pd+dps_band_struc.png, id=357, 650.43pt x 650.43pt>
 File: ./plotForpublishing/pd+dps_band_struc.png Graphic file (type png)
 
 <use ./plotForpublishing/pd+dps_band_struc.png>
 Package pdftex.def Info: ./plotForpublishing/pd+dps_band_struc.png used on inpu
-t line 1268.
+t line 1281.
 (pdftex.def)             Requested size: 433.62pt x 433.63216pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48] [49] <./plotForpublishing/RPA.png, id=355, 1046.91125pt x 224.84pt>
+[51] [52] <./plotForpublishing/RPA.png, id=364, 1046.91125pt x 224.84pt>
 File: ./plotForpublishing/RPA.png Graphic file (type png)
 
 <use ./plotForpublishing/RPA.png>
-Package pdftex.def Info: ./plotForpublishing/RPA.png used on input line 1314.
+Package pdftex.def Info: ./plotForpublishing/RPA.png used on input line 1327.
 (pdftex.def)             Requested size: 433.61342pt x 57.81546pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1321--1340
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1353
 
  []
 
-[50]
-Underfull \hbox (badness 1033) in paragraph at lines 1350--1350
+[53]
+Underfull \hbox (badness 1033) in paragraph at lines 1363--1363
 [][]\OT1/cmr/m/n/8 We prove this us-ing Eq. [8.9[]].In the case of dp model,the
  off-diagonal hy-bridiza-tion func-tion $^^A[] \OMS/cmsy/m/n/8 /
  []
 
 
-Overfull \hbox (3.31128pt too wide) in paragraph at lines 1360--1363
+Overfull \hbox (3.31128pt too wide) in paragraph at lines 1373--1376
 \OT1/cmr/m/n/10 The lat-tice self-energy and Green's func-tion are ob-tained by
  it-er-at-ing our equa-tions to self-consistency.
  []
 
-[51] <./plotForpublishing/pd+dpssigma.png, id=369, 578.16pt x 433.62pt>
+[54] <./plotForpublishing/pd+dpssigma.png, id=379, 578.16pt x 433.62pt>
 File: ./plotForpublishing/pd+dpssigma.png Graphic file (type png)
 
 <use ./plotForpublishing/pd+dpssigma.png>
 Package pdftex.def Info: ./plotForpublishing/pd+dpssigma.png used on input line
- 1380.
+ 1393.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<./plotForpublishing/dp+pds_Udduw.png, id=370, 578.16pt x 433.62pt>
+<./plotForpublishing/dp+pds_Udduw.png, id=380, 578.16pt x 433.62pt>
 File: ./plotForpublishing/dp+pds_Udduw.png Graphic file (type png)
 
 <use ./plotForpublishing/dp+pds_Udduw.png>
 Package pdftex.def Info: ./plotForpublishing/dp+pds_Udduw.png used on input lin
-e 1385.
+e 1398.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<./plotForpublishing/doscmp_barecRPA.png, id=371, 578.16pt x 433.62pt>
+<./plotForpublishing/doscmp_barecRPA.png, id=381, 578.16pt x 433.62pt>
 File: ./plotForpublishing/doscmp_barecRPA.png Graphic file (type png)
 
 <use ./plotForpublishing/doscmp_barecRPA.png>
 Package pdftex.def Info: ./plotForpublishing/doscmp_barecRPA.png used on input 
-line 1389.
+line 1402.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [52]
-<./plotForpublishing/dp+dps_qpw.png, id=375, 578.16pt x 433.62pt>
+ [55]
+<./plotForpublishing/dp+dps_qpw.png, id=385, 578.16pt x 433.62pt>
 File: ./plotForpublishing/dp+dps_qpw.png Graphic file (type png)
 
 <use ./plotForpublishing/dp+dps_qpw.png>
 Package pdftex.def Info: ./plotForpublishing/dp+dps_qpw.png used on input line 
-1403.
+1416.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<./plotForpublishing/nd_obto_dp.png, id=376, 578.16pt x 433.62pt>
+<./plotForpublishing/nd_obto_dp.png, id=386, 578.16pt x 433.62pt>
 File: ./plotForpublishing/nd_obto_dp.png Graphic file (type png)
 
 <use ./plotForpublishing/nd_obto_dp.png>
 Package pdftex.def Info: ./plotForpublishing/nd_obto_dp.png used on input line 
-1408.
+1421.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
- [53]
+ [56]
 
-LaTeX Warning: Reference `App.A' on page 54 undefined on input line 1419.
+LaTeX Warning: Reference `App.A' on page 57 undefined on input line 1432.
 
-<./plotForpublishing/ExactWUrpaWU/tbUdd3.png, id=380, 578.16pt x 433.62pt>
+<./plotForpublishing/ExactWUrpaWU/tbUdd3.png, id=390, 578.16pt x 433.62pt>
 File: ./plotForpublishing/ExactWUrpaWU/tbUdd3.png Graphic file (type png)
 
 <use ./plotForpublishing/ExactWUrpaWU/tbUdd3.png>
 Package pdftex.def Info: ./plotForpublishing/ExactWUrpaWU/tbUdd3.png used on in
-put line 1423.
+put line 1436.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png, id=381, 578.16pt x 433.62pt>
+<./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png, id=391, 578.16pt x 433.62pt>
 File: ./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png Graphic file (type png)
 
 <use ./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png>
 Package pdftex.def Info: ./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png used on 
-input line 1424.
+input line 1437.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 
-LaTeX Warning: Float too large for page by 60.94286pt on input line 1426.
+LaTeX Warning: Float too large for page by 60.94286pt on input line 1439.
 
-<./plotForpublishing/pddoscmpUdd3_locW.png, id=382, 578.16pt x 433.62pt>
+<./plotForpublishing/pddoscmpUdd3_locW.png, id=392, 578.16pt x 433.62pt>
 File: ./plotForpublishing/pddoscmpUdd3_locW.png Graphic file (type png)
 
 <use ./plotForpublishing/pddoscmpUdd3_locW.png>
 Package pdftex.def Info: ./plotForpublishing/pddoscmpUdd3_locW.png used on inpu
-t line 1444.
+t line 1457.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
-<./plotForpublishing/pddoscmpUdd4p5_locW.png, id=383, 578.16pt x 433.62pt>
+<./plotForpublishing/pddoscmpUdd4p5_locW.png, id=393, 578.16pt x 433.62pt>
 File: ./plotForpublishing/pddoscmpUdd4p5_locW.png Graphic file (type png)
 
 <use ./plotForpublishing/pddoscmpUdd4p5_locW.png>
 Package pdftex.def Info: ./plotForpublishing/pddoscmpUdd4p5_locW.png used on in
-put line 1445.
+put line 1458.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
 
 
-LaTeX Warning: Float too large for page by 49.49841pt on input line 1447.
+LaTeX Warning: Float too large for page by 49.49841pt on input line 1460.
 
-[54] [55] [56] [57 <./plotForpublishing/pd+dps_band_struc.png> <./plotForpublis
-hing/RPA.png>] [58 <./plotForpublishing/pd+dpssigma.png>] [59 <./plotForpublish
-ing/dp+pds_Udduw.png>] [60 <./plotForpublishing/doscmp_barecRPA.png>] [61 <./pl
-otForpublishing/dp+dps_qpw.png>] [62 <./plotForpublishing/nd_obto_dp.png>]
-[63 <./plotForpublishing/ExactWUrpaWU/tbUdd3.png> <./plotForpublishing/ExactWUr
-paWU/tbUdd4p5.png>] [64 <./plotForpublishing/pddoscmpUdd3_locW.png> <./plotForp
+[57] [58] [59] [60 <./plotForpublishing/pd+dps_band_struc.png> <./plotForpublis
+hing/RPA.png>] [61 <./plotForpublishing/pd+dpssigma.png>] [62 <./plotForpublish
+ing/dp+pds_Udduw.png>] [63 <./plotForpublishing/doscmp_barecRPA.png>] [64 <./pl
+otForpublishing/dp+dps_qpw.png>] [65 <./plotForpublishing/nd_obto_dp.png>]
+[66 <./plotForpublishing/ExactWUrpaWU/tbUdd3.png> <./plotForpublishing/ExactWUr
+paWU/tbUdd4p5.png>] [67 <./plotForpublishing/pddoscmpUdd3_locW.png> <./plotForp
 ublishing/pddoscmpUdd4p5_locW.png>]
 Chapter 9.
-[65
+[68
 
-] (./thesis.bbl [66
+] (./thesis.bbl [69
 
 
-] [67]
+] [70]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
@@ -614,14 +623,14 @@ Missing character: There is no  in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [68] [69]
+ [71] [72]
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no ‰ in font cmr10!
 Missing character: There is no ¤ in font cmr10!
- [70] [71] [72] [73] [74]) [75]
+ [73] [74] [75] [76] [77]) [78]
 (./thesis.aux)
 
 LaTeX Warning: There were undefined references.
@@ -632,10 +641,10 @@ LaTeX Warning: There were undefined references.
 ### simple group (level 1) entered at line 576 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 3573 strings out of 493089
- 51632 string characters out of 6134842
- 113629 words of memory out of 5000000
- 6953 multiletter control sequences out of 15000+600000
+ 3574 strings out of 493089
+ 51642 string characters out of 6134842
+ 113640 words of memory out of 5000000
+ 6954 multiletter control sequences out of 15000+600000
  15477 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,19n,27p,3097b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -668,10 +677,10 @@ ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on thesis.pdf (82 pages, 2419034 bytes).
+Output written on thesis.pdf (85 pages, 2428018 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 303 compressed objects within 4 object streams
+ 572 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
