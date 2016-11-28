@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: plain.bst
+Database file #1: LaCoO3.bib
+Database file #2: Qualifier_Main.bib
+Database file #3: cRPA.bib
+Database file #4: Cerium.bib
+Warning--empty title in promotional
+You've used 108 entries,
+            2118 wiz_defined-function locations,
+            1139 strings with 26076 characters,
+and the built_in function-call counts, 42022 in all, are:
+= -- 3920
+> -- 2630
+< -- 1
++ -- 1042
+- -- 926
+* -- 3666
+:= -- 7308
+add.period$ -- 324
+call.type$ -- 108
+change.case$ -- 784
+chr.to.int$ -- 0
+cite$ -- 109
+duplicate$ -- 1197
+empty$ -- 2793
+format.name$ -- 926
+if$ -- 8270
+int.to.chr$ -- 0
+int.to.str$ -- 108
+missing$ -- 110
+newline$ -- 543
+num.names$ -- 216
+pop$ -- 587
+preamble$ -- 1
+purify$ -- 679
+quote$ -- 0
+skip$ -- 777
+stack$ -- 0
+substring$ -- 2801
+swap$ -- 115
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 428
+warning$ -- 1
+while$ -- 352
+width$ -- 111
+write$ -- 1188
+(There was 1 warning)

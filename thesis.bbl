@@ -1,0 +1,667 @@
+\begin{thebibliography}{100}
+
+\bibitem{Abbate}
+M.~Abbate, J.~C. Fuggle, A.~Fujimori, L.~H. Tjeng, C.~T. Chen, R.~Potze, G.~A.
+  Sawatzky, H.~Eisaki, and S.~Uchida.
+\newblock Electronic structure and spin-state transition of
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 47:16124--16130, Jun 1993.
+
+\bibitem{PRB_LaFeAsO_2010_A.Georges}
+Markus Aichhorn, Leonid Pourovskii, and Antoine Georges.
+\newblock Importance of electronic correlations for structural and magnetic
+  properties of the iron pnictide superconductor lafeaso.
+\newblock {\em Phys. Rev. B}, 84:054529, Aug 2011.
+
+\bibitem{allenCe}
+J.~W. Allen and Richard~M. Martin.
+\newblock Kondo volume collapse and the $\gamma{}\rightarrow{}\alpha{}$
+  transition in cerium.
+\newblock {\em Phys. Rev. Lett.}, 49(15):1106--1110, Oct 1982.
+
+\bibitem{amadon}
+B.~Amadon, S.~Biermann, A.~Georges, and F.~Aryasetiawan.
+\newblock The $\alpha{}-\gamma{}$ transition of cerium is entropy driven.
+\newblock {\em Phys. Rev. Lett.}, 96(6):066402, Feb 2006.
+
+\bibitem{PRB_localorbital_Downfolding_2008_Lichtenstein}
+B.~Amadon, F.~Lechermann, A.~Georges, F.~Jollet, T.~O. Wehling, and A.~I.
+  Lichtenstein.
+\newblock Plane-wave based electronic structure calculations for correlated
+  materials using dynamical mean-field theory and projected local orbitals.
+\newblock {\em Phys. Rev. B}, 77:205112, May 2008.
+
+\bibitem{PRB_Screened_Coul_inter_cal_2014_F.Bruneval}
+Bernard Amadon, Thomas Applencourt, and Fabien Bruneval.
+\newblock Screened coulomb interaction calculations: crpa implementation and
+  applications to dynamical screening and self-consistency in uranium dioxide
+  and cerium.
+\newblock {\em Phys. Rev. B}, 89:125110, Mar 2014.
+
+\bibitem{AIM}
+P.~W. Anderson.
+\newblock Localized magnetic states in metals.
+\newblock {\em Phys. Rev.}, 124:41--53, Oct 1961.
+
+\bibitem{AndersonKondo}
+P.~W. Anderson and G.~Yuval.
+\newblock Exact results in the kondo problem: Equivalence to a classical
+  one-dimensional coulomb gas.
+\newblock {\em Phys. Rev. Lett.}, 23:89--92, Jul 1969.
+
+\bibitem{andrei}
+N.~Andrei, K.~Furuya, and J.~H. Lowenstein.
+\newblock Solution of the kondo problem.
+\newblock {\em Rev. Mod. Phys.}, 55:331--402, Apr 1983.
+
+\bibitem{PRB_cLDA_Fe_Ce_1991_Anisirnov}
+V.~I. Anisimov and O.~Gunnarsson.
+\newblock Density-functional calculation of effective coulomb interactions in
+  metals.
+\newblock {\em Phys. Rev. B}, 43:7570--7574, Apr 1991.
+
+\bibitem{PRB_Wannier_Downfolding_2006_D.Vollhardt}
+V.~I. Anisimov, D.~E. Kondakov, A.~V. Kozhevnikov, I.~A. Nekrasov, Z.~V.
+  Pchelkina, J.~W. Allen, S.-K. Mo, H.-D. Kim, P.~Metcalf, S.~Suga,
+  A.~Sekiyama, G.~Keller, I.~Leonov, X.~Ren, and D.~Vollhardt.
+\newblock Full orbital calculation scheme for materials with strongly
+  correlated electrons.
+\newblock {\em Phys. Rev. B}, 71:125119, Mar 2005.
+
+\bibitem{JPCM_LDA+U_Doublecounting_1997_Anisimov}
+Vladimir~I Anisimov, F~Aryasetiawan, and A~I Lichtenstein.
+\newblock First-principles calculations of the electronic structure and spectra
+  of strongly correlated systems: the lda + u method.
+\newblock {\em Journal of Physics: Condensed Matter}, 9(4):767, 1997.
+
+\bibitem{PRB_lowenegymodel_for_firstprincilpes__2004_F.Ary}
+F.~Aryasetiawan, M.~Imada, A.~Georges, G.~Kotliar, S.~Biermann, and A.~I.
+  Lichtenstein.
+\newblock Frequency-dependent local interactions and low-energy effective
+  models from electronic structure calculations.
+\newblock {\em Phys. Rev. B}, 70:195104, Nov 2004.
+
+\bibitem{PRB_CalculationofHubU_cRPA._2006_F.Ary}
+F.~Aryasetiawan, K.~Karlsson, O.~Jepsen, and U.~Sch\"onberger.
+\newblock Calculations of hubbard $u$ from first-principles.
+\newblock {\em Phys. Rev. B}, 74:125106, Sep 2006.
+
+\bibitem{Kunes_doped}
+P.~Augustinsk\'y, V.~K\ifmmode~\check{r}\else \v{r}\fi{}\'apek, and
+  J.~Kune\ifmmode~\check{s}\else \v{s}\fi{}.
+\newblock Doping induced spin state transition in ${\mathrm{lacoo}}_{3}$:
+  Dynamical mean-field study.
+\newblock {\em Phys. Rev. Lett.}, 110:267204, Jun 2013.
+
+\bibitem{Bari}
+Robert~A. Bari and J.~Sivardi\`ere.
+\newblock Low-spin-high-spin transitions in transition-metal-ion compounds.
+\newblock {\em Phys. Rev. B}, 5:4466--4471, Jun 1972.
+
+\bibitem{BhideMoss}
+V.~G. Bhide, D.~S. Rajoria, G.~Rama Rao, and C.~N.~R. Rao.
+\newblock M\"ossbauer studies of the high-spin-low-spin equilibria and the
+  localized-collective electron transition in laco${\mathrm{o}}_{3}$.
+\newblock {\em Phys. Rev. B}, 6:1021--1032, Aug 1972.
+
+\bibitem{cox1987}
+N.~E. Bickers, D.~L. Cox, and J.~W. Wilkins.
+\newblock Self-consistent large-$n$ expansion for normal-state properties of
+  dilute magnetic alloys.
+\newblock {\em Phys. Rev. B}, 36:2036--2079, Aug 1987.
+
+\bibitem{wien2k}
+P.~Blaha, K.~Schwarz, G.~K.~H. Madsen, D.~Kvasnicka, and J.~Luitz.
+\newblock {\em {WIEN2K}, {A}n {A}ugmented {P}lane {W}ave + {L}ocal {O}rbitals
+  {P}rogram for {C}alculating {C}rystal {P}roperties}.
+\newblock {K}arlheinz Schwarz, Techn. Universit\"{a}t Wien, Austria, 2001.
+
+\bibitem{Chakrabarti_Cerium}
+B.~Chakrabarti, M.~E. Pezzoli, G.~Sordi, K.~Haule, and G.~Kotliar.
+\newblock $\ensuremath{\alpha}$-$\ensuremath{\gamma}$ transition in cerium:
+  Magnetic form factor and dynamic magnetic susceptibility in dynamical
+  mean-field theory.
+\newblock {\em Phys. Rev. B}, 89:125113, Mar 2014.
+
+\bibitem{Striped}
+Woo~Seok Choi, Ji-Hwan Kwon, Hyoungjeen Jeen, Jorge~E. Hamann-Borrero, Abdullah
+  Radi, Sebastian Macke, Ronny Sutarto, Feizhou He, George~A. Sawatzky,
+  Vladimir Hinkov, Miyoung Kim, and Ho~Nyung Lee.
+\newblock Strain-induced spin states in atomically ordered cobaltites.
+\newblock {\em Nano Letters}, 12(9):4966--4970, 2012.
+\newblock PMID: 22889011.
+
+\bibitem{coleman}
+Piers Coleman.
+\newblock New approach to the mixed-valence problem.
+\newblock {\em Phys. Rev. B}, 29:3035--3044, Mar 1984.
+
+\bibitem{promotional}
+B.~Coqblin and A.~Blandin.
+\newblock {\em Advan. Phys.}, page 281, 1968.
+
+\bibitem{IOP_HubbU_transition_metal_1973_B_N_Cox}
+B~N Cox, M~A Coulthard, and P~Lloyd.
+\newblock A calculation of the coulomb correlation energy, u, for transition
+  metals in hubbard's model.
+\newblock {\em Journal of Physics F: Metal Physics}, 4(6):807, 1974.
+
+\bibitem{craco}
+L.~Craco and E.~M\"uller-Hartmann.
+\newblock Dynamical correlations across the spin-state transition in
+  $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$.
+\newblock {\em Phys. Rev. B}, 77:045130, Jan 2008.
+
+\bibitem{Belanger1}
+A~M Durand, D~P Belanger, T~J Hamil, F~Ye, S~Chi, J~A Fernandez-Baca, C~H
+  Booth, Y~Abdollahian, and M~Bhat.
+\newblock The unusual magnetism of nanoparticle lacoo 3.
+\newblock {\em Journal of Physics: Condensed Matter}, 27(17):176003, 2015.
+
+\bibitem{Eder}
+R.~Eder.
+\newblock Spin-state transition in ${\text{lacoo}}_{3}$ by variational cluster
+  approximation.
+\newblock {\em Phys. Rev. B}, 81:035101, Jan 2010.
+
+\bibitem{English}
+Suzanne~R. English, J.~Wu, and C.~Leighton.
+\newblock Thermally excited spin-disorder contribution to the resistivity of
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 65:220407, Jun 2002.
+
+\bibitem{Freeland}
+J.~W. Freeland, J.~X. Ma, and J.~Shi.
+\newblock Erratum: “ferromagnetic spin-correlations in strained lacoo3 thin
+  films” [appl. phys. lett.93, 212501 (2008)].
+\newblock {\em Applied Physics Letters}, 94(12):--, 2009.
+
+\bibitem{Fuchs2}
+D.~Fuchs, E.~Arac, C.~Pinta, S.~Schuppler, R.~Schneider, and H.~v.~L\"ohneysen.
+\newblock Tuning the magnetic properties of
+  $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$ thin films by epitaxial strain.
+\newblock {\em Phys. Rev. B}, 77:014434, Jan 2008.
+
+\bibitem{Fuchs3}
+D.~Fuchs, L.~Dieterle, E.~Arac, R.~Eder, P.~Adelmann, V.~Eyert, T.~Kopp,
+  R.~Schneider, D.~Gerthsen, and H.~v.~L\"ohneysen.
+\newblock Suppression of the ferromagnetic state in ${\text{lacoo}}_{3}$ films
+  by rhombohedral distortion.
+\newblock {\em Phys. Rev. B}, 79:024424, Jan 2009.
+
+\bibitem{Fuchs1}
+D.~Fuchs, C.~Pinta, T.~Schwarz, P.~Schweiss, P.~Nagel, S.~Schuppler,
+  R.~Schneider, M.~Merz, G.~Roth, and H.~v.~L\"ohneysen.
+\newblock Ferromagnetic order in epitaxially strained
+  $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$ thin films.
+\newblock {\em Phys. Rev. B}, 75:144402, Apr 2007.
+
+\bibitem{RMP_DMFT_1996_A.G_G.K}
+Antoine Georges, Gabriel Kotliar, Werner Krauth, and Marcelo~J. Rozenberg.
+\newblock Dynamical mean-field theory of strongly correlated fermion systems
+  and the limit of infinite dimensions.
+\newblock {\em Rev. Mod. Phys.}, 68:13--125, Jan 1996.
+
+\bibitem{Gne}
+V.~Gnezdilov, V.~Fomin, A.~V. Yeremenko, K.-Y. Choi, Yu. Pashkevich,
+  P.~Lemmens, S.~Shiryaev, G.~Bychkov, and S.~Barilo.
+\newblock Low-temperature mixed spin state of co3+ in lacoo3 evidenced from
+  jahn–teller lattice distortions.
+\newblock {\em Low Temperature Physics}, 32(2):162--168, 2006.
+
+\bibitem{millisqmc}
+Emanuel Gull, Andrew~J. Millis, Alexander~I. Lichtenstein, Alexey~N. Rubtsov,
+  Matthias Troyer, and Philipp Werner.
+\newblock Continuous-time monte~carlo methods for quantum impurity models.
+\newblock {\em Rev. Mod. Phys.}, 83:349--404, May 2011.
+
+\bibitem{NJOP_Udp_in_cuprates_2014_K.Held}
+P~Hansmann, N~Parragh, A~Toschi, G~Sangiovanni, and K~Held.
+\newblock Importance of d ? p coulomb interaction for high t c cuprates and
+  other oxides.
+\newblock {\em New Journal of Physics}, 16(3):033009, 2014.
+
+\bibitem{hauleqmc}
+Kristjan Haule.
+\newblock Quantum monte carlo impurity solver for cluster dynamical mean-field
+  theory and electronic structure calculations with adjustable cluster base.
+\newblock {\em Phys. Rev. B}, 75:155113, Apr 2007.
+
+\bibitem{hauleCTQMC}
+Kristjan Haule.
+\newblock Quantum monte carlo impurity solver for cluster dynamical mean-field
+  theory and electronic structure calculations with adjustable cluster base.
+\newblock {\em Phys. Rev. B}, 75(15):155113, 2007.
+
+\bibitem{haule}
+Kristjan Haule.
+\newblock Quantum monte carlo impurity solver for cluster dynamical mean-field
+  theory and electronic structure calculations with adjustable cluster base.
+\newblock {\em Phys. Rev. B}, 75(15):155113, 2007.
+
+\bibitem{PRB_CTQMC_2007_K.Haule}
+Kristjan Haule.
+\newblock Quantum monte carlo impurity solver for cluster dynamical mean-field
+  theory and electronic structure calculations with adjustable cluster base.
+\newblock {\em Phys. Rev. B}, 75:155113, Apr 2007.
+
+\bibitem{Birol}
+Kristjan Haule and Turan Birol.
+\newblock Free energy from stationary implementation of the
+  $\mathrm{DFT}+\mathrm{DMFT}$ functional.
+\newblock {\em Phys. Rev. Lett.}, 115:256402, Dec 2015.
+
+\bibitem{PRB_covalency_TMoxides_2014_k.Haule}
+Kristjan Haule, Turan Birol, and Gabriel Kotliar.
+\newblock Covalency in transition-metal oxides within all-electron dynamical
+  mean-field theory.
+\newblock {\em Phys. Rev. B}, 90:075136, Aug 2014.
+
+\bibitem{hauleCe}
+Kristjan Haule, Viktor Oudovenko, Sergej~Y. Savrasov, and Gabriel Kotliar.
+\newblock The $\alpha{}\rightarrow{}\gamma{}$ transition in ce: A theoretical
+  view from optical spectroscopy.
+\newblock {\em Phys. Rev. Lett.}, 94(3):036401, Jan 2005.
+
+\bibitem{hauleLDADMFT}
+Kristjan Haule, Chuck-Hou Yee, and Kyoo Kim.
+\newblock Dynamical mean-field theory within the full-potential methods:
+  Electronic structure of $ceirin_{5}$ , $cecoin_{5}$ , and $cerhin_{5}$.
+\newblock {\em Phys. Rev. B}, 81(19):195107, May 2010.
+
+\bibitem{PRB_dmft_wien2k_2010_Chuck_Haule}
+Kristjan Haule, Chuck-Hou Yee, and Kyoo Kim.
+\newblock Dynamical mean-field theory within the full-potential methods:
+  Electronic structure of ${\text{ceirin}}_{5}$, ${\text{cecoin}}_{5}$, and
+  ${\text{cerhin}}_{5}$.
+\newblock {\em Phys. Rev. B}, 81:195107, May 2010.
+
+\bibitem{Dmft3}
+Kristjan Haule, Chuck-Hou Yee, and Kyoo Kim.
+\newblock Dynamical mean-field theory within the full-potential methods:
+  Electronic structure of ${\text{ceirin}}_{5}$, ${\text{cecoin}}_{5}$, and
+  ${\text{cerhin}}_{5}$.
+\newblock {\em Phys. Rev. B}, 81:195107, May 2010.
+
+\bibitem{Haverfort}
+M.~W. Haverkort, Z.~Hu, J.~C. Cezar, T.~Burnus, H.~Hartmann, M.~Reuther,
+  C.~Zobel, T.~Lorenz, A.~Tanaka, N.~B. Brookes, H.~H. Hsieh, H.-J. Lin, C.~T.
+  Chen, and L.~H. Tjeng.
+\newblock Spin state transition in ${\mathrm{lacoo}}_{3}$ studied using soft
+  x-ray absorption spectroscopy and magnetic circular dichroism.
+\newblock {\em Phys. Rev. Lett.}, 97:176405, Oct 2006.
+
+\bibitem{Heikes}
+R.R. Heikes, R.C. Miller, and R.~Mazelsky.
+\newblock Magnetic and electrical anomalies in lacoo3.
+\newblock {\em Physica}, 30(8):1600 -- 1608, 1964.
+
+\bibitem{held2001}
+K.~Held, A.~K. McMahan, and R.~T. Scalettar.
+\newblock Cerium volume collapse: Results from the merger of dynamical
+  mean-field theory and local density approximation.
+\newblock {\em Phys. Rev. Lett.}, 87:276404, Dec 2001.
+
+\bibitem{Herklotz}
+A.~Herklotz, A.~D. Rata, L.~Schultz, and K.~D\"orr.
+\newblock Reversible strain effect on the magnetization of ${\text{lacoo}}_{3}$
+  films.
+\newblock {\em Phys. Rev. B}, 79:092409, Mar 2009.
+
+\bibitem{hfye}
+J.~E. Hirsch and R.~M. Fye.
+\newblock Monte carlo method for magnetic impurities in metals.
+\newblock {\em Phys. Rev. Lett.}, 56:2521--2524, Jun 1986.
+
+\bibitem{hjelm1994}
+Anders Hjelm, Joakim Trygg, Olle Eriksson, B\"orje Johansson, and John Wills.
+\newblock Field-induced magnetism in itinerant \textit{f} -electron systems: U,
+  pu, and ce.
+\newblock {\em Phys. Rev. B}, 50:4332--4340, Aug 1994.
+
+\bibitem{Hsu}
+Han Hsu, Peter Blaha, Renata~M. Wentzcovitch, and C.~Leighton.
+\newblock Cobalt spin states and hyperfine interactions in ${\text{lacoo}}_{3}$
+  investigated by $\text{LDA}+u$ calculations.
+\newblock {\em Phys. Rev. B}, 82:100406, Sep 2010.
+
+\bibitem{PRB_cLDA_cuprates_1989_Christensen}
+Mark~S. Hybertsen, Michael Schl\"uter, and Niels~E. Christensen.
+\newblock Calculation of coulomb-interaction parameters for
+  ${\mathrm{la}}_{2}$${\mathrm{cuo}}_{4}$ using a
+  constrained-density-functional approach.
+\newblock {\em Phys. Rev. B}, 39:9028--9041, May 1989.
+
+\bibitem{RMP_MIT_1998_Imada}
+Masatoshi Imada, Atsushi Fujimori, and Yoshinori Tokura.
+\newblock Metal-insulator transitions.
+\newblock {\em Rev. Mod. Phys.}, 70:1039--1263, Oct 1998.
+
+\bibitem{Masayuki}
+Masayuki Itoh, Ikuomi Natori, Satoshi Kubota, and Kiyoichiro Motoya.
+\newblock Spin-glass behavior and magnetic phase diagram of la1-xsrxcoo3 ( 0
+  ≤x ≤0.5) studied by magnetization measurements.
+\newblock {\em Journal of the Physical Society of Japan}, 63(4):1486--1493,
+  1994.
+
+\bibitem{PhysicsReports_MEM_1996_M.Jarrell}
+Mark Jarrell and J.E. Gubernatis.
+\newblock Bayesian inference and the analytic continuation of imaginary-time
+  quantum monte carlo data.
+\newblock {\em Physics Reports}, 269(3):133 -- 195, 1996.
+
+\bibitem{johansson}
+B.~Johansson.
+\newblock The $\alpha{}-\gamma{}$ transition in cerium is a mott transition.
+\newblock {\em Philosophical Magazine.}, 30:469, 1974.
+
+\bibitem{RMP_dft_review_1989_R_O_Jones}
+R.~O. Jones and O.~Gunnarsson.
+\newblock The density functional formalism, its applications and prospects.
+\newblock {\em Rev. Mod. Phys.}, 61:689--746, Jul 1989.
+
+\bibitem{Kunes_main}
+V.~K\ifmmode~\check{r}\else \v{r}\fi{}\'apek, P.~Nov\'ak,
+  J.~Kune\ifmmode~\check{s}\else \v{s}\fi{}, D.~Novoselov, Dm.~M. Korotin, and
+  V.~I. Anisimov.
+\newblock Spin state transition and covalent bonding in lacoo${}_{3}$.
+\newblock {\em Phys. Rev. B}, 86:195104, Nov 2012.
+
+\bibitem{Klie}
+R.~F. Klie, J.~C. Zheng, Y.~Zhu, M.~Varela, J.~Wu, and C.~Leighton.
+\newblock Direct measurement of the low-temperature spin-state transition in
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. Lett.}, 99:047203, Jul 2007.
+
+\bibitem{Korotin}
+M.~A. Korotin, S.~Yu. Ezhov, I.~V. Solovyev, V.~I. Anisimov, D.~I. Khomskii,
+  and G.~A. Sawatzky.
+\newblock Intermediate-spin state and properties of ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 54:5309--5316, Aug 1996.
+
+\bibitem{ceriumREV}
+D.C. Koskenmaki and Jr. K.A.~Gschneidner.
+\newblock {\em Cerium, Handbook on the Physics and Chemistry of Rare Earths,
+  Vol 1, KA. Gschneidner, Jr. and L. Eyring, Ed.}
+\newblock Elsevier, North-Holland, Amsterdam, 1978.
+
+\bibitem{RMP_LDA+DMFT_2006_G.K}
+G.~Kotliar, S.~Y. Savrasov, K.~Haule, V.~S. Oudovenko, O.~Parcollet, and C.~A.
+  Marianetti.
+\newblock Electronic structure calculations with dynamical mean-field theory.
+\newblock {\em Rev. Mod. Phys.}, 78:865--951, Aug 2006.
+
+\bibitem{Kriener}
+M.~Kriener, C.~Zobel, A.~Reichl, J.~Baier, M.~Cwik, K.~Berggold, H.~Kierspel,
+  O.~Zabara, A.~Freimuth, and T.~Lorenz.
+\newblock Structure, magnetization, and resistivity of
+  ${\mathrm{la}}_{1-x}{M}_{x}{\mathrm{coo}}_{3}$ $(m=\mathrm{Ca},$ sr, and ba).
+\newblock {\em Phys. Rev. B}, 69:094417, Mar 2004.
+
+\bibitem{Asaka}
+T\^oru Ky\^omen, Yoshinori Asaka, and Mitsuru Itoh.
+\newblock Thermodynamical analysis of spin-state transitions in
+  $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$: Negative energy of mixing to assist
+  thermal excitation to the high-spin excited state.
+\newblock {\em Phys. Rev. B}, 71:024418, Jan 2005.
+
+\bibitem{lavagna}
+M.~Lavagna, C.~Lacroix, and M.~Cyrot.
+\newblock Volume collapse in the kondo lattice.
+\newblock {\em Physics Letters A}, 90(4):210 -- 212, 1982.
+
+\bibitem{PRB_Wannier_Downfolding_2006_O.K.Andersen}
+F.~Lechermann, A.~Georges, A.~Poteryaev, S.~Biermann, M.~Posternak,
+  A.~Yamasaki, and O.~K. Andersen.
+\newblock Dynamical mean-field theory using wannier functions: A flexible route
+  to electronic structure calculations of strongly correlated materials.
+\newblock {\em Phys. Rev. B}, 74:125120, Sep 2006.
+
+\bibitem{Maris}
+G.~Maris, Y.~Ren, V.~Volotchaev, C.~Zobel, T.~Lorenz, and T.~T.~M. Palstra.
+\newblock Evidence for orbital ordering in ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 67:224423, Jun 2003.
+
+\bibitem{Masuda}
+S.~Masuda, M.~Aoki, Y.~Harada, H.~Hirohashi, Y.~Watanabe, Y.~Sakisaka, and
+  H.~Kato.
+\newblock Observation of anomalously enhanced satellite in metastable atom
+  electron spectrum of ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. Lett.}, 71:4214--4217, Dec 1993.
+
+\bibitem{mcmahan2003}
+A.~K. McMahan, K.~Held, and R.~T. Scalettar.
+\newblock Thermodynamic and spectral properties of compressed ce calculated
+  using a combined local-density approximation and dynamical mean-field theory.
+\newblock {\em Phys. Rev. B}, 67:075108, Feb 2003.
+
+\bibitem{PRB_cLDA_Cuprates_1988_McMahan}
+A.~K. McMahan, Richard~M. Martin, and S.~Satpathy.
+\newblock Calculated effective hamiltonian for
+  ${\mathrm{la}}_{2}$cu${\mathrm{o}}_{4}$ and solution in the impurity anderson
+  approximation.
+\newblock {\em Phys. Rev. B}, 38:6650--6666, Oct 1988.
+
+\bibitem{PRB_cRPAonTransitionMetal_2008_F.ARy}
+Takashi Miyake and F.~Aryasetiawan.
+\newblock Screened coulomb interaction in the maximally localized wannier
+  basis.
+\newblock {\em Phys. Rev. B}, 77:085122, Feb 2008.
+
+\bibitem{JPSJ_lowenergyOFironbaseSC_2010_M.Imada}
+Takashi Miyake, Kazuma Nakamura, Ryotaro Arita, and Masatoshi Imada.
+\newblock Comparison of ab initio low-energy models for lafepo, lafeaso,
+  bafe2as2, lifeas, fese, and fete: Electron correlation and covalency.
+\newblock {\em Journal of the Physical Society of Japan}, 79(4):044705, 2010.
+
+\bibitem{murani}
+A.~P. Murani, S.~J. Levett, and J.~W. Taylor.
+\newblock Magnetic form factor of $\alpha{}$-ce: Towards understanding the
+  magnetism of cerium.
+\newblock {\em Phys. Rev. Lett.}, 95(25):256403, Dec 2005.
+
+\bibitem{muraniCePd3}
+A.~P. Murani, R.~Raphel, Z.~A. Bowden, and R.~S. Eccleston.
+\newblock Kondo resonance energies in ${\mathrm{cepd}}_{3}$.
+\newblock {\em Phys. Rev. B}, 53:8188--8191, Apr 1996.
+
+\bibitem{muraniSO}
+A.~P. Murani, A.~D. Taylor, R.~Osborn, and Z.~A. Bowden.
+\newblock Evolution of the spin-orbit excitation with increasing kondo energy
+  in ${\mathrm{cein}}_{3\mathrm{-}\mathit{x}}$${\mathrm{sn}}_{\mathit{x}}$.
+\newblock {\em Phys. Rev. B}, 48:10606--10609, Oct 1993.
+
+\bibitem{Naiman}
+C.~S. Naiman, R.~Gilmore, B.~DiBartolo, A.~Linz, and R.~Santoro.
+\newblock Interpretation of the magnetic properties of lacoo3.
+\newblock {\em Journal of Applied Physics}, 36(3):1044--1045, 1965.
+
+\bibitem{Anisimov}
+I.~A. Nekrasov, S.~V. Streltsov, M.~A. Korotin, and V.~I. Anisimov.
+\newblock Influence of rare-earth ion radii on the low-spin to
+  intermediate-spin state transition in lanthanide cobaltite perovskites:
+  ${\mathrm{lacoo}}_{3}$ versus ${\mathrm{hocoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 68:235113, Dec 2003.
+
+\bibitem{nemeth}
+Zolt\'an N\'emeth, Andr\'as Szab\'o, Karel Kn\'{i}\ifmmode~\check{z}\else
+  \v{z}\fi{}ek, Marcin Sikora, Roman Chernikov, Norbert Sas, Csilla Bogd\'an,
+  D\'enes~Lajos Nagy, and Gy\"orgy Vank\'o.
+\newblock Microscopic origin of the magnetoelectronic phase separation in
+  sr-doped lacoo${}_{3}$.
+\newblock {\em Phys. Rev. B}, 88:035125, Jul 2013.
+
+\bibitem{PRB_cRPAonearlyLanthanide_2013_F.Ary}
+F.~Nilsson, R.~Sakuma, and F.~Aryasetiawan.
+\newblock \textit{Ab initio} calculations of the hubbard $u$ for the early
+  lanthanides using the constrained random-phase approximation.
+\newblock {\em Phys. Rev. B}, 88:125123, Sep 2013.
+
+\bibitem{Pandey}
+S.~K. Pandey, Ashwani Kumar, S.~Patil, V.~R.~R. Medicherla, R.~S. Singh,
+  K.~Maiti, D.~Prabhakaran, A.~T. Boothroyd, and A.~V. Pimpale.
+\newblock Investigation of the spin state of co in
+  $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$ at room temperature: \textit{Ab
+  initio} calculations and high-resolution photoemission spectroscopy of single
+  crystals.
+\newblock {\em Phys. Rev. B}, 77:045123, Jan 2008.
+
+\bibitem{Park_prl11}
+Hyowon Park, Kristjan Haule, and Gabriel Kotliar.
+\newblock Magnetic excitation spectra in
+  ${\mathrm{bafe}}_{2}{\mathrm{as}}_{2}$: A two-particle approach within a
+  combination of the density functional theory and the dynamical mean-field
+  theory method.
+\newblock {\em Phys. Rev. Lett.}, 107:137007, Sep 2011.
+
+\bibitem{mariettaMFF}
+Maria~Elisabetta Pezzoli, Kristjan Haule, and Gabriel Kotliar.
+\newblock Neutron magnetic form factor in strongly correlated materials.
+\newblock {\em Phys. Rev. Lett.}, 106:016403, Jan 2011.
+
+\bibitem{Podlesnyak}
+A.~Podlesnyak, S.~Streule, J.~Mesot, M.~Medarde, E.~Pomjakushina, K.~Conder,
+  A.~Tanaka, M.~W. Haverkort, and D.~I. Khomskii.
+\newblock Spin-state transition in ${\mathrm{lacoo}}_{3}$: Direct neutron
+  spectroscopic evidence of excited magnetic states.
+\newblock {\em Phys. Rev. Lett.}, 97:247208, Dec 2006.
+
+\bibitem{Goodenough}
+P.~M. Raccah and J.~B. Goodenough.
+\newblock First-order localized-electron $\ensuremath{\leftrightarrows}$
+  collective-electron transition in laco${\mathrm{o}}_{3}$.
+\newblock {\em Phys. Rev.}, 155:932--943, Mar 1967.
+
+\bibitem{Radaelli}
+P.~G. Radaelli and S.-W. Cheong.
+\newblock Structural phenomena associated with the spin-state transition in
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 66:094408, Sep 2002.
+
+\bibitem{Rondinelli}
+James~M. Rondinelli and Nicola~A. Spaldin.
+\newblock Structural effects on the spin-state transition in epitaxially
+  strained ${\text{lacoo}}_{3}$ films.
+\newblock {\em Phys. Rev. B}, 79:054409, Feb 2009.
+
+\bibitem{Zopka}
+Z.~Ropka and R.~J. Radwanski.
+\newblock ${}^{5}d$ term origin of the excited triplet in
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 67:172401, May 2003.
+
+\bibitem{Saitoh}
+T.~Saitoh, T.~Mizokawa, A.~Fujimori, M.~Abbate, Y.~Takeda, and M.~Takano.
+\newblock Electronic structure and temperature-induced paramagnetism in
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 55:4257--4266, Feb 1997.
+
+\bibitem{PRB_cRPAonTrans_oxides_2013_F.Ary}
+R.~Sakuma and F.~Aryasetiawan.
+\newblock First-principles calculations of dynamical screened interactions for
+  the transition metal oxides $m$o ($m$=mn, fe, co, ni).
+\newblock {\em Phys. Rev. B}, 87:165118, Apr 2013.
+
+\bibitem{PRB_cRPAonTransition_oxide_2012_P.H.Zhang}
+Bi-Ching Shih, Tesfaye~A. Abtew, Xun Yuan, Wenqing Zhang, and Peihong Zhang.
+\newblock Screened coulomb interactions of localized electrons in transition
+  metals and transition-metal oxides.
+\newblock {\em Phys. Rev. B}, 86:165124, Oct 2012.
+
+\bibitem{PRB_AccurayofcRPA_2014_P.Werner}
+Hiroshi Shinaoka, Matthias Troyer, and Philipp Werner.
+\newblock Accuracy of downfolding based on the constrained random-phase
+  approximation.
+\newblock {\em Phys. Rev. B}, 91:245156, Jun 2015.
+
+\bibitem{PRB_CRPAMethodInvented_1998_F.Ary}
+M.~Springer and F.~Aryasetiawan.
+\newblock Frequency-dependent screened interaction in ni within the
+  random-phase approximation.
+\newblock {\em Phys. Rev. B}, 57:4364--4368, Feb 1998.
+
+\bibitem{stassis}
+C.~Stassis, C.-K. Loong, G.R. Kline, O.D. McMasters, and K.A. Gschneider.
+\newblock Field induced magnetic form factor of $\gamma$-ce.
+\newblock {\em J. Appl. Phys.}, 49:2113--2114, Mar 1978.
+
+\bibitem{Stolen}
+Svein St\o{}len, Fredrik Gr\o{}nvold, Hendrik Brinks, Tooru Atake, and Hideki
+  Mori.
+\newblock Energetics of the spin transition in ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 55:14103--14106, Jun 1997.
+
+\bibitem{Sundaram}
+N.~Sundaram, Y.~Jiang, I.~E. Anderson, D.~P. Belanger, C.~H. Booth, F.~Bridges,
+  J.~F. Mitchell, Th. Proffen, and H.~Zheng.
+\newblock Local structure of
+  ${\mathrm{la}}_{1-x}{\mathrm{sr}}_{x}{\mathrm{coo}}_{3}$ determined from
+  exafs and neutron pair distribution function studies.
+\newblock {\em Phys. Rev. Lett.}, 102:026401, Jan 2009.
+
+\bibitem{Thornton}
+G~Thornton, B.c Tofield, and A.W Hewat.
+\newblock A neutron diffraction study of lacoo3 in the temperature range 4.2 t
+  < 1248 k.
+\newblock {\em Journal of Solid State Chemistry}, 61(3):301--307, 1986.
+
+\bibitem{PRB_cRPAonTransition_oxide_2012_S.Biermann}
+Lo\"{\i}g Vaugier, Hong Jiang, and Silke Biermann.
+\newblock Hubbard $u$ and hund exchange $j$ in transition metal oxides:
+  Screening versus localization trends from constrained random phase
+  approximation.
+\newblock {\em Phys. Rev. B}, 86:165105, Oct 2012.
+
+\bibitem{Vogt}
+T.~Vogt, J.~A. Hriljac, N.~C. Hyatt, and P.~Woodward.
+\newblock Pressure-induced intermediate-to-low spin state transition in
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 67:140401, Apr 2003.
+
+\bibitem{wernerqmc}
+Philipp Werner, Armin Comanac, Luca de' Medici, Matthias Troyer, and Andrew~J.
+  Millis.
+\newblock Continuous-time solver for quantum impurity models.
+\newblock {\em Phys. Rev. Lett.}, 97:076405, Aug 2006.
+
+\bibitem{PRL_firstpaper_on_CTQMC_2006_P.Werner_A.J}
+Philipp Werner, Armin Comanac, Luca de' Medici, Matthias Troyer, and Andrew~J.
+  Millis.
+\newblock Continuous-time solver for quantum impurity models.
+\newblock {\em Phys. Rev. Lett.}, 97:076405, Aug 2006.
+
+\bibitem{PRB_DyanmicScreening_LaCuO_2015_P.Werner_F.Ary}
+Philipp Werner, Rei Sakuma, Fredrik Nilsson, and Ferdi Aryasetiawan.
+\newblock Dynamical screening in ${\text{la}}_{2}{\text{cuo}}_{4}$.
+\newblock {\em Phys. Rev. B}, 91:125142, Mar 2015.
+
+\bibitem{wilson}
+Kenneth~G. Wilson.
+\newblock The renormalization group: Critical phenomena and the kondo problem.
+\newblock {\em Rev. Mod. Phys.}, 47:773--840, Oct 1975.
+
+\bibitem{Zaanen}
+J.~Zaanen, G.~A. Sawatzky, and J.~W. Allen.
+\newblock Band gaps and electronic structure of transition-metal compounds.
+\newblock {\em Phys. Rev. Lett.}, 55:418--421, Jul 1985.
+
+\bibitem{Zhang}
+Guoren Zhang, Evgeny Gorelov, Erik Koch, and Eva Pavarini.
+\newblock Importance of exchange anisotropy and superexchange for the
+  spin-state transitions in $r$coo${}_{3}$ ($r=$ rare earth) cobaltates.
+\newblock {\em Phys. Rev. B}, 86:184413, Nov 2012.
+
+\bibitem{Zobel}
+C.~Zobel, M.~Kriener, D.~Bruns, J.~Baier, M.~Gr\"uninger, T.~Lorenz,
+  P.~Reutler, and A.~Revcolevschi.
+\newblock Evidence for a low-spin to intermediate-spin state transition in
+  ${\mathrm{lacoo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 66:020402, Jun 2002.
+
+\bibitem{zolf2001}
+M.~B. Z\"olfl, I.~A. Nekrasov, Th. Pruschke, V.~I. Anisimov, and J.~Keller.
+\newblock Spectral and magnetic properties of $\alpha$- and $\gamma$-ce from
+  dynamical mean-field theory and local density approximation.
+\newblock {\em Phys. Rev. Lett.}, 87:276403, Dec 2001.
+
+\end{thebibliography}

@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: plain.bst
+Database file #1: LaCoO3.bib
+Database file #2: Qualifier_Main.bib
+Database file #3: cRPA.bib
+Database file #4: Cerium.bib
+You're missing a field name---line 299 of file Cerium.bib
+ : 
+ : %title = {<span class="aps-inline-formula"><math display="inline"><mi>?</mi><mtext mathvariant="normal">-</mtext><mi>?</mi></math></span> Isostructural Transition in Cerium},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 372 of file Cerium.bib
+ : %@book{wien2k
+ :              ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in lanata2013
+Warning--empty author in lanata2013
+Warning--empty title in lanata2013
+Warning--empty journal in lanata2013
+Warning--empty year in lanata2013
+Warning--empty title in promotional
+You've used 109 entries,
+            2118 wiz_defined-function locations,
+            1140 strings with 26086 characters,
+and the built_in function-call counts, 42177 in all, are:
+= -- 3930
+> -- 2631
+< -- 1
++ -- 1043
+- -- 926
+* -- 3683
+:= -- 7323
+add.period$ -- 325
+call.type$ -- 109
+change.case$ -- 786
+chr.to.int$ -- 0
+cite$ -- 115
+duplicate$ -- 1207
+empty$ -- 2811
+format.name$ -- 926
+if$ -- 8300
+int.to.chr$ -- 0
+int.to.str$ -- 109
+missing$ -- 111
+newline$ -- 546
+num.names$ -- 216
+pop$ -- 597
+preamble$ -- 1
+purify$ -- 681
+quote$ -- 0
+skip$ -- 784
+stack$ -- 0
+substring$ -- 2806
+swap$ -- 115
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 432
+warning$ -- 6
+while$ -- 352
+width$ -- 112
+write$ -- 1192
+(There were 2 error messages)
