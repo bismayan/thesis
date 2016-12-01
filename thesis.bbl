@@ -152,6 +152,13 @@ L.~Craco and E.~M\"uller-Hartmann.
   $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$.
 \newblock {\em Phys. Rev. B}, 77:045130, Jan 2008.
 
+\bibitem{Sawatsky_DC}
+M.~T. Czy\ifmmode~\dot{z}\else \.{z}\fi{}yk and G.~A. Sawatzky.
+\newblock Local-density functional and on-site correlations: The electronic
+  structure of ${\mathrm{la}}_{2}$${\mathrm{cuo}}_{4}$ and
+  ${\mathrm{lacuo}}_{3}$.
+\newblock {\em Phys. Rev. B}, 49:14211--14228, May 1994.
+
 \bibitem{Belanger1}
 A~M Durand, D~P Belanger, T~J Hamil, F~Ye, S~Chi, J~A Fernandez-Baca, C~H
   Booth, Y~Abdollahian, and M~Bhat.
@@ -196,11 +203,30 @@ D.~Fuchs, C.~Pinta, T.~Schwarz, P.~Schweiss, P.~Nagel, S.~Schuppler,
   $\mathrm{La}\mathrm{Co}{\mathrm{o}}_{3}$ thin films.
 \newblock {\em Phys. Rev. B}, 75:144402, Apr 2007.
 
+\bibitem{Kotliar_RMP}
+Antoine Georges, Gabriel Kotliar, Werner Krauth, and Marcelo~J. Rozenberg.
+\newblock Dynamical mean-field theory of strongly correlated fermion systems
+  and the limit of infinite dimensions.
+\newblock {\em Rev. Mod. Phys.}, 68:13--125, Jan 1996.
+
 \bibitem{RMP_DMFT_1996_A.G_G.K}
 Antoine Georges, Gabriel Kotliar, Werner Krauth, and Marcelo~J. Rozenberg.
 \newblock Dynamical mean-field theory of strongly correlated fermion systems
   and the limit of infinite dimensions.
 \newblock {\em Rev. Mod. Phys.}, 68:13--125, Jan 1996.
+
+\bibitem{Quantum_Espresso}
+Paolo Giannozzi, Stefano Baroni, Nicola Bonini, Matteo Calandra, Roberto Car,
+  Carlo Cavazzoni, Davide Ceresoli, Guido~L Chiarotti, Matteo Cococcioni,
+  Ismaila Dabo, Andrea~Dal Corso, Stefano de~Gironcoli, Stefano Fabris, Guido
+  Fratesi, Ralph Gebauer, Uwe Gerstmann, Christos Gougoussis, Anton Kokalj,
+  Michele Lazzeri, Layla Martin-Samos, Nicola Marzari, Francesco Mauri,
+  Riccardo Mazzarello, Stefano Paolini, Alfredo Pasquarello, Lorenzo Paulatto,
+  Carlo Sbraccia, Sandro Scandolo, Gabriele Sclauzero, Ari~P Seitsonen,
+  Alexander Smogunov, Paolo Umari, and Renata~M Wentzcovitch.
+\newblock Quantum espresso: a modular and open-source software project for
+  quantum simulations of materials.
+\newblock {\em Journal of Physics: Condensed Matter}, 21(39):395502, 2009.
 
 \bibitem{Gne}
 V.~Gnezdilov, V.~Fomin, A.~V. Yeremenko, K.-Y. Choi, Yu. Pashkevich,
@@ -208,6 +234,19 @@ V.~Gnezdilov, V.~Fomin, A.~V. Yeremenko, K.-Y. Choi, Yu. Pashkevich,
 \newblock Low-temperature mixed spin state of co3+ in lacoo3 evidenced from
   jahn–teller lattice distortions.
 \newblock {\em Low Temperature Physics}, 32(2):162--168, 2006.
+
+\bibitem{Abinit}
+X.~Gonze, B.~Amadon, P.-M. Anglade, J.-M. Beuken, F.~Bottin, P.~Boulanger,
+  F.~Bruneval, D.~Caliste, R.~Caracas, M.~Côté, T.~Deutsch, L.~Genovese, Ph.
+  Ghosez, M.~Giantomassi, S.~Goedecker, D.R. Hamann, P.~Hermet, F.~Jollet,
+  G.~Jomard, S.~Leroux, M.~Mancini, S.~Mazevet, M.J.T. Oliveira, G.~Onida,
+  Y.~Pouillon, T.~Rangel, G.-M. Rignanese, D.~Sangalli, R.~Shaltaf, M.~Torrent,
+  M.J. Verstraete, G.~Zerah, and J.W. Zwanziger.
+\newblock Abinit: First-principles approach to material and nanosystem
+  properties.
+\newblock {\em Computer Physics Communications}, 180(12):2582 -- 2615, 2009.
+\newblock 40 \{YEARS\} \{OF\} CPC: A celebratory issue focused on quality
+  software for high performance, grid and novel computing architectures.
 
 \bibitem{millisqmc}
 Emanuel Gull, Andrew~J. Millis, Alexander~I. Lichtenstein, Alexey~N. Rubtsov,
@@ -245,6 +284,12 @@ Kristjan Haule.
   theory and electronic structure calculations with adjustable cluster base.
 \newblock {\em Phys. Rev. B}, 75:155113, Apr 2007.
 
+\bibitem{Haule_DC}
+Kristjan Haule.
+\newblock Exact double counting in combining the dynamical mean field theory
+  and the density functional theory.
+\newblock {\em Phys. Rev. Lett.}, 115:196403, Nov 2015.
+
 \bibitem{Birol}
 Kristjan Haule and Turan Birol.
 \newblock Free energy from stationary implementation of the
@@ -276,6 +321,13 @@ Kristjan Haule, Chuck-Hou Yee, and Kyoo Kim.
   ${\text{cerhin}}_{5}$.
 \newblock {\em Phys. Rev. B}, 81:195107, May 2010.
 
+\bibitem{Chuck_prb}
+Kristjan Haule, Chuck-Hou Yee, and Kyoo Kim.
+\newblock Dynamical mean-field theory within the full-potential methods:
+  Electronic structure of ${\text{ceirin}}_{5}$, ${\text{cecoin}}_{5}$, and
+  ${\text{cerhin}}_{5}$.
+\newblock {\em Phys. Rev. B}, 81:195107, May 2010.
+
 \bibitem{Dmft3}
 Kristjan Haule, Chuck-Hou Yee, and Kyoo Kim.
 \newblock Dynamical mean-field theory within the full-potential methods:
@@ -295,6 +347,12 @@ M.~W. Haverkort, Z.~Hu, J.~C. Cezar, T.~Burnus, H.~Hartmann, M.~Reuther,
 R.R. Heikes, R.C. Miller, and R.~Mazelsky.
 \newblock Magnetic and electrical anomalies in lacoo3.
 \newblock {\em Physica}, 30(8):1600 -- 1608, 1964.
+
+\bibitem{Held_Review}
+K.~{Held}.
+\newblock {Electronic Structure Calculations using Dynamical Mean Field
+  Theory}.
+\newblock {\em eprint arXiv:cond-mat/0511293}, November 2005.
 
 \bibitem{held2001}
 K.~Held, A.~K. McMahan, and R.~T. Scalettar.
@@ -318,6 +376,11 @@ Anders Hjelm, Joakim Trygg, Olle Eriksson, B\"orje Johansson, and John Wills.
 \newblock Field-induced magnetism in itinerant \textit{f} -electron systems: U,
   pu, and ce.
 \newblock {\em Phys. Rev. B}, 50:4332--4340, Aug 1994.
+
+\bibitem{Hohenberg_Kohn}
+P.~{Hohenberg} and W.~{Kohn}.
+\newblock {Inhomogeneous Electron Gas}.
+\newblock {\em Physical Review}, 136:864--871, November 1964.
 
 \bibitem{Hsu}
 Han Hsu, Peter Blaha, Renata~M. Wentzcovitch, and C.~Leighton.
@@ -343,6 +406,14 @@ Masayuki Itoh, Ikuomi Natori, Satoshi Kubota, and Kiyoichiro Motoya.
   ≤x ≤0.5) studied by magnetization measurements.
 \newblock {\em Journal of the Physical Society of Japan}, 63(4):1486--1493,
   1994.
+
+\bibitem{Me_Pu}
+Marc Janoschek, Pinaki Das, Bismayan Chakrabarti, Douglas~L. Abernathy, Mark~D.
+  Lumsden, John~M. Lawrence, Joe~D. Thompson, Gerard~H. Lander, Jeremy~N.
+  Mitchell, Scott Richmond, Mike Ramos, Frans Trouw, Jian-Xin Zhu, Kristjan
+  Haule, Gabriel Kotliar, and Eric~D. Bauer.
+\newblock The valence-fluctuating ground state of plutonium.
+\newblock {\em Science Advances}, 1(6), 2015.
 
 \bibitem{PhysicsReports_MEM_1996_M.Jarrell}
 Mark Jarrell and J.E. Gubernatis.
@@ -373,6 +444,11 @@ R.~F. Klie, J.~C. Zheng, Y.~Zhu, M.~Varela, J.~Wu, and C.~Leighton.
   ${\mathrm{lacoo}}_{3}$.
 \newblock {\em Phys. Rev. Lett.}, 99:047203, Jul 2007.
 
+\bibitem{Kohn_Sham}
+W.~Kohn and L.~J. Sham.
+\newblock Self-consistent equations including exchange and correlation effects.
+\newblock {\em Phys. Rev.}, 140:A1133--A1138, Nov 1965.
+
 \bibitem{Korotin}
 M.~A. Korotin, S.~Yu. Ezhov, I.~V. Solovyev, V.~I. Anisimov, D.~I. Khomskii,
   and G.~A. Sawatzky.
@@ -391,6 +467,11 @@ G.~Kotliar, S.~Y. Savrasov, K.~Haule, V.~S. Oudovenko, O.~Parcollet, and C.~A.
 \newblock Electronic structure calculations with dynamical mean-field theory.
 \newblock {\em Rev. Mod. Phys.}, 78:865--951, Aug 2006.
 
+\bibitem{Vasp}
+G.~Kresse and J.~Hafner.
+\newblock \textit{Ab initio} molecular dynamics for liquid metals.
+\newblock {\em Phys. Rev. B}, 47:558--561, Jan 1993.
+
 \bibitem{Kriener}
 M.~Kriener, C.~Zobel, A.~Reichl, J.~Baier, M.~Cwik, K.~Berggold, H.~Kierspel,
   O.~Zabara, A.~Freimuth, and T.~Lorenz.
@@ -405,6 +486,13 @@ T\^oru Ky\^omen, Yoshinori Asaka, and Mitsuru Itoh.
   thermal excitation to the high-spin excited state.
 \newblock {\em Phys. Rev. B}, 71:024418, Jan 2005.
 
+\bibitem{Lashley1}
+J.~C. Lashley, J.~Singleton, A.~Migliori, J.~B. Betts, R.~A. Fisher, J.~L.
+  Smith, and R.~J. McQueeney.
+\newblock Experimental electronic heat capacities of $\ensuremath{\alpha}$- and
+  $\ensuremath{\delta}$-plutonium: Heavy-fermion physics in an element.
+\newblock {\em Phys. Rev. Lett.}, 91:205901, Nov 2003.
+
 \bibitem{lavagna}
 M.~Lavagna, C.~Lacroix, and M.~Cyrot.
 \newblock Volume collapse in the kondo lattice.
@@ -416,6 +504,12 @@ F.~Lechermann, A.~Georges, A.~Poteryaev, S.~Biermann, M.~Posternak,
 \newblock Dynamical mean-field theory using wannier functions: A flexible route
   to electronic structure calculations of strongly correlated materials.
 \newblock {\em Phys. Rev. B}, 74:125120, Sep 2006.
+
+\bibitem{Marianetti_Pu}
+C.~A. Marianetti, K.~Haule, G.~Kotliar, and M.~J. Fluss.
+\newblock Electronic coherence in $\delta$-pu: A dynamical mean-field theory
+  study.
+\newblock {\em Phys. Rev. Lett.}, 101:056403, Aug 2008.
 
 \bibitem{Maris}
 G.~Maris, Y.~Ren, V.~Volotchaev, C.~Zobel, T.~Lorenz, and T.~T.~M. Palstra.
@@ -526,6 +620,11 @@ A.~Podlesnyak, S.~Streule, J.~Mesot, M.~Medarde, E.~Pomjakushina, K.~Conder,
   spectroscopic evidence of excited magnetic states.
 \newblock {\em Phys. Rev. Lett.}, 97:247208, Dec 2006.
 
+\bibitem{Quint_1}
+Jorge Quintanilla and Chris Hooley.
+\newblock The strong-correlations puzzle.
+\newblock {\em Physics World}, 22(06):32, 2009.
+
 \bibitem{Goodenough}
 P.~M. Raccah and J.~B. Goodenough.
 \newblock First-order localized-electron $\ensuremath{\leftrightarrows}$
@@ -567,6 +666,12 @@ Bi-Ching Shih, Tesfaye~A. Abtew, Xun Yuan, Wenqing Zhang, and Peihong Zhang.
 \newblock Screened coulomb interactions of localized electrons in transition
   metals and transition-metal oxides.
 \newblock {\em Phys. Rev. B}, 86:165124, Oct 2012.
+
+\bibitem{Haule_Pu}
+J.~H. Shim, K.~Haule, and G.~Kotliar.
+\newblock Fluctuating valence in a correlated solid and the anomalous
+  properties of {$[$}dgr{$]$}-plutonium.
+\newblock {\em Nature}, 446(7135):513--516, 03 2007.
 
 \bibitem{PRB_AccurayofcRPA_2014_P.Werner}
 Hiroshi Shinaoka, Matthias Troyer, and Philipp Werner.
@@ -618,6 +723,13 @@ T.~Vogt, J.~A. Hriljac, N.~C. Hyatt, and P.~Woodward.
   ${\mathrm{lacoo}}_{3}$.
 \newblock {\em Phys. Rev. B}, 67:140401, Apr 2003.
 
+\bibitem{Millis_DC}
+Xin Wang, M.~J. Han, Luca de' Medici, Hyowon Park, C.~A. Marianetti, and
+  Andrew~J. Millis.
+\newblock Covalency, double-counting, and the metal-insulator phase diagram in
+  transition metal oxides.
+\newblock {\em Phys. Rev. B}, 86:195136, Nov 2012.
+
 \bibitem{wernerqmc}
 Philipp Werner, Armin Comanac, Luca de' Medici, Matthias Troyer, and Andrew~J.
   Millis.
@@ -639,6 +751,12 @@ Philipp Werner, Rei Sakuma, Fredrik Nilsson, and Ferdi Aryasetiawan.
 Kenneth~G. Wilson.
 \newblock The renormalization group: Critical phenomena and the kondo problem.
 \newblock {\em Rev. Mod. Phys.}, 47:773--840, Oct 1975.
+
+\bibitem{Yang}
+Yi-feng Yang and David Pines.
+\newblock Emergent states in heavy-electron materials.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  109(45):E3060--E3066, 2012.
 
 \bibitem{Zaanen}
 J.~Zaanen, G.~A. Sawatzky, and J.~W. Allen.

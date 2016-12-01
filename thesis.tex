@@ -1,52 +1,64 @@
 \documentclass[10pt]{ruthesis}
 \special{papersize=8.5in,11in}
-
 \usepackage{natbib}
-
 %\usepackage{aastex_hack,deluxetable} 
-\usepackage{graphicx}
+\usepackage{graphicx,subfigure,hyperref}
 %\usepackage{rotating}
-\usepackage{lscape,longtable}
-
+\usepackage{lscape,longtable,float}
 \setlength{\unitlength}{1.0cm}
-
 % Load packages; ambssymb is for extra fonts, such as blackboard
 \usepackage{latexsym}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsbsy}
 \usepackage{braket}
+\usepackage[bottom]{footmisc}
 % Define Italic Sans Serif font (for tensors)
 \DeclareMathAlphabet{\mathsfsl}{OT1}{cmss}{m}{sl}
 
-
 %\draft
-\setcounter{tocdepth}{1}
 
 \begin{document}
-\phd \title{PhD Thesis Draft}
+\phd 
+\title{PhD Thesis Draft}
 \author{Bismayan Chakrabarti}
 \program{Physics and Astronomy}
-\director{}
+\director{Prof. Kristjan Haule}
 \approvals{5}
 \submissionyear{2017}
 \submissionmonth{January} 
+%\setcounter{tocdepth}{1}
+\abstract{ The study of strongly correlated materials is currently perhaps one of the most active areas of research in condensed matter physics. Strongly correlated materials contain localized electronic states which are often hybridized with more itinerant electrons. This interplay between localized and delocalized degrees of freedom means that these compounds have highly complex phase diagrams which makes these compounds very challenging to understand from a theoretical standpoint. Computer simulations have proved to be an invaluable tool in this regard with state of the art ab-initio simulation techniques harnessing the ever-increasing power of modern computers to produce highly accurate descriptions of a variety of strongly correlated materials. One of the most powerful simulation techniques currently in existence is Dynamical Mean Field Theory (DMFT). This thesis describes this powerful simulation technique and its applications to various material systems, as well as addressing some theoretical questions concerning particular implementations of DMFT.
 
-\abstract{Abstract goes here}
 
-%\beforepreface
+This thesis is divided into two parts. In part 1, we describe the theory behind DMFT and it's amalgamation with Density Functional Theory (DFT+DMFT). In chapters 2 and 3, we provide the basic theory theory behind DFT and DMFT respectively. In chapter 4, we describe how these two methods are merged to give us the computational framework that is used in this thesis, namely DFT+DMFT. Finally, we round off part 1 of the thesis in chapter 5, which provides a description of the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver, which is at the heart of the DFT+DMFT algorithm and is used extensively throughout this thesis. 
 
-\acknowledgements{Sample Acknowledgements}
 
-\dedication{
-\begin{center}
-{\em For ???} \\
-\end{center}
+In part two of the thesis, we apply the DFT+DMFT framework to address some important problems in condensed matter physics. In chapter 6, we study the Magnetic Spectral function of strongly correlated f-shell materials to understand two important problems in condensed matter physics, namely the volume collapse transition in Cerium and the valence fluctuating state ground state of $\delta$-Pu. In chapter 7, we study the contribution of lattice parameters and electronic entropy to study the decades-old problem of understanding the spin state transition observed in $\mathbf{LaCoO_3}$, where we show how lattice expansion, octahedral rotations and electronic entropy are all essential in stabilizing the high-spin state at high temperature. In chapter 8, we switch to studying a more theoretical problem by looking at the problems with using the highly popular constrained Random Phase Approximation (cRPA) method to estimate the screening of local inter-electronic repulsion in strongly correlated systems. We show that cRPA systematically underestimates screening in such systems which makes it an unsuitable method for estimating the repulsion parameter (U) used in impurity solvers. We then develop an alternate method to estimate the screening using the full local polarization which overcomes many of these limitations. Chapter 9 contains all  the conclusions obtained in this thesis, followed by references and appendices. 
+
+ 
 }
 
+\beforepreface
+\acknowledgements{I would like to start by thanking Prof. Kristjan Haule for all the help provided by him over the course of my Ph.D. None of this work would have been possible without his constant support, intellectual freedom, guidance as well the computational resources provided by him. 
+
+I would also like to thank Prof. Gabriel Kotliar, for all the help he has so freely provided as well as his valuable insight which I have gained a lot from, especially during my study of magnetic spectrum of f-shell materials.
+
+I have gained most of my expertise in physics from the courses taught here at Rutgers by the highly knowledgeable faculty in the physics department. I would like to the thank all the professors I have taken courses with, as well the entire faculty of the condensed matter department who have always inspired me with their great dedication to constantly pushing the limits of human knowledge.
+
+Over the course of my dissertation, I have had the opportunity to work with a number of highly talented post-doctoral scholars and doctoral students whom I have collaborated closely with. Dr. Maria Pezzoli was a great help during my initial research on magnetic properties of materials. Dr. Turan Birol has been a constant source of help and support over the last three years of my research and I have gained a lot from his knowledge of physics and life in general. Dr. Chuck Hou Yee has also been a trusted friend and colleague who has always been available whenever I had a question about physics, science or computation in general. Qiang Han and I had a great experience working on the project estimating screening in correlated systems and I wish him the best in all his future endeavors. 
+
+In addition to this,the Rutgers has also provided me with a valuable set of friends who have made my experience as a graduate student a lot more enjoyable. To Aniket, Juho,Patrick, Conan, Upamanyu, Dinesh, Kartik, Rahul, Hitesh, Kinnari, Shree, Samruddhi and all the other friends I have been fortunate enough to make at Rutgers, I would like to thank all of you for all the immensely enjoyable experiences which have made my time at Rutgers some of the best years of my life.
+
+Finally, I would like to thank my parents, my sister and my entire extended family for always being there for me whenever I have needed them. Your love and support inspires me to always strive for perfection in whatever I do and I am truly lucky to have been been born into a family which has such kind and loving individuals.  
+}
+\dedication{
+\begin{center}
+{To my family and friends} \\
+\end{center}
+}
 \figurespage
 \tablespage
-
 \afterpreface
 
 % aliases begin
@@ -97,24 +109,39 @@
 
 \chapter{Introduction}
 
-Condensed Matter Physics involves the scientific study of the macroscopic properties of materials. In a rich history spanning a century since the birth of quantum mechanics, Condensed Matter physics has grown into one of the most active fields of physics and has had a direct role in enabling the technological revolution that the human species is currently living through. The basic philosophy of the field is perhaps best summarized by the oft-quoted phrase coined by P.W Anderson- "More is different". It captures the idea that a macroscopic collection of particles exhibits properties which are hard to predict based on merely the microscopic equations governing the individual constituents. This idea, which is known "emergence", is what condensed matter physicists strive to understand in the realm of the quantum properties of materials. The principles that have been uncovered in this domain have given us a keen understanding of why a material might behave as a metal,insulator, semiconductor,magnet, superconductor or a variety of other complex phases known to us. The ability to understand and thereby control these material properties have resulted in condensed matter physics having a great impact in engineering and technology, making it a field of physics which has a pronounced real-world impact in society.
+Condensed Matter Physics involves the scientific study of the macroscopic properties of materials. In a rich history spanning a century since the birth of quantum mechanics, Condensed Matter physics has grown into one of the most active fields of physics and has had a direct role in enabling the technological revolution that the human species is currently living through. In most fields of physics, the fundamental concept which underlies most research is that of ``Reductionism", which is the belief that every phenomenon can be explained by understanding the fundamental properties of its most elementary constituents. However, the basic philosophy of  condensed matter physics is perhaps best summarized by the oft-quoted phrase coined by P.W Anderson- "More is different". It captures the idea that a macroscopic collection of constituent elements exhibits properties which are hard to predict based on merely the microscopic equations governing the individual constituents. This idea, which is known ``emergence", is what condensed matter physicists strive to understand in the realm of the quantum properties of materials. Examples of emergent properties (see Fig 1.1) include water molecules forming complex waves in water bodies and intricately shaped snow flakes in winter, swarms of living organisms exhibiting behaviors much more complicated than individual members, or perhaps most stunningly, how a collection of lifeless chemical elements can combine to form something as complex as a human being. In condensed matter, the study of emergent properties in material systems has given us a keen understanding of why a material might behave as a metal,insulator, semiconductor,magnet, superconductor or a variety of other complex phases known to us, even though it might be composed of very similar elements. The ability to understand and thereby control these material properties have resulted in condensed matter physics having a great impact in engineering and technology, making it a field of physics which has a pronounced real-world impact in society.
 \linebreak
+\begin{figure}[H]
+\includegraphics[width=\columnwidth]{Emergence.jpg}
+\caption{Examples of Emergent behavior in nature: (from left) 1) swarms of birds displaying complex behavior. 2) Snowflakes of complex different shapes formed by the same fundamental solid phase of water \protect \footnotemark  }
 
-Within condensed matter, one of the most active and fascinating fields is the study of strongly correlated systems. In most materials (like those with open s and p shells), the somewhat naive yet powerful approximation that the electrons in the material act as independent particles moving in an effective medium (the independent electron approximation) works surprisingly well. This effect, which is explained by the Landau Fermi Liquid Theory, occurs due to these extremely mobile itinerant electrons screening each other highly effectively. However this approximation usually breaks down in materials with incomplete d and f shells, because the electrons in these shells are localized to a much greater extent around their parent atoms. These electrons cannot effectively screen each other, unlike the much more itinerant s and p electrons and therefore retain some of their atomic properties. In addition, there is often strong mixing (hybridization) between them and the outer s and p electrons, leading to a large interplay between itinerant and localized degrees of freedom. Such materials, commonly known as \textit{strongly correlated systems}, often have highly complex phase diagrams with many different phases across which transitions can be tuned by tweaking some external \textit{knob} such as temperature or pressure. This makes these systems particularly useful from a material science/engineering standpoint.
+\end{figure}
+\footnotetext{Sources-1) fuelspace.org 2) Wikipedia}
 
-Finding a coherent theoretical framework which can capture the essential properties of such complex materials has proved to be immensely challenging and continues to be an area of active research. Computational simulations have played an important role in this effort and have enabled us to study and predict properties of real materials instead of restricting ourselves to model Hamiltonians. In the field of weakly correlated materials, Density Functional Theory (DFT) has led to a revolution in material simulation, and has given us the power to compute properties using relatively modest computational resources. However, DFT is often completely inadequate when applied to strongly correlated systems, as it contains only rudimentary treatments of the electronic correlations which are essential to understanding the physics of these compounds.
+Within condensed matter, one of the most active and fascinating fields is the study of strongly correlated systems. In most materials (like those where the constituent elements all have open s and p shells), the somewhat naive yet powerful approximation that the electrons in the material act as independent particles moving in an effective medium, known as the independent electron approximation works surprisingly well. This effect, which is explained by the Landau Fermi Liquid Theory, occurs due to these extremely mobile itinerant electrons forming "quasiparticles", which result in the inter-electronic coulomb repulsion being screened highly effectively. This success of the Landau Fermi liquid theory and other theoretical approximation schemes has meant that we have quite a good understanding of the properties of these ``weakly correlated systems" (though some particular systems still remain challenging).
 
-Dynamical Mean Field Theory (DMFT) aims to address some of these shortcomings. DMFT gives us a way to simulate strongly correlated systems using controlled approximations which reduce the computational complexity while retaining most of the essential physics of the system, including the interplay between itinerant and localized degrees of freedom. This method, which initially became popular as a method to solve model Hamiltonians such as the Hubbard Model, has proved to be a valuable tool to capture the properties of d and f shell systems. This has especially been true in the last decade after the successful merger of DMFT with DFT to yield a framework which is capable of dealing with both the weakly correlated shells (which DFT is well suited to) and the localized orbitals, where DMFT shines. This approach, known as DFT+DMFT has proved to be one of the most successful methods in reproducing experimentally verifiable properties of correlated systems.
+However this approximation usually breaks down in materials with incomplete d and f shells, because the electrons in these shells are localized to a much greater extent around their parent atoms (see Fig 1.2). These electrons cannot effectively screen each other, unlike the much more itinerant s and p electrons and therefore retain some of their atomic properties. In addition, there is often strong mixing (hybridization) between them and the outer s and p electrons, leading to a large interplay between itinerant and localized degrees of freedom. Such materials, commonly known as \textit{strongly correlated systems}, often have highly complex phase diagrams with many different phases across which transitions can be tuned by tweaking some external \textit{knob} such as temperature or pressure. This makes these systems particularly useful from a material science/engineering standpoint.
 
-As result of these and other highly advanced computational techniques available, computational condensed matter today is one of the most exiting fields of physics to be part of. The current algorithms allow us, for perhaps the first time in history, to perform "computational experiments", where we can simulate materials reliably and quickly given sufficient computational resources. It is hoped that soon this would give us the power to perform computational material design, which is perhaps one of the ultimate aims of condensed matter physics. We could soon be at a stage where we can solve the inverse problem of, having been given a certain set of desired properties, of being able to predict which exact chemical system would satisfy those requirements from first principles without necessarily having to resort to actual experimentation. Methods such as DFT+DMFT are at the cutting edge of such efforts. 
+\begin{figure}[H]
+\includegraphics[width=\columnwidth]{Knetko-Smith.jpg}
+\caption{The Kmetko-Smith diagram showing the trends in increasing electronic correlation/localization across different shells of the periodic table. The elements at the bottom left corner display the least amount of correlations and form conventional superconductors at low temperatures. At the other extreme elements in top right corner show extremely high localization and typically form local moments which give rise to magnetism \protect \footnotemark}
 
-In this thesis, we shall study some of the fundamental theoretical aspects of the DMFT method as well as its applications to real material systems. The thesis is arranged in the following manner: In Part 1 , we shall aim to present a description of the theory behind DFT+DMFT. In chapter 2 we shall give a brief introduction to Density functional Theory (DFT) and the equations which govern the method. In chapter 3, we shall explain the DMFT method, providing details of the exact approximations and explain how the merger of DFT+DMFT works in practice. In Chapter 4 we shall provide more technical details of the Computational algorithm which lies at the heart of our implementation of DFT+DMFT, the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver. Having laid out the major theoretical building blocks of our framework, in Part 2 we shall move on to particular problems which have been investigated in the course of this doctoral study. Chapter 4 details the investigation of the magnetic spectral function of f-shell compounds such as $\alpha$ Cerium, $\gamma$ Cerium and $\delta$ plutonium. Chapter 5 describes a study of the the importance of structural parameters and electronic entropy in the spin state transition in $LaCoO_3$ using DFT+ DMFT. Chapter 7 contains the investigation of the inadequacy of the Constrained Random Phase Approximation(cRPA), one of the most popular methods to estimate screening in strongly correlated systems. Chapter 8 contains the conclusion and is followed by the Bibliography and Appendices.
+\end{figure}
+\footnotetext{Source- Introduction to Many-Body Physics. Piers Coleman (Cambridge University Press)}
+
+Finding a coherent theoretical framework which can capture the essential properties of such complex materials has proved to be immensely challenging and continues to be an area of active research. Computational simulations have played an important role in this effort and have enabled us to study and predict properties of real materials instead of restricting ourselves to model Hamiltonians. These developments have been made possible by large improvements in both the hardware capabilities of modern computers as well as the development of new faster and more powerful simulation algorithms. In the field of weakly correlated materials, Density Functional Theory (DFT) has led to a revolution in material simulation, and has given us the power to compute properties using relatively modest computational resources, which has led to an explosion in research in computational materials physics as well as quantum chemistry. However DFT, while being extremely powerful, is often completely inadequate when applied to strongly correlated systems, as the drastic approximations it employs  contain only rudimentary treatments of the electronic correlations which are essential to understanding the physics of these compounds (for more details refer to chapters 2 and 3).
+
+Dynamical Mean Field Theory (DMFT) is one of the most promising theories which aims to address some of these shortcomings. DMFT provides us a way to simulate strongly correlated systems using controlled approximations which reduce the computational complexity while retaining most of the essential physics of the system, including the interplay between itinerant and localized degrees of freedom. This method, which initially became popular as a method to solve model Hamiltonians such as the Hubbard Model, has proved to be a valuable tool to capture the properties of d and f shell systems. This has especially been true in the last decade after the successful merger of DMFT with DFT to yield a framework which is capable of dealing with both the weakly correlated electrons (which DFT is well suited to) as well as the localized d and f orbital electrons, where DMFT shines. This approach, known as DFT+DMFT has proved to be one of the most successful methods in reproducing experimentally verifiable properties of correlated systems and is one of the methods driving the advancement in human understanding in the field of correlated materials .
+
+As result of these and other highly advanced computational techniques available, computational condensed matter today is one of the most exiting fields of physics to be part of. The current algorithms allow us , for perhaps the first time in history, to perform "computational experiments", where we can simulate materials reliably and quickly given sufficient computational resources. It is hoped that soon this would give us the power to perform computational material design, which is perhaps one of the ultimate aims of condensed matter physics. We could soon be at a stage where we can solve the inverse problem of having been given a certain set of desired properties, of being able to predict which exact chemical system would satisfy those requirements from first principles without necessarily having to resort to actual experimentation. Since strongly correlated materials display some of the most interesting properties known in nature, it is to be expected that methods such as DFT+DMFT will be at the cutting edge of such efforts. 
+
+In this thesis, we shall study some of the fundamental theoretical aspects of the DFT+DMFT method as well as its applications to real material systems. The thesis is arranged in the following manner: In Part 1 , we shall aim to present a description of the theory behind DFT+DMFT. In chapter 2 we shall give a brief introduction to Density functional Theory (DFT) and the equations which govern the method. In chapters 3 and 4, we shall explain the DMFT method, provide details of the exact approximations and explain how the merger of DFT+DMFT is carried out in practice. In Chapter 5 we shall provide more technical details of the Computational algorithm which lies at the heart of our implementation of DFT+DMFT, the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver. Having laid out the major theoretical building blocks of our framework, in Part 2 we shall move on to particular problems which have been investigated in the course of this doctoral study. Chapter 6 details the investigation of the magnetic spectral function of f-shell compounds such as $\alpha$ Cerium, $\gamma$ Cerium and $\delta$ plutonium. Chapter 7 describes a study of the the importance of structural parameters and electronic entropy in the spin state transition in $LaCoO_3$ using DFT+ DMFT. Chapter 8 contains the investigation of the inadequacy of the Constrained Random Phase Approximation(cRPA), one of the most popular methods to estimate screening in strongly correlated systems. Chapter 9 contains the conclusion and is followed by the Bibliography and Appendices.
 
 
 \pagebreak
 \chapter{Density Functional Theory}
 
-Density Functional Theory(DFT) is one of the most successful theories in the world of modern physics. Its immense popularity can be gauged from the fact that the seminal papers  by Hohenberg and Kohn \textbf{cite}, and Kohn and Sham \textbf{cite} are the two most heavily cited papers in modern times. Density functional theory allows for ab-initio (with no arbitrary tunable free parameters) calculations of the zero-temperature ground state material properties of the vast majority of weakly correlated compounds. With the growth of modern algorithms in this field, one can now employ off-the-shelf packages to obtain highly accurate results for a large variety of experimental observables while spending very little computational resources. In this section, we shall concentrate on giving a brief introduction to the principles of DFT, while also mentioning some of the limitations that have led to the search for more advanced methods.
+Density Functional Theory(DFT) is one of the most successful theories in the world of modern physics. Its immense popularity can be gauged from the fact that the seminal papers  by Hohenberg and Kohn \cite{Hohenberg_Kohn}, and Kohn and Sham \cite{Kohn_Sham} are the two most heavily cited papers in modern times. Density functional theory allows for ab-initio (with no arbitrary tunable free parameters) calculations of the zero-temperature ground state material properties of the vast majority of weakly correlated compounds. With the growth of modern algorithms in this field, one can now employ off-the-shelf packages to obtain highly accurate results for a large variety of experimental observables while spending very little computational resources. In this section, we shall concentrate on giving a brief introduction to the principles of DFT, while also mentioning some of the limitations that have led to the search for more advanced methods.
 
 As a starting point for the discussion, we begin with the "Theory of everything" for condensed matter systems, describing a non-relativistic lattice system of nucleii and the accompanying electrons:
 \begin{equation}\label{DFT_1}
@@ -131,7 +158,7 @@ Where $E_{ion}$ is the constant inter-nuclear Coulomb term and $V_{ext}$ is the 
  V_{ext}(\rmb)= \sum_{I} \dfrac{e^2 Z_I}{|\rmb-\mathbf{R}_I|}
  \end{equation} 
 
-However, even this simplified many-electron Schrodinger equation is essentially impossible to solve for more than O(10) electrons. The major breakthrough, first proposed by Hohenberg and Kohn \textbf{cite} was to show that, at least for the calculation of ground state properties, it is sufficient to work with the charge density rather than the wave function itself. Or in other words, the ground state wavefunction and other observables are uniquely determined  by the charge density-
+However, even this simplified many-electron Schrodinger equation is essentially impossible to solve for more than O(10) electrons. The major breakthrough, first proposed by Hohenberg and Kohn \cite{Hohenberg_Kohn} was to show that, at least for the calculation of ground state properties, it is sufficient to work with the charge density rather than the wave function itself. Or in other words, the ground state wavefunction and other observables are uniquely determined  by the charge density-
 \begin{equation}
 n(\rmb)= \la \Ps|\ps^\da (\rmb) \ps(\rmb) | \Ps\ra 
 \end{equation}
@@ -164,7 +191,7 @@ attains a minimum for the ground state density, and has the value corresponding 
  \end{equation} 
 Where $I[n]$ contains everything in $F[n]$ not including the Hartree term, including the kinetic energy and the non-Hartree potential energy contributions. Therefore the central problem of solving any chemical system is the formulation of an accurate $I[n]$.
 
-The first successful attempt at approximating $I[n]$, without which the findings of Hohenberg and Kohn would have remained a mere theoretical exercise, was achieved by Kohn and Sham \textbf{cite} in their seminal paper. They proposed breaking up $I[n]$ as follows:
+The first successful attempt at approximating $I[n]$, without which the findings of Hohenberg and Kohn would have remained a mere theoretical exercise, was achieved by Kohn and Sham \cite{Kohn_Sham} in their seminal paper. They proposed breaking up $I[n]$ as follows:
 \begin{equation}
  I[n]=T_s[n]+E_{XC}[n]
  \end{equation} 
@@ -213,20 +240,30 @@ E=\sum_i \epsilon_i - \dfrac{e^2}{2}\int d\rmb d\rmb' \dfrac{n(\rmb) n(\rmb')}{|
 \end{equation}
 It is to be noted that that apart from the ground state, the eigenvalues and eigenfunctions of the Kohn Sham Hamiltonian are meaningless, strictly speaking. However in practice they are often found to be in good agreement with experimental bandstructures and are used as such.
 
+So we see that Density Functional Theory provides us with a valuable tool with which to perform ab-initio simulations of real materials. The success of this method is mainly based on its computational efficiency and ease of implementation, which has resulted in a number of packages being developed such as VASP \cite{Vasp}, Quantum Espresso \cite{Quantum_Espresso}, Abinit \cite{Abinit} and Wien2k \cite{wien2k} which offer off-the-shelf implementations which enable researchers to perform reliable and fast simulations even with very limited resources. However DFT fails when applied to materials with strong correlations because of the relatively naive way it treats electronic correlations with LDA approximation (or improvements on it such as GGA, PBE, Hybrid Functionals etc.). Therefore, one needs more advanced methods to simulate such materials, which is exactly where Dynamical Mean Field Theory (described in the next chapter) comes into its own. 
+
 \pagebreak
 \chapter{Dynamical Mean Field Theory}
-
-
-
-
 
 In the previous section, we looked at Density Functional Theory (DFT), which is the current workhorse for materials simulation in Condensed Matter Physics. While exceedingly successful in simulating \textit{weakly correlated} systems (those with open s and p shells), DFT is known to be deficient when simulating open d anf f shell materials, where the highly localized d and f electrons play an important role determining the physics of the compound. The main issue is the rather rudimentary treatment of electronic correlations in DFT. In the last section, we explained the Local Density Approximation(LDA) where the uniform electron density of a free electron gas is used to estimate the Exchange Correlation functional. There have been improvements to this approximation where we include higher order corrections to the exchange correlation Kernel or otherwise tweak to functional to include terms which allow better agreement with experiment. We therefore have a wide variety of functionals such as GGA, PBE, PBESol and Hybrid functionals which are currently the state of the art in DFT material simulations. Most of the implementations of DFT in off-the-shelf packages also include treatments of spin orbit coupling and other relativistic corrections as well as spin-dependent interactions to some degree which allows us to simulate magnetic phases in weakly correlated systems.
 
 However, all of these treatments are unable to capture the strongly correlated behaviour of materials with highly localized electrons. Mott Physics for example, whereby certain compounds such as become insulators even though they have half-filled electronic shells, is completely beyond the scope of standard DFT. These effects often stem from the fact that the electrons in these materials are correlated, i.e- the behavior of one electron on that of other electrons in similarly correlated shells. This effect cannot be described by any scheme which assumes pointwise locality (or some weaker form thereof) like DFT does. In addition, the correlated objects can be more complicated than simple atomic orbitals, they can be dimers or some higher aggregation of atoms like in $VO_2$ or molecular orbitals in molecules. So we can have electronic correlations appear in a wide variety of chemical systems where a simple DFT-like treatment is inadequate.
 
-It should be evident that simulations of such highly correlated systems would be highly expensive because in principle we have to solve the true many body quantum mechanical equation such as \ref{DFT_2}, which is computationally intractable as mentioned earlier. One of the most promising approaches to simulating such systems is Dynamical Mean Field Theory(DMFT). Within DMFT, we simulate the correlated system as an impurity containing the correlated degrees of freedom, embedded in a self-consistently determined effective medium which represents the non-correlated itinerant orbitals. The approach is \textit{mean field} in the sense that we freeze out some of the spatial extent of electronic correlations. However the resulting \textit{mean field} coupling the impurity and the bath is still time-dependent, allowing us to preserve dynamic fluctuations. The True power of the method however comes from the fact that highly efficient computational \textit{impurity solvers} such as Continuous Time Quantuam Monte Carlo (CTQMC) described in the next chapter, which make the formulation computationally tractable. DMFT can also be very efficiently merged with DFT to create DFT+DMFT, wherein the itinerant bath (which represents the weakly correlated s and p shells) can be solved using DFT while the correlated subspace of d and f orbitals is left to the DMFT impurity solvers and self-consistency conditions.
+It should be evident that simulations of such highly correlated systems would be highly expensive because in principle we have to solve the true many body quantum mechanical equation such as \ref{DFT_2}, which is computationally intractable as mentioned earlier. One of the most promising approaches to simulating such systems is Dynamical Mean Field Theory(DMFT). Within DMFT, we simulate the correlated system as an impurity containing the correlated degrees of freedom, embedded in a self-consistently determined effective medium which represents the non-correlated itinerant orbitals (see Fig. 3.1). The approach is \textit{mean field} in the sense that we freeze out some of the spatial extent of electronic correlations. However the resulting \textit{mean field} coupling the impurity and the bath is still time-dependent, allowing us to preserve dynamic fluctuations. The True power of the method however comes from the fact that highly efficient computational \textit{impurity solvers} such as Continuous Time Quantuam Monte Carlo (CTQMC) described in the next chapter, which make the formulation computationally tractable. DMFT can also be very efficiently merged with DFT to create DFT+DMFT, wherein the itinerant bath (which represents the weakly correlated s and p shells) can be solved using DFT while the correlated subspace of d and f orbitals is left to the DMFT impurity solvers and self-consistency conditions.
+
+\begin{figure}[thbp]\label{DMFT_pic}
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{dmft_image.jpg}
+\caption{Schematic diagram showing the basic DMFT approximation where an interacting lattice system is mapped to an impurity model hybridized with a self-consistently determined bath \protect \footnotemark}
+\end{center}
+
+\end{figure}
+
+\footnotetext{Source : \url{ http://www.theorie.physik.uni-muenchen.de/lsschollwoeck/pollet_group/pollet_bilder/web_bilder_l/dmft_l.jpg} }
 
 \section{Basics of DMFT}
+
+
 
 The simplest model for studying correlated systems is the famous Hubbard Model-
 \begin{equation}
@@ -259,7 +296,7 @@ This part of the process is achieved by applying impurity solvers such as CTQMC 
 \begin{equation}
 G(k,i\omega_n)=\dfrac{1}{i\omega -\epsilon_k +\mu -\Sigma(i\omega_n)}
 \end{equation}
- where $\Sigma(i\omega_n)$ is the self energy. Note that in general the self energy is k-dependent. However within the DMFT approximation is approximated to be the local part of the self energy. This approximation is at the heart of DMFT. Detailed accounts of when it can be applied can be found in \textbf{cite}. Like most mean field treatments, it becomes exact in the limit of infinite dimensions or more exactly in the limit of infinite co-ordination number. In order to see this one has to look at the diagrammatic expansion for the self energy. By looking at the scaling of the Greens function as the co-ordination number grows, we see that all non-local diagrams between sites i and j scale at least as $1/\sqrt{d_{||i-j||}^3}$ where $d_{||i-j||}$ is the number of equivalent atoms at a manhattan distance of $||i-j||$. However all local diagrams in the self energy scale as $1/\sqrt{d}$. Therefore as the coordination number (or the number of dimensions) approaches $d \rightarrow \infty$, only the local diagrams survive. 
+ where $\Sigma(i\omega_n)$ is the self energy. Note that in general the self energy is k-dependent. However within the DMFT approximation is approximated to be the local part of the self energy. This approximation is at the heart of DMFT. Detailed accounts of when it can be applied can be found in Ref. \cite{Kotliar_RMP}. Like most mean field treatments, it becomes exact in the limit of infinite dimensions or more exactly in the limit of infinite co-ordination number. In order to see this one has to look at the diagrammatic expansion for the self energy. By looking at the scaling of the Greens function as the co-ordination number grows, we see that all non-local diagrams between sites i and j scale at least as $1/\sqrt{d_{||i-j||}^3}$ where $d_{||i-j||}$ is the number of equivalent atoms at a manhattan distance of $||i-j||$. However all local diagrams in the self energy scale as $1/\sqrt{d}$. Therefore as the coordination number (or the number of dimensions) approaches $d \rightarrow \infty$, only the local diagrams survive. 
  
  Now we have to connect the impurity greens function calculated by the impurity Greens function to the Lattice Greens function of the original system. In the infinite dimensional limit, it can be shown that that $\mathcal{G}_0$ in Eq. \ref{S_eff} is related to the lattice greens function of the original system by:
  \begin{equation}
@@ -271,7 +308,7 @@ G(k,i\omega_n)=\dfrac{1}{i\omega -\epsilon_k +\mu -\Sigma(i\omega_n)}
   G_{00}(\i\omega_n)=\sum_k G(k,\i\omega_n)
  \end{equation} 
 
-  The term subtracted from Eq. \ref{G0_imp} comes due to the so called "cavity construction" formulation where one takes out the impurity and treats it as a "cavity", and is one of the simplest ways to arrive at the DMFT equations (the reader can find a more detailed proof in \textbf{cite Held and RMP1}). Now using the properties of Fourier transforms (check this part), we arrive at the following identities-
+  The term subtracted from Eq. \ref{G0_imp} comes due to the so called "cavity construction" formulation where one takes out the impurity and treats it as a "cavity", and is one of the simplest ways to arrive at the DMFT equations (the reader can find a more detailed proof in \cite{Held_Review,Kotliar_RMP}). Now using the properties of Fourier transforms (check this part), we arrive at the following identities-
   \begin{equation}
   \sum_{i} t_{0i} G_{i0}= \sum_{k}\epsilon_k G_k= (i\omega +\mu -\Sigma)G_{00} -1
   \end{equation}
@@ -317,8 +354,10 @@ where $E_{imp}$ is the static energy level of the impurity states and $\Delta$ i
 \begin{equation}
 \dfrac{1}{i \omega_n -E_{imp}+ \Delta- \Sigma}=  \sum_k \dfrac{1}{i\omega -\epsilon_k +\mu -\Sigma(i\omega_n)}
 \end{equation}
-and that the impurity  $\Sigma$ is the same as the (purely local) lattice $\Sigma$
-\end{itemize}  
+and that the impurity  $\Sigma$ is the same as the (purely local) lattice $\Sigma$. 
+\end{itemize}
+
+Thus in this section we have outlined the algorithm behind DMFT. However the true power of the method is unlocked when we combine the power of DMFT to accurately describe the strongly correlated degrees of freedom with the tried and tested accuracy of DFT in simulating the weakly correlated bands. In the next chapter we shall outline how these two techniques can be combined to produce DFT+DMFT, the algorithm of choice for the simulations carried out in this dissertation.  
 %
 
 \pagebreak
@@ -433,11 +472,11 @@ Where $\Gamma[G]$ and $\Phi[G]$ are the Baym-Kadanoff and Luttinger-Ward functio
  \begin{equation}
 V_H+V_{XC}=\dfrac{\partial \Phi_{H}[G]}{\partial \rho}- \dfrac{\partial \Phi_{XC}[G]}{\partial \rho}
  \end{equation}
- and the charge density $\rho$ is calculated by summing the Green's function over all frequencies. It is to be noted that the $G$ is the total Green's function. It is only while taking the partial derivatives in Eq. \ref{DMFT_SC} that we we have terms only where $G=G_loc$. So we see that we can use the Hartree and Exchange correlation potentials computed with DFT and the self energy computed within DMFT and merge them in one framework. One of the issues that arises is that we have to take care of the double counting term , which contains the part of the DMFT self energy which is already accounted for in the DFT calculations. This issue has been one of the main talking points in DFT+DMFT research and different groups differ on how exactly to deal with it. \textbf{cite a Millis Paper and Anisimov paper and check intro to kristjan's paper}. However, recently Haule has proposed an efficient method to compute highly accurate values of $V_{DC} $.
+ and the charge density $\rho$ is calculated by summing the Green's function over all frequencies. It is to be noted that the $G$ is the total Green's function. It is only while taking the partial derivatives in Eq. \ref{DMFT_SC} that we we have terms only where $G=G_loc$. So we see that we can use the Hartree and Exchange correlation potentials computed with DFT and the self energy computed within DMFT and merge them in one framework. One of the issues that arises is that we have to take care of the double counting term , which contains the part of the DMFT self energy which is already accounted for in the DFT calculations. This issue has been one of the main talking points in DFT+DMFT research and different groups differ on how exactly to deal with it. \cite{Millis_DC}  \cite{Sawatsky_DC} . However, recently Haule \cite{Haule_DC} has proposed an efficient method to compute highly accurate values of $V_{DC} $.
  
  Within this new formulation, we still use the impurity Green's function as our Local Greens function and the impurity self energy as the self energy of the system. The energy levels of the lattice system are expressed as Kohn sham eigen energies, and then the Greens function of the lattice system is built up by inserting the Self energy and Double counting corrections . 
  
-One of the main challenges involved in formulations of DFT+DMFT is how to go from the full-lattice system, for which we solve the DFT equations to obtain the Kohn-sham levels, to the correlated subspace, where we can apply the impurity models from which we obtain the DMFT self energy. In actual material calculations this would involve formulating a method to project our Greens function onto the d or f shell degrees of freedom. Different implementations of DFT+DMFT differ in their methods of identification of these correlated states. Moreover, they also have different methods to project the Greens function on to these localized states (The "Projection" scheme) and in how they embed the impurity self energy back into the Lattice Greens function (The "Embedding" Scheme). Various Projection functions such as LMTO's, Nth-order Muffin Tin orbitals, as well as the highly popular Maximally localized Wannier functions. However the most accurate results are obtained (\textbf{This might be dicey}) by using quasi-localized atomic orbitals $|\phi^m \ra$, which are defined as:
+One of the main challenges involved in formulations of DFT+DMFT is how to go from the full-lattice system, for which we solve the DFT equations to obtain the Kohn-sham levels, to the correlated subspace, where we can apply the impurity models from which we obtain the DMFT self energy. In actual material calculations this would involve formulating a method to project our Greens function onto the d or f shell degrees of freedom. Different implementations of DFT+DMFT differ in their methods of identification of these correlated states. Moreover, they also have different methods to project the Greens function on to these localized states (The "Projection" scheme) and in how they embed the impurity self energy back into the Lattice Greens function (The "Embedding" Scheme). Various Projection functions such as LMTO's, Nth-order Muffin Tin orbitals, as well as the highly popular Maximally localized Wannier functions. However possibly the most accurate results are obtained by using quasi-localized atomic orbitals $|\phi^m \ra$, which are defined as:
 \begin{equation}\label{Projector}
 \la \rmb |\phi_m^\mu \ra= u_l(|r-R_\mu|) Y_{lm}(\widehat{r-R_\mu})
 \end{equation}
@@ -608,13 +647,13 @@ So we see how CTQMC gives us an efficient computational way of solving the AIM a
 \pagebreak
 \chapter{Calculation of Magnetic Spectral function and Dynamic Magnetic Susceptibility for f-shell materials}
 
-In this section we shall present calculations of the magnetic properties of f-shell materials. As mentioned earlier, materials with incompletely filled f-shells exhibit strong correlations which make them particularly challenging to understand from a theoretical standpoint. DFT+DMFT is one of the very few methods capable of simulating these systems \textbf{cite Pu paper by marinetti and some others}. Here we concentrate on studies of the magnetic properties of such elements. Out ultimate aim shall be to calculate the Magnetic Spectral function $S(q,\omega)$, which shall give us complete information about all the magnetic excitations of the system. In order to calculate this quantity, we shall need to calculate the Magnetic formfactor $\vec{F}(q)$ and the dynamic magnetic susceptibility $\chi(\omega)$ of these materials. Using these tools, we shall make important claims about two important problems in condensed matter physics
+In this section we shall present calculations of the magnetic properties of f-shell materials. As mentioned earlier, materials with incompletely filled f-shells exhibit strong correlations which make them particularly challenging to understand from a theoretical standpoint. DFT+DMFT is one of the very few methods capable of simulating these systems \cite{Haule_Pu,Marianetti_Pu}. Here we concentrate on studies of the magnetic properties of such elements. Out ultimate aim shall be to calculate the Magnetic Spectral function $S(q,\omega)$, which shall give us complete information about all the magnetic excitations of the system. In order to calculate this quantity, we shall need to calculate the Magnetic formfactor $\vec{F}(q)$ and the dynamic magnetic susceptibility $\chi(\omega)$ of these materials. Using these tools, we shall make important claims about two important problems in condensed matter physics
 \begin{itemize}
 \item The volume collapse (or the $\alpha - \gamma$) transition in Cerium
 \item The valence fluctuating ground state of $\delta$-Plutonium which explains its "missing magnetism" 
 \end{itemize}
 
-In the first \textbf{check} three sections of this chapter, we describe in some detail the calculation procedure for the various components of $S(q,\omega)$. After that we shall go on to details of the calculations for Cerium and Plutonium respectively.
+In the first three sections of this chapter, we describe in some detail the calculation procedure for the various components of $S(q,\omega)$. After that we shall go on to details of the calculations for Cerium and Plutonium respectively.
 \section{Details of theory and calculation techniques}
 \subsection{The Magnetic Spectral Function S(q,$\omega$)}
 The magnetic spectral function S(q,$\omega$) gives us information about the the spectrum of all magnetic excitations of a material. Within the single ion approximation (which amounts to saying that the excitations are mostly limited to the ground state multiplet and that we can approximate the magnetic susceptibility as a fairly local quantity which does not fluctuate over the first Brillouin zone), we can separate out the $q$ and $\omega$ dependence of the quantity and express the quantity as:
@@ -743,10 +782,11 @@ After a large enough B-field has been chosen, the effect of the B-field is inclu
 \begin{align}
 H_{B}=H-\mu_{B}B(l_{z}+2s_{z})
 \end{align} 
-where the old assumption that the B-field is in the $\hat{z}$ direction is used again. Now, in the presence of spin-orbit coupling this might lead to a non-diagonal $H_{B}$. If the off-diagonal terms can be safely ignored (as is the case in Cerium because the j= $\dfrac{7}{2}$ can be assumed to be unoccupied) then we can still use CTQMC as our impurity solver and can include the effect of the B-field as a shift in the double counting energy ($E_{DC}$). However in $\delta$-Pu we cannot afford such luxuries and we really do have to take the entire non-diagonal hamiltonian with transitions between the  j= $\dfrac{7}{2}$ and  j= $\dfrac{5}{2}$ multiplets as allowed by Hamiltonian. In that case, we can no longer use CTQMC as it would have a horrible sign problem with off-diagonal terms, so we resort to other impurity solvers like NCA and OCA \textbf{cite}. These solvers would give us the whole (off-diagonal included) self energy and Greens functions which we can then use in Eq \ref{eq 19}.
+where the old assumption that the B-field is in the $\hat{z}$ direction is used again. Now, in the presence of spin-orbit coupling this might lead to a non-diagonal $H_{B}$. If the off-diagonal terms can be safely ignored (as is the case in Cerium because the j= $\dfrac{7}{2}$ can be assumed to be unoccupied) then we can still use CTQMC as our impurity solver and can include the effect of the B-field as a shift in the double counting energy ($E_{DC}$). However in $\delta$-Pu we cannot afford such luxuries and we really do have to take the entire non-diagonal hamiltonian with transitions between the  j= $\dfrac{7}{2}$ and  j= $\dfrac{5}{2}$ multiplets as allowed by Hamiltonian. In that case, we can no longer use CTQMC as it would have a horrible sign problem with off-diagonal terms, so we resort to other impurity solvers like NCA and OCA \cite{Chuck_prb}. These solvers would give us the whole (off-diagonal included) self energy and Greens functions which we can then use in Eq \ref{eq 19}.
 
 Note that in either case, the calculation of the additional piece of the hamiltonian would involve the use of Clebsch Gordon Coefficients as we have to go from the $j,m_{j}, l,s$ basis to the $l,m_{l},s,m_{s}$ basis to evaluate the $(l+2s)$ term 
 
+\clearpage
 \section{Applications to Real Materials}
 \subsection{Analyzing the Volume Collapse transition in Cerium}
 
@@ -755,7 +795,7 @@ The physical mechanism driving the $\alpha$-$\gamma$ phase transition
 has puzzled physicists for many years~\cite{ceriumREV}.  Similar to
 other elements, the temperature versus pressure phase diagram of
 cerium shows multiple structural transitions, where the symmetry of
-the structure changes across the phase transition. The
+the structure changes across the phase transition (see Fig. \ref{Cerium_phase}). The
 $\alpha$-$\gamma$ transition is exceptional because it is
 isostructural, i.e. the atoms retain their ordering in an $fcc$
 structure while the volume collapses by 15$\%$ from $\gamma$ to
@@ -766,6 +806,10 @@ Pauli-like susceptibility, while the $\gamma$ phase has Curie-like
 susceptibility. Therefore, most of the theoretical work has focused on
 the hypothesis that electronic effects are responsible for the
 transition.
+\begin{figure}[H]\label{Cerium_phase}
+\includegraphics[width=\columnwidth]{Cerium_phase_diagram.jpg}
+\caption{The Temperature vs Pressure Phase diagram for Cerium showing the multiple phases of the material. We shall be concentrating on the volume callpse transition between $\alpha$-Ce and $\gamma$-Ce}
+\end{figure}
 
 Numerous theoretical models were proposed to explain the isostructural
 transition in Ce. For example, in the promotional
@@ -1047,19 +1091,22 @@ of Figure~\ref{Susc_both} shows $\chi(q, \omega=0)$. We can see that
 there is no significant variation in the static susceptibility within
 the first Brillouin zone, which validates the "single-ion form factor
 formula".
-%
+
+
+
+
+
 \begin{figure}[t]
 \centering{
-\includegraphics[width=0.5 \columnwidth]{Fig3a.eps}
-\includegraphics[width=0.5 \columnwidth]{Fig3b.png}
+\includegraphics[width=\columnwidth]{Sq_Ce.jpg}
 }
 \caption{Difference of $S(q,\omega)$ between $\alpha$ and $\gamma$ phase :
-  Top panel shows DFT+DMFT  results. Lower panel shows high energy neutron
+  Left panel shows DFT+DMFT  results. Right panel shows high energy neutron
   inelastic measurements, taken from Ref~\cite{murani}.
   }
 \label{Sq}
 \end{figure}
-%
+%%
 
 \subsubsection{Magnetic  spectral Function $S(q,\omega)$}
   We then use this formula to
@@ -1097,11 +1144,19 @@ different aspects of the volume collapse transition in cerium.
 
 \subsubsection{Introduction}
 
-Plutonium (Pu) is well-known due to the radioactive instability of its nucleus which makes it an important material for nuclear fission. However, the electronic properties of Pu have also attracted a lot of attention due to the presence of multiple degenerate configurations due to it's position in the periodic table.Pu is an actinide and therefore has an incomplete 5f electronic shell.  among the first few members of the actinide series, there is a volume contraction which is observed with increasing atomic number, due to the excess screening provided by the comparatively delocalized nature of the 5f electrons being added . However in the last few members of the actinide series, one observes an increase in atomic volume with increasing $Z$ because at this point the 5f electrons are highly localized and do not screen the nuclear charge. Plutonium sits at the cusp of these two two different subgroups of Actinides and therefore has an exceeding complex electronic structure, which has been the subject of intense study for more than six decades. This complexity also manifests itself in the highly complex phase diagram exhibited by Pu, with six competing allotropic phases which unusually large volume differences between then of up to 25$\%$ accompanied by large variation in mechanical properties \textbf{put in phase diagram pic..also maybe one for cerium}. In this particular study we shall study the properties of the delta phase ($\delta$-Pu). 
+Plutonium (Pu) is well-known due to the radioactive instability of its nucleus which makes it an important material for nuclear fission. However, the electronic properties of Pu have also attracted a lot of attention due to the presence of multiple degenerate configurations due to it's position in the periodic table.Pu is an actinide and therefore has an incomplete 5f electronic shell.  among the first few members of the actinide series, there is a volume contraction which is observed with increasing atomic number, due to the excess screening provided by the comparatively delocalized nature of the 5f electrons being added . However in the last few members of the actinide series, one observes an increase in atomic volume with increasing $Z$ because at this point the 5f electrons are highly localized and do not screen the nuclear charge. Plutonium sits at the cusp of these two two different subgroups of Actinides and therefore has an exceeding complex electronic structure, which has been the subject of intense study for more than six decades. This complexity also manifests itself in the highly complex phase diagram exhibited by Pu, with six competing allotropic phases which unusually large volume differences between then of up to 25$\%$ accompanied by large variation in mechanical properties (see Fig \ref{Pu_phase}) . In this particular study we shall study the properties of the delta phase ($\delta$-Pu). 
 
-The face centered cubic (fcc) $\delta$-Pu displays Pauli-like magnetic susceptibility (like $\alpha$-Ce)  as well as an anomalously highly  Sommerfeld coefficient of the specific heat  due to its unique combination of itinerant and localized electronic states  \textbf{cite{4,5,6}}, which makes it an extremely interesting problem to study in strongly correlated materials, far away from the well understood limits of completely itinerant or localized electronic structures . This inability to describe the exact electronic structure properties has resulted in a lot of disagreement between theory and experiment, with theories that can accurately predict the volume and structural fluctuations concurrent with the phase transitions exhibited by Pu being completely unable to reproduce the lack of a static magnetic moment, as is required by the Pauli-like susceptibility shown by $\delta$-Pu, and confirmed by experiments. This is known as the missing magnetism problem of $\delta$-Pu
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.7\columnwidth]{Plutonium_phase_diagram.png}
+\caption{The Volume vs Temperature Phase diagram for Plutonium showing the multiple phases of the material}
+\label{Pu_phase}
+\end{center}
+\end{figure}
 
-However, this kind of electronic structure problem where there is an interplay between localization/delocalization is exactly the domain where DFT+DMFT comes into its own. In order to correctly capture the physics of this material, we need to preserve the quantum mechanical fluctuations present, which result in the material fluctuating between three different atomic valency states, namely $5f^4$ (Pu 4+), $5f^5$ (Pu 3+), and $5f^6$ (Pu 2+). Since we preserve all local quantum fluctuations in DFT+DMFT, we can accurately model these virtual valence fluctuations. An extremely sensitive and important tool to capture this effect is the magnetic spectral function $S(q,\omega)$, because the magnetic formfactor $F(q)$ displayed by $\delta$-Pu is markedly different than the one displayed by any calculations which neglect valence fluctuations. In addition, any accurate simulation of $S(q,\omega)$ would also have to be display a Pauli-like susceptibility which would rule out a static magnetic moment. In addition neutron scattering experiments, similar to Cerium, would provide an experimental verification of our theoretical predictions  . Plutonium being a radioactive element, performing experiments on it can be extremely difficult. However recently experiments were performed at Oak Ridge National Labs which gave verified our calculations and which were published in Ref \textbf{cite myself}. We shall present the results below but for more details the reader should refer to the reference.
+The face centered cubic (fcc) $\delta$-Pu displays Pauli-like magnetic susceptibility (like $\alpha$-Ce)  as well as an anomalously highly  Sommerfeld coefficient of the specific heat  due to its unique combination of itinerant and localized electronic states  \cite{Lashley1,Quint_1,Yang}, which makes it an extremely interesting problem to study in strongly correlated materials, far away from the well understood limits of completely itinerant or localized electronic structures . This inability to describe the exact electronic structure properties has resulted in a lot of disagreement between theory and experiment, with theories that can accurately predict the volume and structural fluctuations concurrent with the phase transitions exhibited by Pu being completely unable to reproduce the lack of a static magnetic moment, as is required by the Pauli-like susceptibility shown by $\delta$-Pu, and confirmed by experiments. This is known as the missing magnetism problem of $\delta$-Pu
+
+However, this kind of electronic structure problem where there is an interplay between localization/delocalization is exactly the domain where DFT+DMFT comes into its own. In order to correctly capture the physics of this material, we need to preserve the quantum mechanical fluctuations present, which result in the material fluctuating between three different atomic valency states, namely $5f^4$ (Pu 4+), $5f^5$ (Pu 3+), and $5f^6$ (Pu 2+). Since we preserve all local quantum fluctuations in DFT+DMFT, we can accurately model these virtual valence fluctuations. An extremely sensitive and important tool to capture this effect is the magnetic spectral function $S(q,\omega)$, because the magnetic formfactor $F(q)$ displayed by $\delta$-Pu is markedly different than the one displayed by any calculations which neglect valence fluctuations. In addition, any accurate simulation of $S(q,\omega)$ would also have to be display a Pauli-like susceptibility which would rule out a static magnetic moment. In addition neutron scattering experiments, similar to Cerium, would provide an experimental verification of our theoretical predictions  . Plutonium being a radioactive element, performing experiments on it can be extremely difficult. However recently experiments were performed at Oak Ridge National Labs which gave verified our calculations and which were published in Ref \cite{Me_Pu}. We shall present the results below but for more details the reader should refer to the reference.
 
 
 \subsubsection{Details of Method}
@@ -1110,14 +1165,39 @@ In our calculations, we performed  DFT+DMFT calculations with a Hubbard U of $4.
 
 \subsubsection{Magnetic Formfactor}
 
-The magnetic formfactor obtained by us is shown in Fig $ put in figure$ (taken from our published paper \textbf{refer}. The figure also provides the experimentally obtained formfactor as well the formfactors that would have been obtained by considering a pure $5f^4$ or $5f^5$ valence, as well as a admixture of the two that is empirically close to the experimental results. As we see, DMFT is successful is capturing the correct form of the formfactor. We see that the $5f^5$ formfactor is also a reasonable fit with experiment. However a pure $5f^5$ state would have a magnetic moment and is hence not suitable to reproduce the Pauli-like suceptibility we observe. It is to be noted that at low Q, the experimental errors are very large due to experimental limitations. Therefore the discrepancies with experiment are not considered very relevant . However we clearly see that DFT+DMFT is successful in capturing the correct spatial dependence of $S(q,\omega)$ through the magnetic formfactor. 
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Formfactor_Pu.jpg}
+\caption{The DMFT Formfactor obtained by our simulations for $\delta$-Pu, together with neutron scattering results at 250 and 500 meV incident neutron energies and the formfactors that would have been obtained by considering a pure $5f^4$ or $5f^5$ valence, as well as a admixture of the two}
+\label{Form_Pu}
+\end{center}
+\end{figure}
+
+The magnetic formfactor obtained by us is shown in Fig \ref{Form_Pu} (taken from our published paper \cite{Me_Pu}). The figure also provides the experimentally obtained formfactor and the formfactors that would have been obtained by considering a pure $5f^4$ or $5f^5$ valence, as well as a admixture of the two that is empirically close to the experimental results. As we see, DMFT is successful is capturing the correct form of the formfactor. We see that the $5f^5$ formfactor is also a reasonable fit with experiment. However a pure $5f^5$ state would have a magnetic moment and is hence not suitable to reproduce the Pauli-like suceptibility we observe. It is to be noted that at low Q, the experimental errors are very large due to experimental limitations. Therefore the discrepancies with experiment are not considered very relevant . However we clearly see that DFT+DMFT is successful in capturing the correct spatial dependence of $S(q,\omega)$ through the magnetic formfactor. 
 
 
 \subsubsection{Dynamic Suceptibility and $S(q,\omega)$}
 
-The dynamic magnetic susceptibility calculated for $\delta$-Pu is given in Fig \textbf{put in figure}. In the figure, we also see the experimental results from \textbf{cite myself} (the actual reference contains multiple experimental results ommitted here for clarity). As we see, DMFT is able to capture the correct location of the peak in the dynamic susceptibilty at ~84 meV, which gives us the relevant scale for spin excitations. It is to be noted that these results predict a Kondo Temperature of $\sim$800 K  which explains why at room temperature the moment of the 5f state is screened by the Kondo screening cloud of antiparallely alligned conduction electrons , which screen the magnetic moment. By using the sum rule in Eq. \ref{sum rule} we obtain a fluctuating moment of $\sim$ 0.8 $\mu_B$ per atom which is also in good agreement with experiment. Finally we note that for any static local moment phase, we would have seen a Curie-like susceptibility which is characterized by a peak in the imaginary part of $\chi(\omega)$ at very low frequencies, analogous to $\gamma$-Cerium. However no such peak is observed. Therefore we can see that we have no local moment behaviour in this material
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{Susc_pu_cropped.jpg}
+\caption{ The Imaginary part of the local dynamic susceptibility for $\delta$-Pu compared to neutron scattering experiment \cite{Me_Pu} }
+\label{Susc_Pu}
+\end{center}
+\end{figure}
 
-Finally we show in figure \textbf{put in figures theory and expt} the $S(q,\omega)$ for $\delta$-Pu using DFT+DMFT as well as by neutron scattering. As we can see (and as can be expected from the fact that both the formfactor and the susceptibility are in good agreement with experiment) we can very good agreement between theory and experiment. Therefore we can claim that using DFT+DMFT, we can obtain an exceedingly accurate description of the magnetic spectrum of $\delta$-Pu and get very important clues which shall help us in understanding the true nature of this compound.
+The dynamic magnetic susceptibility calculated for $\delta$-Pu is given in Fig 6.7. In the figure, we also see the experimental results from \cite{Me_Pu} (the actual reference contains multiple experimental results ommitted here for clarity). As we see, DMFT is able to capture the correct location of the peak in the dynamic susceptibilty at ~84 meV, which gives us the relevant scale for spin excitations. It is to be noted that these results predict a Kondo Temperature of $\sim$800 K (in agreement with results obtained by Haule et. al \cite{Haule_Pu} )  which explains why at room temperature the moment of the 5f state is screened by the Kondo screening cloud of antiparallely alligned conduction electrons , which screen the magnetic moment. By using the sum rule in Eq. \ref{sum rule} we obtain a fluctuating moment of $\sim$ 0.8 $\mu_B$ per atom which is also in good agreement with experiment. Finally we note that for any static local moment phase, we would have seen a Curie-like susceptibility which is characterized by a peak in the imaginary part of $\chi(\omega)$ at very low frequencies, analogous to $\gamma$-Cerium. However no such peak is observed. Therefore we can see that we have no local moment behaviour in this material
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\columnwidth]{Sq_Pu_joined.jpg}
+\caption{ The Magnetic Spectral Function $S(q,\omega)$  for $\delta$-Pu compared to neutron scattering experiment \cite{Me_Pu}. The dashed lines on the experimental figure denote the Q and $\omega$ values used to obtain the formfactor and the Susceptibility. The peak position corresponding to $k_B T_K$ is also marked \label{Sq_Pu_fig} }
+\end{center}
+
+\end{figure}
+
+Finally we show in Fig 6.8 the $S(q,\omega)$ for $\delta$-Pu using DFT+DMFT as well as by neutron scattering. As we can see (and as can be expected from the fact that both the formfactor and the susceptibility are in good agreement with experiment) we can very good agreement between theory and experiment. Therefore we can claim that using DFT+DMFT, we can obtain an exceedingly accurate description of the magnetic spectrum of $\delta$-Pu and get very important clues which shall help us in understanding the true nature of this compound.
 
 Therefore in conclusion, we have shown that we have developed a robust method to calculate the magnetic spectrum of correlated systems. We have used our method to understand the magnetic structure of both Cerium and Plutonium and have obtained very accurate experimentally verifiable results. Therefore we believe that in the future we can use our method to understand the magnetic properties of a large class of strongly correlated systems.
 
@@ -1126,54 +1206,69 @@ Therefore in conclusion, we have shown that we have developed a robust method to
 \chapter{Spin State Transition in $\mathbf{LaCoO_3}$}
 
 \section{Introduction}
-The spin state transition in LaCoO$_3$ has been the subject of  intensive investigation for decades.\cite{Heikes, Naiman, Goodenough} This compound is established to be a narrow bandgap insulator at low temperature with Pauli-like magnetic susceptibility. However between 90-150 K, it transitions to a local moment phase with a Curie-Weiss like susceptibility which reaches its peak around 150K. It also undergoes a gradual closing of the insulating gap and is known to be metallic above 600K \cite{BhideMoss, English, Saitoh}.
+The spin state transition in LaCoO$_3$ has been the subject of  intensive investigation for decades.\cite{Heikes, Naiman, Goodenough}.At low temperature, this compound is known to be a to be a narrow bandgap insulator  with Pauli-like magnetic susceptibility. However between 90-150 K, it transitions to a local moment phase with a Curie-Weiss like susceptibility which reaches its peak around 150K. It also undergoes a gradual closing of the insulating gap and is known to be metallic above 600K \cite{BhideMoss, English, Saitoh}.
 
-There is considerable debate regarding the mechanism of this transition, mainly due to the uncertainty regarding the multiplet of the $Co^{3+}$ ion which  characterizes the excited state of the compound.  The cobalt ion in LaCoO$_3$ is commonly considered to have a formal valence of $3+$ and to be in the $d^6$ state. The scale of the crystal field splitting is comparable to Hunds coupling energy scale. As a result, one would expect that as temperature is increased, there would be an entropy-driven transition from the low spin (LS) $S=0$ state with a fully filled $t_{2g}$ shell($t^6e^0$) to an $S=2$ high spin (HS) state ($t^4e^2$)\cite{Goodenough}. Indeed there is experimental evidence to support such a scenerio. Electron spin resonance\cite{Zopka}, neutron scattering \cite{Podlesnyak}, X-ray absorbtion spectroscopy and magnetic circular dichroism experiments\cite{Haverfort} point towards a transition to an HS state. In addition, no inequivalent Co-O bond is found in EXAFS experiements, which also supports the formation of an HS state due to the HS state not being strongly Jahn-Teller active \cite{Sundaram}. However, it has been noted that in order to explain the  XAS experimental data, one would have to assume that the crystal field grows with temperature, which is counter-intuitive.\cite{Eder, Haverfort} This led to some authors suggesting that there is an LS-HS alternating structure caused by breathing distortions\cite{Bari} \cite{Goodenough} and interatomic repulsion between the HS atoms.\cite{Asaka, Eder} 
+There is considerable debate regarding the mechanism of this transition, mainly due to the uncertainty regarding the multiplet of the $Co^{3+}$ ion which  characterizes the excited state of the compound.  The cobalt ion in LaCoO$_3$ is commonly considered to have a formal valence of $3+$ and to be in the $d^6$ state. The scale of the crystal field splitting is comparable to the Hunds coupling energy scale. As a result, one would expect that as temperature is increased, there would be an entropy-driven transition from the low spin (LS) $S=0$ state with a fully filled $t_{2g}$ shell($t^6e^0$) to an $S=2$ high spin (HS) state ($t^4e^2$)\cite{Goodenough}. Indeed there is experimental evidence to support such a scenerio. Electron spin resonance\cite{Zopka}, neutron scattering \cite{Podlesnyak}, X-ray absorbtion spectroscopy and magnetic circular dichroism experiments\cite{Haverfort} point towards a transition to an HS state. In addition, no inequivalent Co-O bond is found in EXAFS experiements, which also supports the formation of an HS state due to the HS state not being strongly Jahn-Teller active \cite{Sundaram}. However, it has been noted that in order to explain the  XAS experimental data, one would have to assume that the crystal field grows with temperature, which is counter-intuitive.\cite{Eder, Haverfort} This led to some authors suggesting that there is an LS-HS alternating structure , which forms as a result of by breathing distortions in the lattice \cite{Bari} \cite{Goodenough} and interatomic repulsion between the HS atoms.\cite{Asaka, Eder} 
  
 A competing explanation, whereby the excited state is the $S=1$ intermediate spin (IS) state ($t^5e^1$), has also become popular\cite{Heikes, Radaelli}, mainly because of LDA+U results which show that the    
 IS state is lower in energy compared to the HS state.\cite{Korotin, Pandey, Anisimov} The stability of the IS state has been justified by the large hybridization of the Co 3d electrons with neighboring O 2p electrons. This causes charge transfer between the ions resulting in the Co ion having a $d^7$ structure according to the Zaanen-Sawatzky-Allen scheme,\cite{Zaanen} which in turn would cause stabilization of the IS state. The intermediate spin state hypothesis also seems to explain experimental findings such as Raman Spectroscopy, X-Ray photoemission, other XAS and EELS spectroscopies, as well as susceptibility and thermal expansion measurements. \cite{Saitoh, Abbate, Masuda, Klie, Zobel, Gne, Maris, Vogt}. 
 
-To summarize, there has been significant debate regarding the true nature of the spin state transition in LaCoO$_3$. Interest in this compound has also been enhanced in light of recent discoveries of ferromagnetism induced by Sr (hole) doping \cite{Kriener, Masayuki, Kunes_doped,nemeth}, as well as experiments reporting strain induced magnetism in epitaxially grown thin films.\cite{Fuchs1, Fuchs2, Rondinelli, Freeland, Fuchs3, Herklotz,Hsu}.Additionally, there have been reports of the emergence of a striped phase in thin films with alternating LS and HS/IS regions.\cite{Striped}   Low temperature ferromagnetism has also been reported in experiments on $LaCoO_3$ nanoparticles\cite{Belanger1}. Hence, there is great interest in understanding the true behavior of this material. 
+To summarize, there has been significant debate regarding the true nature of the spin state transition in LaCoO$_3$ (see Fig \ref{Transition}). Interest in this compound has also been enhanced in light of recent discoveries of ferromagnetism induced by Sr (hole) doping \cite{Kriener, Masayuki, Kunes_doped,nemeth}, as well as experiments reporting strain induced magnetism in epitaxially grown thin films.\cite{Fuchs1, Fuchs2, Rondinelli, Freeland, Fuchs3, Herklotz,Hsu}.Additionally, there have been reports of the emergence of a striped phase in thin films with alternating LS and HS/IS regions.\cite{Striped}   Low temperature ferromagnetism has also been reported in experiments on $LaCoO_3$ nanoparticles\cite{Belanger1}. Hence, there is great interest in understanding the true behavior of this material. 
 
-In this letter, we use Density Functional Theory + embedded Dynamical Mean Field Theory (DFT+DMFT)  to analyze spin state transition of bulk $LaCoO_3$.  Our implementation extremizes the DFT+DMFT functional in real space, thereby avoiding the downfolding approximation and uses the numerically exact CTQMC impurity solver\cite{Dmft3,haule}.  Even though there are multiple recent studies that use DFT+DMFT on this compound \cite{craco, Zhang, Kunes_main}, to our knowledge none of them provide a comprehensive analysis of all of the factors governing the transition such as octahedral rotations and electronic entropy. We show that i) LaCoO$_3$ has large charge fluctuations and it is not possible to explain the spin state with a single multiplet at any temperature, ii) The crystal field splitting very sensitively depends on the details of the crystal structure, and taking into account not only the thermal expansion but also the oxygen octahedral rotations is very important, and  iii) It is possible to stabilize an insulating phase (without orbital order) at intermediate temperatures where local moments are present, thereby showing that the metal-insulator transition is distinct from the spin state transition in this compound. We also show that  iv) Electronic entropy difference between the high and low temperature states is necessary for the stabilization of the different spin states, which is a fact overlooked in various first principle studies so far. 
-
-
-\section{Crystal Structure of LaCoO$_3$}$LaCoO_3$ is a perovskite with space group $R\bar{3}c$ with significant oxygen octahedral rotations ($a^-a^-a^-$) and large thermal expansion. 
-
-LaCoO$_3$ is a perovskite, which has the rare earth La on the A-site and Co on the B-site   , which corresponds to the center of the oxygen octahedron (see Fig \ref{Perov_struct}). However, like most of the perovskites, LaCoO$_3$ has oxygen octahedral rotations (Fig. \ref{Sfig:structure}) which involves the oxygen octahedra rotating out-of-phase around the [111] axes of the undistorted cubic highsymmetry structure. The rotation pattern in Glazer notation is $a^-a^-a^-$, which corresponds to the space group R$\bar 3$c (\#167).
-
-As noted by Thornton et. al. \cite{Thornton}, LaCoO$_3$ has large thermal expansion and the octahedral rotation angle also changes with temperature. In our study, we used four different crystal structures to isolate and study the effect of different lattice parameters on the spin state transition. We used the two different experimental structures observed at 1143K and 4K, which we denote by $HTa^-$ and $LTa^-$. Comparing the electronic structure for these two crystal structures provides a means to study the temperature evolution of the electronic structure. In addition to these two, we also built two crystal structures with the same strain state (unit cell vectors) as them, but with no octahedral rotations. These structures, denoted by $HTa^0$ and $LTa^0$, enabled us to isolate the effect of oxygen octahedral rotations on the strain state of LaCoO$_3$. 
-
-\begin{figure}\label{Perov_struct}
+ \begin{figure}[H]
  \begin{center}
- \includegraphics[height=3in]{plots_final/supplement_plots/perovskite_struct}
- \caption{Conventional cell for a perovskite with no octahedral rotations ($a^0a^0a^0$ structure). In laCoO$_3$, the green atoms would be 
-La, the red atoms O and the blue atom Co. The figure also shows the octahedra formed by the oxygen atoms around the Co atom}
+ \includegraphics[width=\columnwidth]{Transition_figure.jpg}
+ \caption{Schematic illustration of the two different scenarios for the the spin state transition in LaCoO$_3$ }
+\label{Transition}
+ \end{center}
+ \end{figure}
+ 
+In this chapter, we use Density Functional Theory + embedded Dynamical Mean Field Theory (DFT+DMFT)  to analyze the spin state transition of bulk $LaCoO_3$.  Our implementation extremizes the DFT+DMFT functional in real space, thereby avoiding the downfolding approximation and uses the numerically exact CTQMC impurity solver\cite{Dmft3,haule}.  Even though there are multiple recent studies that use DFT+DMFT on this compound \cite{craco, Zhang, Kunes_main}, to our knowledge none of them provide a comprehensive analysis of all of the factors governing the transition such as octahedral rotations and electronic entropy. We show that i) LaCoO$_3$ has large charge fluctuations and it is not possible to explain the spin state with a single multiplet at any temperature, ii) The crystal field splitting very sensitively depends on the details of the crystal structure, and taking into account not only the thermal expansion but also the oxygen octahedral rotations is very important, and  iii) It is possible to stabilize an insulating phase (without orbital order) at intermediate temperatures where local moments are present, thereby showing that the metal-insulator transition is distinct from the spin state transition in this compound. We also show that  iv) Electronic entropy difference between the high and low temperature states is necessary for the stabilization of the different spin states, which is a fact overlooked in various first principle studies so far. 
+
+
+\section{Crystal Structure of LaCoO$_3$}
+
+LaCoO$_3$ is a perovskite, which has the rare earth La on the A-site and Co on the B-site   , which corresponds to the center of the oxygen octahedron (see Fig \ref{Perov_struct}). However, like most of the perovskites, LaCoO$_3$ has oxygen octahedral rotations (Fig. \ref{structure}) which involves the oxygen octahedra rotating out-of-phase around the [111] axes of the undistorted cubic highsymmetry structure. The rotation pattern in Glazer notation is $a^-a^-a^-$, which corresponds to the space group R$\bar 3$c (\#167).
+
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[height=4in]{plots_final/supplement_plots/perovskite_struct}
+ \caption{Conventional cell for a perovskite with no octahedral rotations ($a^0a^0a^0$ structure). In LaCoO$_3$, the green atoms would be 
+La, the red atoms O and the blue atom Co. The figure also shows the octahedra formed by the oxygen atoms around the Co atom}\label{Perov_struct}
 \end{center}
 \end{figure}
 
-\begin{figure}
+
+As noted by Thornton et. al. \cite{Thornton}, LaCoO$_3$ has large thermal expansion and the octahedral rotation angle also changes with temperature. In our study, we used four different crystal structures to isolate and study the effect of different lattice parameters on the spin state transition. We used the two different experimental structures observed at 1143K and 4K, which we denote by $HTa^-$ and $LTa^-$. Comparing the electronic structure for these two crystal structures provides a means to study the temperature evolution of the electronic structure. In addition to these two, we also built two crystal structures with the same strain state (unit cell vectors) as them, but with no octahedral rotations. These structures, denoted by $HTa^0$ and $LTa^0$, enabled us to isolate the effect of oxygen octahedral rotations on the strain state of LaCoO$_3$. 
+
+\begin{figure}[H]
  \begin{center}
- \includegraphics[height=3in]{plots_final/supplement_plots/a-a-a-_struct}
- \caption{A depiction of the pattern of octahedral rotations that is present in LaCoO$_3$. Each of the oxygen octadra rotates in opposite direction to all nearest neighbour octahedra by the same amount relative to all three coordinate axes ($a^-a^-a^-$ structure).}\label{Sfig:structure}
+ \includegraphics[height=4in]{plots_final/supplement_plots/a-a-a-_struct}
+ \caption{A depiction of the pattern of octahedral rotations that is present in LaCoO$_3$. Each of the oxygen octadra rotates in opposite direction to all nearest neighbour octahedra by the same amount relative to all three coordinate axes ($a^-a^-a^-$ structure).}\label{structure}
  \end{center}
  \end{figure}
 
-In Fig \ref{LaCoO3_dos} we show the density of states for all 4 structures, calculated at both low temperature and high temperature (116K and 1160K) using DFT+DMFT.\footnote{The details of the calculations are presented in the supplemental information.}  Unlike DFT, which always predicts a metallic state, our calculations correctly reproduce an insulating ground state at low temperature for all the structures. The $t_{2g}$ orbitals are below the fermi level whereas the $e_g$ orbitals are above the fermi level. 
+
+
+
+
+
+In Fig \ref{LaCoO3_dos} we show the density of states for all 4 structures, calculated at both low temperature and high temperature (116K and 1160K) using DFT+DMFT. Unlike DFT, which always predicts a metallic state, our calculations correctly reproduce an insulating ground state at low temperature for all the structures. The $t_{2g}$ orbitals are below the fermi level whereas the $e_g$ orbitals are above the fermi level. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\columnwidth]{plots_final/output/New_Dos.png}
+\caption{Density of states ($t_2g$,$e_g$ and total including all atoms) for all four structures at 116K and 1160K.}\label{LaCoO3_dos}
+\end{center}
+\end{figure}
 
 The charge gap closes continuously with increasing temperature, and as a result, there is a large overlap in energy between the $t_{2g}$ and $e_g$ orbitals at high temperatures. This overlap, however, is much smaller if the structures without rotations are simulated. (See Fig. 2b).
 
 The $HTa^0$ structure  shows some overlap at high temperatures, and the $LTa^0$ structure almost remains an insulator for the entire range of temperature studied, with a small overlap developing above 900K. 
 %
 This shows clearly that octahedral rotations play a large role in decreasing the strength of the crystal field splitting. 
-This can be explained by a combination of factors. The rotation of the oxygen octahedra causes misalignment of the crystal field of the O atoms with that of the La atoms, which normally reinforce each other in a  perovskite with no octahedral rotations. This leads to an overall reduction of the effective crystal field which reduces the charge gap between the $t_{2g}$ and $e_g$ orbitals. In addition, this trigonal distortion also leads to a splitting of the $t_{2g}$ orbitals into 2+1 orbitals, thereby again reducing the gap with the $e_g$ orbitals. The combination of these two effects seems to overcome the expected decrease in the bandwith of the $e_g$ orbitals.Finally, note that there is a considerable overlap in energy of the O 2p orbitals with the Co 3d orbitals, which is very important in producing charge fluctuations on the Co ion, making it highly mixed-valent. 
+This can be explained by a combination of factors. The rotation of the oxygen octahedra causes misalignment of the crystal field of the O atoms with that of the La atoms, which normally reinforce each other in a  perovskite with no octahedral rotations. This leads to an overall reduction of the effective crystal field which reduces the charge gap between the $t_{2g}$ and $e_g$ orbitals. In addition, this trigonal distortion also leads to a splitting of the $t_{2g}$ orbitals into 2+1 orbitals, thereby again reducing the gap with the $e_g$ orbitals (Note that in Fig \ref{LaCoO3_dos} we have clubbed together all of the 2+1 orbitals into one single "$t_{2g}$" group because the splitting is small compared to the $t_{2g}-e_g$ splitting  and doing so makes the figure clearer). The combination of these two effects seems to overcome the expected decrease in the bandwith of the $e_g$ orbitals caused by the bending of the Co-O-Co bond.Finally, note that there is a considerable overlap in energy of the O 2p orbitals with the Co 3d orbitals, which is very important in producing charge fluctuations on the Co ion, making it highly mixed-valent. 
 
-\begin{figure}\label{LaCoO3_dos}
-\begin{center}
-\includegraphics[width=\columnwidth]{plots_final/output/New_Dos.png}
-\caption{Density of states ($t_2g$,$e_g$ and total including all atoms) for all four structures at 116K and 1160K.}
-\end{center}
-\end{figure}
 
 \begin{figure}
 \begin{center}
@@ -1183,7 +1278,7 @@ This can be explained by a combination of factors. The rotation of the oxygen oc
 \end{figure}
 
 \section{The spin state transition} 
-In order to focus on the spin state of the Co ion, we calculate the expectation value of the magnitude of z-component of the spin $\langle|S_z|\rangle$. Note that all our calculations are in the paramagnetic state and hence the value of $\langle S_z \rangle=0$. The results are presented in Fig. 2a as a function of temperature.\footnote{Note that the quantitative value of the transition temperature is overestimated in our calculations. This can be explained by the fact that DMFT does not take into account finite wavelength fluctuations, and as a result, has a tendency to overestimate order like many other mean field methods.} 
+In order to focus on the spin state of the Co ion, we calculate the expectation value of the magnitude of z-component of the spin $\langle|S_z|\rangle$. Note that all our calculations are in the paramagnetic state and hence the value of $\langle S_z \rangle=0$. The results are presented in Fig. 2a as a function of temperature. Note that the quantitative value of the transition temperature is overestimated in our calculations. This can be explained by the fact that DMFT does not take into account finite wavelength fluctuations, and as a result, has a tendency to overestimate order like many other mean field methods.
 The largest value of $|S_z|$ at 1160K is seen for the $HTa^-$ structure, followed by the $LTa^-$ structure. 
 %
 This is in line with the stronger crystal field in the $LTa^-$ structure due to the smaller lattice constant.
@@ -1203,7 +1298,7 @@ Fig. 3 shows the evolution of the occupation probabilities for the different val
 The $|S_z|=1$ multiplet sees an increase in probability at higher temperatures (above 500K) and also follows a similar trend for all the structures except the $LTa^0$ structure, where all changes are very small. Therefore, the initial signature of the transition is best seen in the behavior of the $|S_z|=2.0$ and $|S_z|=1.5$ multiplets, which can be said to be the HS multiplets for the $d^6$ and $d^7$ occupancies respectively. 
  \begin{figure}
  \begin{center}
- \includegraphics[width=\columnwidth]{./plots_final/output/New_Sz.png}
+ \includegraphics[width=0.7 \columnwidth]{./plots_final/output/New_Sz.png}
  \caption{Evolution of occupation probabilities for all the spin states for the four structures with temperature. }
  \end{center}
  \end{figure}
@@ -1223,7 +1318,14 @@ According to the entropy driven transition scenerio, which is supported by calor
 We calculated the contribution of the electronic entropy to the free energy using our state of the art DFT+DMFT implementation\cite{Birol}. 
 In particular, we evaluated the Free Energy and the Electronic Entropy for both the 4K and 1143K structures ($LTa^-$ and $HTa^-$) at 1160K to predict if the structural changes make a considerable difference. 
 %
-The $HTa^-$ structure is indeed much higher in electronic entropy compared to the $LTa^-$ structure at 1160K; the difference in $T\cdot S$ between these two structures is $\sim$ 110 meV per formula unit. This unusually large difference emphasises the importance of electronic entropy to the transition.We also calculate the energy difference between the $HTa^-$ and $LTa^-$ structures to be $\sim$ 70meV at 1160K with the $LTa^-$ being lower in energy. Thus we see that when the entropy is taken into account and the Free Energy (F=E-TS) is calculated, the high temperature structure $HTa^-$ becomes more stable purely due to the contribution of electronic entropy.  This result therefore confirms the structural phase transition that is observed as a function of temperature. So, we can conclude that the electronic entropy, which has been ignored in many first-principles studies of this material, is a leading factor in creating an anomalous thermal expansion and driving the material to a high spin state. 
+The $HTa^-$ structure is indeed much higher in electronic entropy compared to the $LTa^-$ structure at 1160K; the difference in $T\cdot S$ between these two structures is $\sim$ 110 meV per formula unit. This unusually large difference emphasises the importance of electronic entropy to the transition.We also calculate the energy difference between the $HTa^-$ and $LTa^-$ structures to be $\sim$ 70meV at 1160K with the $LTa^-$ being lower in energy. Thus we see that when the entropy is taken into account and the Free Energy (F=E-TS) is calculated, the high temperature structure $HTa^-$ becomes more stable purely due to the contribution of electronic entropy (see Fig \ref{Entropy_Swap}).  This result therefore confirms the structural phase transition that is observed as a function of temperature. So, we can conclude that the electronic entropy, which has been ignored in many first-principles studies of this material, is a leading factor in creating an anomalous thermal expansion and driving the material to a high spin state. 
+\begin{figure}[H]
+ \begin{center}
+ \includegraphics[width=\columnwidth]{Entropy_swap.jpg}
+ \caption{A depiction of the Switch in stability between the $LTa^-$ and $HTa^-$  structures due to the impact of electronic entropy.}\label{Entropy_Swap}
+ \end{center}
+ \end{figure}
+
 
 
 \section{Summary} 
@@ -1277,8 +1379,8 @@ where $\hat \tau_i$ denotes Pauli matrices and $\epsilon_{\pm}(\mathbf k) =\big(
 %\end{align*}
 
 In Fig.~\ref{fig1}(a) and (c) we show the non-interacting density of states(DOS) and band structure of the model with the parameters $E_p=-2.0,E_d=0.0,t_{dp}=1.0,t_{dd}=0.2$ (in units of $t_{pp}$).Unless specified otherwise,all the calculations in this paper have been performed at a fixed  total electron number per site $n=3$ and at an inverse temperature of $\beta=100$.We note that there are several Van-Hove singularities in the DOS due to the extrema in the energy spectrum. We can also see from the from the orbital-resolved DOS that there is some mixture of d and p states around the chemical potential.
-\begin{figure}[h]
- \includegraphics[width=\columnwidth]{./plotForpublishing/pd+dps_band_struc}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/pd+dps_band_struc}
  \caption{\label{fig1}(a)-(b):orbital-resolved dos of dp model with $\mu=0.28,n_p=1.78,$  $n_d=1.22$ and dps model with $\mu=0.038,n_p=1.70,n_s=0.14$ and $n_d=1.16$.(c)-(d):band structure showing orbital characters of dp model and dps model. The dashed line denotes the chemical potential $\mu$.}
 \end{figure}
 
@@ -1323,8 +1425,8 @@ with $P_r$ approximated by only the particle-hole(RPA)``bubble" diagrams.The ful
 W^{RPA}(q)=u^{cRPA}(q)(\mathbb{1}-P_d(q)u^{cRPA}(q))^{-1}
 \end{equation} 
 The Feynman diagrammatic  illustration for the summation procedure of the bubble diagrams used to calculate $W^{RPA}$ or $u^{cRPA}$ is shown in Fig.~\ref{fig2}.
-\begin{figure}[h]
- \includegraphics[width=\columnwidth, height=0.8in]{./plotForpublishing/RPA.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth, height=0.8in]{./plotForpublishing/RPA.png}
  \caption{\label{fig2} a) Figure showing the RPA screening process to obtain the fully screened interaction W from the unscreened interaction V. b) Figure showing the cRPA process to obtain the partially screened $u$ from the unscreened interaction V.  }
 \end{figure}
 Since we keep only density-density interactions in the model, the polarization function $P$ in orbital basis depends on two orbital indices instead of four in general. The bubble polarization function is given by
@@ -1389,17 +1491,17 @@ In order to calculate the effective interaction parameters predicted by cRPA, we
 
 %%Hence, the static value of $u$ will be a very good approximation as the on-site $u_{dd}$ in the ``1-orb cRPA" scenario for each model in the low energy limit.\textbf{More elaboration...high freq behavior of u and freq behavior of W}
 
-\begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/pd+dpssigma.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/pd+dpssigma.png}
  \caption{\label{fig3}Comparison of Im$\Sigma$ in all orbital channels in ``2-orb/3-orb" scenario for (a) dp model with $U_{dd}=4.5 $ and (b) dps model with $U_{dd}=6.0$.}
 \end{figure}
 
-\begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/dp+pds_Udduw.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/dp+pds_Udduw.png}
  \caption{\label{fig4}$u^{cRPA}_{dd}$ and $W^{RPA}_{dd}$ of the dp(dps) model predicted by (c)RPA is shown in red (blue).The dark dashed horizontal line denotes the bare value of $U_{dd}$ used in dp and dps model. Note that both $u^{cRPA}_{dd}$ and $W^{RPA}_{dd}$ approach the bare value in the limit of high frequency as expected(not shown here). }
 \end{figure}
 \begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/doscmp_barecRPA.png}
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/doscmp_barecRPA.png}
  \caption{\label{fig5}Comparison of dos of d orbital (d-DOS) within three scenarios for (a) dp model with $U_{dd}=4.5 $ and (b) dps model with $U_{dd}=6.0$.}
 \end{figure}
 
@@ -1412,13 +1514,13 @@ Next we present the central result in this section: comparing the spectral funct
 \subsection{Quasiparticle Residue}
 In order to further illustrate the inaccuracy of cRPA, we shall now show how the ``1-orb cRPA" scenario deviates from the other two for a broad range of $U_{dd}$ by comparing the quasiparticle residue $Z_d$ of the d-band (calculated using Eq.~[\ref{QP}]) in the three scenarios for both models. $Z_d$ gives us the extent of the correlations present in the correlated band and (within the DMFT approximation) is the inverse of the effective mass of the quasiparticle excitations. So a value of 1 would denote lack of correlation, whereas $Z_d \sim 0$ would signal proximity to an insulating solution with $Z_d$ becoming zero at the critical $U$. From the results shown in Fig.~\ref{fig6}, we see that cRPA always overestimates screening, with the discrepancy getting more pronounced as the $U_{dd}$ approaches the critical value for the MIT. We also notice that ``1-orb bare" is closer to the ``2-orb/3-orb" scenario than the ``1-orb cRPA" scenario, and in the range $U_{dd}\sim 2.7-3.4eV$,we observe dubious antiscreening effect in ``2-orb" scenario if it is compared to``1-orb bare" scenario in dp model. We claim that this comparison is not physical in strict sense because low energy physics is not the same in these two scenarios .To demonstrate this, we investigated the behavior of occupancy of d orbital $n_d$ in these two scenarios as shown in Fig.~\ref{figlast}. One notices that there is a tiny difference of $n_d$ in these two scenarios, showing that low-energy physics in d orbital channel is not the same.Besides, the onset point of ``antiscreening" is concurrent with the  crossing point in Fig.~\ref{figlast} where $n_d$ in ``1-orb bare" starts to outweigh that in ``2-orb" scenario. From this we claim that the dubious ``antiscreening" effect is caused by the difference in $n_d$ and thus it is not a true effect here. These results establish the fact there is little screening on the most correlated orbital by the remaining orbitals in the dp and dps model and that it could be more accurate to factor in no screening at all rather than use cRPA as a predictive mechanism.  These are in agreement with those in Sec.~\ref{DOS} and suggest that in the strongly correlated regime with large hybridization between bands, the RPA bubble diagrams are not  the most relevant ones when one is describing screening by non-correlated bands. It also suggests that in such cases, we should go beyond cRPA and consider a different screening mechanism,which is discussed in Sec.~\ref{Local Screening}.
 
-\begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/dp+dps_qpw.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/dp+dps_qpw.png}
  \caption{\label{fig6}Comparison of the quasiparticle residue of the three scenarios varying $U_{dd} $ in (a) dp model with $U_{pp}=0.2U_{dd},U_{pd}=0.8U_{dd}$ and (b) dps model with $U_{pp}=U_{ss}=U_{ps}=0.1U_{dd},U_{pd}=0.6U_{dd},U_{ds}=0.3U_{dd}$.}
 \end{figure}
 
-\begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/nd_obto_dp.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/nd_obto_dp.png}
  \caption{\label{figlast}Occupation of d orbital ($n_d$) in dp model varying $U_{dd}$ with $U_{pp}=0.2U_{dd},U_{pd}=0.8U_{dd}$ of 1-orb bare and 2-orb scenario. MIT(1-orb bare) and MIT(2-orb) are transition points inferred from the quasiparticle residue results.}
 \end{figure}
 
@@ -1432,9 +1534,9 @@ W^{Loc}=u^{cLoc}(\mathbb{1}-P_d^{Loc} u^{cLoc})^{-1}
 The local polarization bubbles $P^{Loc}$ here are constructed from the local two-band impurity charge and spin susceptibilities which are easily calculated using the CTQMC impurity solver \cite{Chakrabarti_Cerium}. These polarization inclusions include all the local interactions exactly and thus go far beyond the RPA-like prescription (For details on the exact procedure please refer to Appendix \ref{App.A}). Note that this new procedure also obeys the Pauli exclusion principle , which is known to be a major failing of cRPA. \cite{PRB_AccurayofcRPA_2014_P.Werner}. Also note that $u^{cLoc}$ and $W^{Loc}$ give us the screened interaction parameters in all the orbital and spin channels separately. However as  our major interest here is  the interaction between electrons with opposite spins in the correlated (d) orbital,we shall concentrate only on this particular channel. Using this new procedure we estimate the new screened interaction parameters $W^{Loc}$ and $u^{cLoc}$ for two sets of parameters, one in the correlated metallic regime with $U_{dd}=3.0$ and one in the Mott insulating regime with $U_{dd}=4.5$. The results are shown in Fig.~\ref{fig7}. The comparison between the static values of $u^{cRPA}_{dd}$ and $u^{cLoc}_{dd}$ is given in Table~\ref{table1}. As we can see, cRPA predicts vastly larger screening compared to our method (3 times larger in the metallic case and 52 times larger in the insulating case).
 We performed single orbital DMFT runs using the values predicted by our new method. We see that for $U_{dd}=3.0$, our method still predicts slightly too much screening as evidenced by the enhanced metallicity of the "1-orb cLoc" run compared to the full 2-orb run. However the result is a large improvement on the cRPA result. For the insulating case, our method successfully reproduces the Mott transition, which cRPA fails completely in achieving. Our method yields a value of screened $u_{dd}$ which is almost identical to the bare $U_{dd}$, again showing that there is very little inter-orbital screening near the MIT . We see that $u^{cLoc}_{dd}$ has very little frequency dependence, which also negates the need for inclusion of more complicated frequency dependent $u$ in our impurity solvers.
 
-\begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/ExactWUrpaWU/tbUdd3.png}
- \includegraphics[width=\columnwidth]{./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/ExactWUrpaWU/tbUdd3.png}
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png}
  \caption{\label{fig7}Plot showing the $u^{cLoc}$ and $W^{Loc}$ for $U_{dd}=2.5$ (top) and $U_{dd}=4.5$ (bottom) using the Local Polarization method. The RPA $W^{RPA}$ and cRPA $u^{cRPA}$ for both sets of parameters is also shown for comparison. Note: For both runs $U_{pp}=0.2U_{dd}; U_{dp}=0.8U_{dd}$. Inset shows a magnified portion of the plot for $u^{cRPA}$ and $u^{cLoc}$ near $\omega \rightarrow 0$.   }
 \end{figure}
 
@@ -1453,9 +1555,9 @@ We performed single orbital DMFT runs using the values predicted by our new meth
 \caption{\label{table1}Comparison between static values of $u^{cRPA}_{dd}$ and $u^{cLoc}_{dd}$ for different values of bare U in the dp model.}
 \end{table}
 
-\begin{figure}[th]
- \includegraphics[width=\columnwidth]{./plotForpublishing/pddoscmpUdd3_locW.png}
- \includegraphics[width=\columnwidth]{./plotForpublishing/pddoscmpUdd4p5_locW.png}
+\begin{figure}[H]
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/pddoscmpUdd3_locW.png}
+ \includegraphics[width=0.8\columnwidth]{./plotForpublishing/pddoscmpUdd4p5_locW.png}
  \caption{\label{fig8}Plot showing the p orbital and d-orbital density of states using two-orbital DMFT (``2-orb") and  effective one-orbtial DMFT using the Local Polarization method(``1-orb cLoc") and cRPA (``1-orb cRPA"). The top two figures are for $U_{dd}=2.5$ whereas the bottom two are for $U_{dd}=4.5$.  }
 \end{figure}
 
@@ -1469,12 +1571,75 @@ In this paper,we investigate the validity of cRPA as a method for predicting the
 
 \pagebreak
 \chapter{Conclusion}
- 
+
+In this thesis we have studied various aspects of strongly correlated systems using DFT+DMFT. We started the thesis with a derivation of the theoretical building blocks of the DFT+DMFT method, namely Density functional Theory (DFT), Dynamical Mean Field Theory (DMFT) and the procedure to combine them into one comprehensive algorithm (DFT+DMFT). We then looked at some details of the impurity solver used in most of the DMFT simulations, the Continuous Time Quantum Monte Carlo (CTQMC) impurity solver. After building up the framework to be used in our simulations, we moved on to specific applications which have been the subject of my dissertation.
+
+We start off in Chapter 6 by describing the simulations of the magnetic spectral function $S(q,\omega)$ for strongly correlated f-shell materials. We first outlined the theory for the calculation by describing the method to calculate the magnetic formfactor and the dynamic magnetic susceptibility (which contain the q-dependence and the $\omega$-dependence respectively)  and to combine them into $S(q,\omega)$ under the single ion approximation. 
+
+We then used this computational machinery to study two important problems in condensed matter. We first studied the volume collapse transition in Cerium between $\alpha$-Ce and $\gamma$-Ce. By confirming that the magnetic formfactor $F(q)$ is identical across the transition, we confirmed that the f-electrons remain correlated in both phases, ruling out the promotional scenario for the transition. We then showed that the dynamic magnetic susceptibility shows an increase in the Kondo Temperature as we go across the transition into the $\alpha$-phase. This showed that the hybridization and Kondo effect are important drivers for this transition. Finally we combined these two pieces to get the $S(q,\omega)$ for the transition which showed excellent agreement with neutron scattering experiments performed by Murani et. al \cite{murani}.
+
+Next we used the same technique to study the valence fluctuations in $\delta$-Pu. The magnetic formfactor obtained by us for the material not only achieved good agreement with experiments but also showed that we can understand the ground state of $\delta$-Pu as a quantum mechanical mixture of different valence states. We then showed using the dynamic susceptibility that the compound does not show local moment behavior thus addressing the problem of missing magnetism in $\delta$-Pu. We also obtain a Kondo Temperature of $\sim$ 800K which explains how the moment in $\delta$-Pu gets screened by Kondo effects. Finally we again obtained $S(q,\omega)$ which is in good agreement with neutron scattering experiments performed by Janoschek et al at Oak Ridge National Lab.
+
+The next problem we address in this dissertation is the decades-old problem of explaining the spin state transition in LaCoO$_3$. In this system there has been a long debate about whether the Intermediate Spin (S=1) or the High Spin (S=2) state is dominant at high temperatures after the spin state transition has set in. In addition, there is also a non-concurrent metal-insulator transition that occurs in the compound at a different temperature scale. In our simulations, we used four different crystal structures (two physically present structures and two hypothetical structures) to isolate and study the effect of the (abnormally large) lattice thermal expansion and octahedral rotations in driving the spin state transition. Our simulations we successful in obtaining a spin state transition as a function of increasing temperature in the system. In addition we also obtained the non-concurrent metal-insulator transition as well. By studying the four different structures, we ascertained that both thermal expansion and octahedral rotations aid the transition by reducing the crystal field splitting in the compound. By using the spin state probabilities given to us by CTQMC, we showed that the high-temperature is a mixture of both the Intermediate and High spin states with both states gaining in probability as temperature is increased. We also showed that there are large valence fluctuations in the compound which make any description in the terms of spin states of the $d^6$ state inadequate. However we also see importantly that at the onset of the spin state transition, we see a jump in the occupation probability of the High spin multiplet. Interestingly we also noted that the metal-insulator transition is rather insensitive to the lattice parameters and happens at almost the same temperature for all four structures. Finally we used our state of the art Free Energy calculation algorithm to show that the electronic entropy gained by the spin state transition is enough to stabilize the High spin state at high temperatures. 
+
+In chapter 8, we study the validity of the constrained Random Phase Approximation (cRPA) in estimating the screening of Hubbard U in strongly correlated system with large hybridization between correlated and non-correlated orbitals. We showed, using simple yet general two and three orbital model hamiltonians that cRPA systematically underestimates screening in these systems, which can lead to pathological misrepresentation of the amount of correlations present. By comparing the simulations of the spectra and the quasiparticle residues of the full model and effective one orbital models with zero screening and screening estimated by cRPA, we showed that it is often more accurate to factor in no screening at all rather than the RPA-like screening used by cRPA. This showed that the RPA diagrams which are relevant in the q $\rightarrow$ 0 limit, are not the most important diagrams in local screening. In addition we show that the interorbital repulsion parameters which are fundamental to the screening diagrams in cRPA, have very little effect on the spectra thereby further calling into question the cRPA method, which seems to incorporate these parameters to overestimate screening to an unpredictable degree. Finally we address some of these concerns by postulating a new method to estimate screening which involves the full local polarization bubble (constructed using the local spin and charge susceptibilities) instead of the RPA polarization. Using this local polarization, which includes a much larger class of diagrams, we estimate the screening much more accurately than cRPA and are much more successful in reproducing spectra and the Mott-like metal-insulator transition in these models. The screened repulsion calculated using this method also shows very little frequency dependence, which seems to suggest that factoring in the frequency dependence of U is not very important in describing the physics of these systems.
+
+Therefore in this dissertation, we have studied different aspects of the physics of strongly correlated systems using DFT+DMFT. We firmly believe that we have built up a robust framework which shall serve as an invaluable tool in studying the properties of real strongly correlated materials in time to come. It is hoped that by harnessing the full power of techniques like DMFT, we shall soon have the power to fully understand the physics of these notoriously difficult materials, which in turn will open up new horizons for mankind in engineering and technology.
+        
+\chapter{Appendix test}
+In this appendix,we sketch out the method to evaluate the partially screened $u^{cLoc}$ and fully screened $W^{Loc}$ and  elaborate how the local polarization bubbles are evaluated using impurity solver ctqmc.
+Unlike the RPA method,which ignores the Pauli principle inherited in the many-body models,the formulation adopted here preserves the Pauli principle explicitly. The interaction matrix $V^{Loc}$ is :
+\begin{eqnarray}
+V^{Loc}=
+%\left(
+\begin{array}{c|cccc}
+&d\uparrow&d\downarrow&p\uparrow&p\downarrow\\
+\hline
+d\uparrow&0&U_{dd}&U_{dp}&U_{dp}\\
+d\downarrow&U_{dd}&0&U_{dp}&U_{dp}\\
+p\uparrow&U_{dp}&U_{dp}&0&U_{pp}\\
+p\downarrow&U_{dp}&U_{dp}&U_{pp}&0
+\end{array}
+%\right)
+\end{eqnarray}
+and correspondingly,the local polarization bubble matrix $P^{Loc}$ (for simplicity of notation,we denote it as $\tilde P$ afterwards)takes the form:
+\begin{eqnarray}
+\tilde P=
+\left(
+\begin{array}{cccc}
+\tilde P^{d\uparrow}_{d\uparrow}&\tilde P^{d\uparrow}_{d\downarrow}&\tilde P^{d\uparrow}_{p\uparrow}&\tilde P^{d\uparrow}_{p\downarrow}\\
+\tilde P^{d\downarrow}_{d\uparrow}&\tilde P^{d\downarrow}_{d\downarrow}&\tilde P^{d\downarrow}_{p\uparrow}&\tilde P^{d\downarrow}_{p\downarrow}\\
+\tilde P^{p\uparrow}_{d\uparrow}&\tilde P^{p\uparrow}_{d\downarrow}&\tilde P^{p\uparrow}_{p\uparrow}&\tilde P^{p\uparrow}_{p\downarrow}\\
+\tilde P^{p\downarrow}_{d\uparrow}&\tilde P^{p\downarrow}_{d\downarrow}&\tilde P^{p\downarrow}_{p\uparrow}&\tilde P^{p\downarrow}_{p\downarrow}
+\end{array}
+\right)
+\end{eqnarray}
+Because of the spin symmetry in the paramagnetic phase,we have the following identities which simplify the calculation:$\tilde P^{d\uparrow}_{d\uparrow}=\tilde P^{d\downarrow}_{d\downarrow}=a$,
+$\tilde P^{p\uparrow}_{p\uparrow}=\tilde P^{p\downarrow}_{p\downarrow}=b$,$\tilde P^{d\uparrow}_{d\downarrow}=\tilde P^{d\downarrow}_{d\uparrow}=c$,$\tilde P^{p\uparrow}_{p\downarrow}=\tilde P^{p\downarrow}_{p\uparrow}=d$,$\tilde P^{d\uparrow}_{p\uparrow}=\tilde P^{d\downarrow}_{p\downarrow}=\tilde P^{p\uparrow}_{d\uparrow}=\tilde P^{p\downarrow}_{d\downarrow}=e$,$\tilde P^{d\uparrow}_{p\downarrow}=\tilde P^{d\downarrow}_{p\uparrow}=\tilde P^{p\uparrow}_{d\downarrow}=\tilde P^{p\downarrow}_{d\uparrow}=f$.To evaluate $\{a\ldots f\}$,we perform calculations of charge and spin susceptibility in different orbital channels separately.In the total orbital channel,the sampled charge susceptibility $\tilde P^{(t)}_c$ and spin susceptibility $\tilde P^{(t)}_s$ are related to $\{a\ldots f\}$ as :
+\begin{eqnarray}
+\tilde P^{(t)}_c=2(a+b+c+d)+4(e+f)\\ \nonumber
+\tilde P^{(t)}_s=2(a+b-c-d)+4(e-f)
+\end{eqnarray}
+We also need to sample the charge and spin susceptibility in d and p subspace denoted as $\tilde P^{(\alpha)}_c$ and $\tilde P^{(\alpha)}_s,\alpha=p,d$ to solve the equations above.They are given in terms of $\{a\ldots f\}$ as:
+\begin{eqnarray}
+\tilde P^{(d)}_c=2(a+c),\tilde P^{(d)}_s=2(a-c)\nonumber\\
+\tilde P^{(p)}_c=2(b+d),\tilde P^{(p)}_s=2(b-d)
+\end{eqnarray}
+In this way,$\{a\ldots f\}$ are given by the sampled $\tilde P^{(t)}_s,\tilde P^{(t)}_c$,$\tilde P^{(\alpha)}_c$,$\tilde P^{(\alpha)}_s(\alpha=p,d)$:
+\begin{eqnarray}
+a=\frac{\tilde P^{(d)}_c+\tilde P^{(d)}_s}{4},c=\frac{\tilde P^{(d)}_c-\tilde P^{(d)}_s}{4} \\
+b=\frac{\tilde P^{(p)}_c+\tilde P^{(p)}_s}{4},d=\frac{\tilde P^{(p)}_c-\tilde P^{(p)}_s}{4} \\
+e=\frac{1}{8}(\tilde P^{(t)}_c+\tilde P^{(t)}_s)-\frac{1}{2}(a+b)\\
+f=\frac{1}{8}(\tilde P^{(t)}_c-\tilde P^{(t)}_s)-\frac{1}{2}(c+d)
+\end{eqnarray}
+Finally,$\tilde P_d$ is obtained by setting susceptibility in the d-d channel to be zero,i.e.$\tilde P_d=\tilde P(\tilde P^{ds}_{ds^\prime}=0),(s,s^\prime={\uparrow,\downarrow})$ and $\tilde P_r=\tilde P-\tilde P_d$.
+
 
 \clearpage
-%\addcontentsline{toc}{chapter}{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{plain}
-\bibliography{LaCoO3,Qualifier_Main,cRPA,Cerium}
+\bibliography{LaCoO3,Qualifier_Main,cRPA,Cerium,Misc}
+
 
 \end{document}
 
