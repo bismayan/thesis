@@ -8,45 +8,46 @@ Database file #3: cRPA.bib
 Database file #4: Cerium.bib
 Database file #5: Misc.bib
 Warning--empty title in promotional
-You've used 125 entries,
+Warning--empty journal in LAPW_Book
+You've used 130 entries,
             2118 wiz_defined-function locations,
-            1237 strings with 30089 characters,
-and the built_in function-call counts, 50157 in all, are:
-= -- 4637
-> -- 3294
+            1266 strings with 31056 characters,
+and the built_in function-call counts, 51815 in all, are:
+= -- 4788
+> -- 3399
 < -- 1
-+ -- 1307
-- -- 1172
-* -- 4437
-:= -- 8754
-add.period$ -- 376
-call.type$ -- 125
-change.case$ -- 958
++ -- 1348
+- -- 1208
+* -- 4569
+:= -- 9050
+add.period$ -- 391
+call.type$ -- 130
+change.case$ -- 991
 chr.to.int$ -- 0
-cite$ -- 126
-duplicate$ -- 1382
-empty$ -- 3227
-format.name$ -- 1172
-if$ -- 9815
+cite$ -- 132
+duplicate$ -- 1435
+empty$ -- 3337
+format.name$ -- 1208
+if$ -- 10140
 int.to.chr$ -- 0
-int.to.str$ -- 125
-missing$ -- 127
-newline$ -- 629
-num.names$ -- 250
-pop$ -- 728
+int.to.str$ -- 130
+missing$ -- 132
+newline$ -- 654
+num.names$ -- 260
+pop$ -- 757
 preamble$ -- 1
-purify$ -- 836
+purify$ -- 864
 quote$ -- 0
-skip$ -- 903
+skip$ -- 941
 stack$ -- 0
-substring$ -- 3235
-swap$ -- 132
+substring$ -- 3314
+swap$ -- 136
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 496
-warning$ -- 1
-while$ -- 406
-width$ -- 128
-write$ -- 1376
-(There was 1 warning)
+type$ -- 516
+warning$ -- 2
+while$ -- 419
+width$ -- 133
+write$ -- 1428
+(There were 2 warnings)

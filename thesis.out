@@ -4,51 +4,33 @@
 \BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 4
 \BOOKMARK [0][-]{chapter*.5}{List of Figures}{}% 5
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
-\BOOKMARK [0][-]{chapter.2}{Density Functional Theory}{}% 7
-\BOOKMARK [0][-]{chapter.3}{Dynamical Mean Field Theory}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Basics of DMFT}{chapter.3}% 9
-\BOOKMARK [0][-]{chapter.4}{DFT+DMFT}{}% 10
-\BOOKMARK [1][-]{section.4.1}{A functional Reformulation of DMFT}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.2}{Merging DFT with DMFT}{chapter.4}% 12
-\BOOKMARK [0][-]{chapter.5}{Continuous Time Quantum Monte Carlo Impurity Solver}{}% 13
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 14
-\BOOKMARK [1][-]{section.5.2}{Details of the Algorithm}{chapter.5}% 15
-\BOOKMARK [0][-]{chapter.6}{Calculation of Magnetic Spectral function and Dynamic Magnetic Susceptibility for f-shell materials}{}% 16
-\BOOKMARK [1][-]{section.6.1}{Details of theory and calculation techniques}{chapter.6}% 17
-\BOOKMARK [2][-]{subsection.6.1.1}{The Magnetic Spectral Function S\(q,\)}{section.6.1}% 18
-\BOOKMARK [2][-]{subsection.6.1.2}{The Local dynamic susceptibility loc\(\) }{section.6.1}% 19
-\BOOKMARK [2][-]{subsection.6.1.3}{The Magnetic Formfactor M\(\)}{section.6.1}% 20
-\BOOKMARK [1][-]{section.6.2}{Applications to Real Materials}{chapter.6}% 21
-\BOOKMARK [2][-]{subsection.6.2.1}{Analyzing the Volume Collapse transition in Cerium}{section.6.2}% 22
-\BOOKMARK [3][-]{section*.6}{Introduction}{subsection.6.2.1}% 23
-\BOOKMARK [3][-]{section*.7}{Details of method}{subsection.6.2.1}% 24
-\BOOKMARK [3][-]{section*.8}{Magnetic Form Factor}{subsection.6.2.1}% 25
-\BOOKMARK [3][-]{section*.9}{ Dynamic Magnetic Susceptibility}{subsection.6.2.1}% 26
-\BOOKMARK [3][-]{section*.10}{Magnetic spectral Function S\(q,\)}{subsection.6.2.1}% 27
-\BOOKMARK [3][-]{section*.11}{Conclusions}{subsection.6.2.1}% 28
-\BOOKMARK [2][-]{subsection.6.2.2}{The valence fluctuating ground state of Plutonium}{section.6.2}% 29
-\BOOKMARK [3][-]{section*.12}{Introduction}{subsection.6.2.2}% 30
-\BOOKMARK [3][-]{section*.13}{Details of Method}{subsection.6.2.2}% 31
-\BOOKMARK [3][-]{section*.14}{Magnetic Formfactor}{subsection.6.2.2}% 32
-\BOOKMARK [3][-]{section*.15}{Dynamic Suceptibility and S\(q,\)}{subsection.6.2.2}% 33
-\BOOKMARK [0][-]{chapter.7}{Spin State Transition in LaCoO3}{}% 34
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.2}{Crystal Structure of LaCoO3}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.3}{The spin state transition}{chapter.7}% 37
-\BOOKMARK [1][-]{section.7.4}{Nature of the excited spin state}{chapter.7}% 38
-\BOOKMARK [1][-]{section.7.5}{Contribution of Electronic Entropy}{chapter.7}% 39
-\BOOKMARK [1][-]{section.7.6}{Summary}{chapter.7}% 40
-\BOOKMARK [0][-]{chapter.8}{Investigation into the inadequacy of cRPA in reproducing screening in strongly correlated systems}{}% 41
-\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.2}{Models and Methods}{chapter.8}% 43
-\BOOKMARK [2][-]{subsection.8.2.1}{Model Hamiltonians}{section.8.2}% 44
-\BOOKMARK [2][-]{subsection.8.2.2}{constrained Random Phase Approximation\(cRPA\)}{section.8.2}% 45
-\BOOKMARK [2][-]{subsection.8.2.3}{DMFT calculations}{section.8.2}% 46
-\BOOKMARK [1][-]{section.8.3}{Results}{chapter.8}% 47
-\BOOKMARK [2][-]{subsection.8.3.1}{Density of states}{section.8.3}% 48
-\BOOKMARK [2][-]{subsection.8.3.2}{Quasiparticle Residue}{section.8.3}% 49
-\BOOKMARK [2][-]{subsection.8.3.3}{ Estimation of Screening using Local Polarization}{section.8.3}% 50
-\BOOKMARK [1][-]{section.8.4}{Discussion and Conclusion}{chapter.8}% 51
-\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 52
-\BOOKMARK [0][-]{chapter.10}{Appendix test}{}% 53
-\BOOKMARK [0][-]{equation.10.0.5}{Bibliography}{}% 54
+\BOOKMARK [0][-]{figure.caption.8}{I The DFT+DMFT Method}{}% 7
+\BOOKMARK [0][-]{chapter.2}{Density Functional Theory}{}% 8
+\BOOKMARK [0][-]{chapter.3}{Dynamical Mean Field Theory}{}% 9
+\BOOKMARK [1][-]{section.3.1}{Basics of DMFT}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{DFT+DMFT}{}% 11
+\BOOKMARK [1][-]{section.4.1}{A functional Reformulation of DMFT}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{Merging DFT with DMFT}{chapter.4}% 13
+\BOOKMARK [0][-]{chapter.5}{Continuous Time Quantum Monte Carlo Impurity Solver}{}% 14
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.2}{Details of the Algorithm}{chapter.5}% 16
+\BOOKMARK [0][-]{equation.5.2.25}{II Applications}{}% 17
+\BOOKMARK [0][-]{chapter.6}{Calculation of Magnetic Spectral function and Dynamic Magnetic Susceptibility for f-shell materials}{}% 18
+\BOOKMARK [1][-]{section.6.1}{Details of theory and calculation techniques}{chapter.6}% 19
+\BOOKMARK [1][-]{section.6.2}{Applications to Real Materials}{chapter.6}% 20
+\BOOKMARK [0][-]{chapter.7}{Spin State Transition in LaCoO3}{}% 21
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.2}{Crystal Structure of LaCoO3}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.3}{Density of States}{chapter.7}% 24
+\BOOKMARK [1][-]{section.7.4}{The spin state transition}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.5}{Nature of the excited spin state}{chapter.7}% 26
+\BOOKMARK [1][-]{section.7.6}{Contribution of Electronic Entropy}{chapter.7}% 27
+\BOOKMARK [1][-]{section.7.7}{Summary}{chapter.7}% 28
+\BOOKMARK [0][-]{chapter.8}{Investigation into the inadequacy of cRPA in reproducing screening in strongly correlated systems}{}% 29
+\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.2}{Models and Methods}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.3}{Results}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.4}{Discussion and Conclusion}{chapter.8}% 33
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 34
+\BOOKMARK [0][-]{chapter.9}{Bibliography}{}% 35
+\BOOKMARK [0][-]{appendix.A}{Appendix A. Details of the calculation of Local Screening}{}% 36

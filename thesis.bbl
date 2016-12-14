@@ -116,6 +116,12 @@ P.~Blaha, K.~Schwarz, G.~K.~H. Madsen, D.~Kvasnicka, and J.~Luitz.
   {P}rogram for {C}alculating {C}rystal {P}roperties}.
 \newblock {K}arlheinz Schwarz, Techn. Universit\"{a}t Wien, Austria, 2001.
 
+\bibitem{me_arxiv}
+B.~{Chakrabarti}, T.~{Birol}, and K.~{Haule}.
+\newblock {Role of Entropy and Structural Parameters in the Spin State
+  Transition of LaCoO$\_3$}.
+\newblock {\em ArXiv e-prints}, May 2016.
+
 \bibitem{Chakrabarti_Cerium}
 B.~Chakrabarti, M.~E. Pezzoli, G.~Sordi, K.~Haule, and G.~Kotliar.
 \newblock $\ensuremath{\alpha}$-$\ensuremath{\gamma}$ transition in cerium:
@@ -130,6 +136,12 @@ Woo~Seok Choi, Ji-Hwan Kwon, Hyoungjeen Jeen, Jorge~E. Hamann-Borrero, Abdullah
 \newblock Strain-induced spin states in atomically ordered cobaltites.
 \newblock {\em Nano Letters}, 12(9):4966--4970, 2012.
 \newblock PMID: 22889011.
+
+\bibitem{PRB_linear_response_2005_Gironcoli}
+Matteo Cococcioni and Stefano de~Gironcoli.
+\newblock Linear response approach to the calculation of the effective
+  interaction parameters in the $\mathrm{LDA}+\mathrm{U}$ method.
+\newblock {\em Phys. Rev. B}, 71:035105, Jan 2005.
 
 \bibitem{coleman}
 Piers Coleman.
@@ -343,6 +355,14 @@ M.~W. Haverkort, Z.~Hu, J.~C. Cezar, T.~Burnus, H.~Hartmann, M.~Reuther,
   x-ray absorption spectroscopy and magnetic circular dichroism.
 \newblock {\em Phys. Rev. Lett.}, 97:176405, Oct 2006.
 
+\bibitem{Pu_muon}
+R.~H. Heffner, G.~D. Morris, M.~J. Fluss, B.~Chung, S.~McCall, D.~E.
+  MacLaughlin, L.~Shu, K.~Ohishi, E.~D. Bauer, J.~L. Sarrao, W.~Higemoto, and
+  T.~U. Ito.
+\newblock Limits for ordered magnetism in pu from muon spin rotation
+  spectroscopy.
+\newblock {\em Phys. Rev. B}, 73:094453, Mar 2006.
+
 \bibitem{Heikes}
 R.R. Heikes, R.C. Miller, and R.~Mazelsky.
 \newblock Magnetic and electrical anomalies in lacoo3.
@@ -460,12 +480,6 @@ D.C. Koskenmaki and Jr. K.A.~Gschneidner.
 \newblock {\em Cerium, Handbook on the Physics and Chemistry of Rare Earths,
   Vol 1, KA. Gschneidner, Jr. and L. Eyring, Ed.}
 \newblock Elsevier, North-Holland, Amsterdam, 1978.
-
-\bibitem{RMP_LDA+DMFT_2006_G.K}
-G.~Kotliar, S.~Y. Savrasov, K.~Haule, V.~S. Oudovenko, O.~Parcollet, and C.~A.
-  Marianetti.
-\newblock Electronic structure calculations with dynamical mean-field theory.
-\newblock {\em Rev. Mod. Phys.}, 78:865--951, Aug 2006.
 
 \bibitem{Vasp}
 G.~Kresse and J.~Hafner.
@@ -679,6 +693,11 @@ Hiroshi Shinaoka, Matthias Troyer, and Philipp Werner.
   approximation.
 \newblock {\em Phys. Rev. B}, 91:245156, Jun 2015.
 
+\bibitem{LAPW_Book}
+David.~J Singh and Lars Nordstron.
+\newblock Planewaves, pseudopotentials, and the lapw method.
+\newblock 2006.
+
 \bibitem{PRB_CRPAMethodInvented_1998_F.Ary}
 M.~Springer and F.~Aryasetiawan.
 \newblock Frequency-dependent screened interaction in ni within the
@@ -709,6 +728,13 @@ G~Thornton, B.c Tofield, and A.W Hewat.
 \newblock A neutron diffraction study of lacoo3 in the temperature range 4.2 t
   < 1248 k.
 \newblock {\em Journal of Solid State Chemistry}, 61(3):301--307, 1986.
+
+\bibitem{Pu_CHPES}
+G.~van~der Laan and M.~Taguchi.
+\newblock Valence fluctuations in thin films and the $\ensuremath{\alpha}$ and
+  $\ensuremath{\delta}$ phases of pu metal determined by $4f$ core-level
+  photoemission calculations.
+\newblock {\em Phys. Rev. B}, 82:045114, Jul 2010.
 
 \bibitem{PRB_cRPAonTransition_oxide_2012_S.Biermann}
 Lo\"{\i}g Vaugier, Hong Jiang, and Silke Biermann.
@@ -747,7 +773,7 @@ Philipp Werner, Rei Sakuma, Fredrik Nilsson, and Ferdi Aryasetiawan.
 \newblock Dynamical screening in ${\text{la}}_{2}{\text{cuo}}_{4}$.
 \newblock {\em Phys. Rev. B}, 91:125142, Mar 2015.
 
-\bibitem{wilson}
+\bibitem{Wilson}
 Kenneth~G. Wilson.
 \newblock The renormalization group: Critical phenomena and the kondo problem.
 \newblock {\em Rev. Mod. Phys.}, 47:773--840, Oct 1975.
@@ -757,6 +783,12 @@ Yi-feng Yang and David Pines.
 \newblock Emergent states in heavy-electron materials.
 \newblock {\em Proceedings of the National Academy of Sciences},
   109(45):E3060--E3066, 2012.
+
+\bibitem{Zhipin_Mag}
+Z.~P. Yin, K.~Haule, and G.~Kotliar.
+\newblock Spin dynamics and orbital-antiphase pairing symmetry in iron-based
+  superconductors.
+\newblock {\em Nat Phys}, 10(11):845--850, 11 2014.
 
 \bibitem{Zaanen}
 J.~Zaanen, G.~A. Sawatzky, and J.~W. Allen.

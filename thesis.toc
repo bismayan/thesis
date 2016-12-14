@@ -1,54 +1,57 @@
 \contentsline {unnumberedsection}{Abstract}{ii}{Doc-Start}
 \contentsline {unnumberedsection}{Acknowledgments}{iv}{chapter*.1}
 \contentsline {unnumberedsection}{Dedication}{v}{chapter*.2}
-\contentsline {chapter}{List of Tables}{ix}{chapter*.4}
-\contentsline {chapter}{List of Figures}{x}{chapter*.5}
+\contentsline {chapter}{List of Tables}{viii}{chapter*.4}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Density Functional Theory}{6}{chapter.2}
-\contentsline {chapter}{\numberline {3}Dynamical Mean Field Theory}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Basics of DMFT}{13}{section.3.1}
-\contentsline {chapter}{\numberline {4}DFT+DMFT}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}A functional Reformulation of DMFT}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Merging DFT with DMFT}{18}{section.4.2}
-\contentsline {chapter}{\numberline {5}Continuous Time Quantum Monte Carlo Impurity Solver}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Details of the Algorithm}{24}{section.5.2}
-\contentsline {chapter}{\numberline {6}Calculation of Magnetic Spectral function and Dynamic Magnetic Susceptibility for f-shell materials}{28}{chapter.6}
-\contentsline {section}{\numberline {6.1}Details of theory and calculation techniques}{28}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}The Magnetic Spectral Function S(q,$\omega $)}{28}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}The Local dynamic susceptibility $\chi _{loc}(\omega )$ }{29}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}The Magnetic Formfactor $\mathaccentV {vec}17E{F}_{M}(\mathaccentV {vec}17E{q})$}{30}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Applications to Real Materials}{34}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Analyzing the Volume Collapse transition in Cerium}{34}{subsection.6.2.1}
-\contentsline {subsubsection}{Introduction}{34}{section*.6}
-\contentsline {subsubsection}{Details of method}{35}{section*.7}
-\contentsline {subsubsection}{Magnetic Form Factor}{36}{section*.8}
-\contentsline {subsubsection}{ Dynamic Magnetic Susceptibility}{37}{section*.9}
-\contentsline {subsubsection}{Magnetic spectral Function $S(q,\omega )$}{40}{section*.10}
-\contentsline {subsubsection}{Conclusions}{41}{section*.11}
-\contentsline {subsection}{\numberline {6.2.2}The valence fluctuating ground state of Plutonium}{41}{subsection.6.2.2}
-\contentsline {subsubsection}{Introduction}{41}{section*.12}
-\contentsline {subsubsection}{Details of Method}{43}{section*.13}
-\contentsline {subsubsection}{Magnetic Formfactor}{44}{section*.14}
-\contentsline {subsubsection}{Dynamic Suceptibility and $S(q,\omega )$}{45}{section*.15}
-\contentsline {chapter}{\numberline {7}Spin State Transition in $\mathbf {LaCoO_3}$}{48}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introduction}{48}{section.7.1}
-\contentsline {section}{\numberline {7.2}Crystal Structure of LaCoO$_3$}{50}{section.7.2}
-\contentsline {section}{\numberline {7.3}The spin state transition}{54}{section.7.3}
-\contentsline {section}{\numberline {7.4}Nature of the excited spin state}{55}{section.7.4}
-\contentsline {section}{\numberline {7.5}Contribution of Electronic Entropy}{58}{section.7.5}
-\contentsline {section}{\numberline {7.6}Summary}{59}{section.7.6}
-\contentsline {chapter}{\numberline {8}Investigation into the inadequacy of cRPA in reproducing screening in strongly correlated systems}{60}{chapter.8}
-\contentsline {section}{\numberline {8.1}Introduction}{60}{section.8.1}
-\contentsline {section}{\numberline {8.2}Models and Methods}{62}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Model Hamiltonians}{62}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}constrained Random Phase Approximation(cRPA)}{64}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}DMFT calculations}{65}{subsection.8.2.3}
-\contentsline {section}{\numberline {8.3}Results}{66}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Density of states}{66}{subsection.8.3.1}
-\contentsline {subsection}{\numberline {8.3.2}Quasiparticle Residue}{69}{subsection.8.3.2}
-\contentsline {subsection}{\numberline {8.3.3} Estimation of Screening using Local Polarization}{72}{subsection.8.3.3}
-\contentsline {section}{\numberline {8.4}Discussion and Conclusion}{76}{section.8.4}
-\contentsline {chapter}{\numberline {9}Conclusion}{78}{chapter.9}
-\contentsline {chapter}{\numberline {10}Appendix test}{81}{chapter.10}
-\contentsline {chapter}{Bibliography}{83}{equation.10.0.5}
+\contentsline {chapter}{\textbf {I The DFT+DMFT Method}}{7}{figure.caption.8}
+\contentsline {chapter}{\numberline {2}Density Functional Theory}{8}{chapter.2}
+\contentsline {chapter}{\numberline {3}Dynamical Mean Field Theory}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Basics of DMFT}{15}{section.3.1}
+\contentsline {chapter}{\numberline {4}DFT+DMFT}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}A functional Reformulation of DMFT}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Merging DFT with DMFT}{23}{section.4.2}
+\contentsline {chapter}{\numberline {5}Continuous Time Quantum Monte Carlo Impurity Solver}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}Details of the Algorithm}{29}{section.5.2}
+\contentsline {chapter}{\textbf {II Applications}}{32}{equation.5.2.25}
+\contentsline {chapter}{\numberline {6}Calculation of Magnetic Spectral function and Dynamic Magnetic Susceptibility for f-shell materials}{34}{chapter.6}
+\contentsline {section}{\numberline {6.1}Details of theory and calculation techniques}{34}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}The Magnetic Spectral Function S(q,$\omega $)}{34}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}The Local dynamic susceptibility $\chi _{loc}(\omega )$ }{35}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}The Magnetic form factor $\mathaccentV {vec}17E{F}_{M}(\mathaccentV {vec}17E{q})$}{36}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Applications to Real Materials}{41}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Analyzing the Volume Collapse transition in Cerium}{41}{subsection.6.2.1}
+\contentsline {subsubsection}{Introduction}{41}{section*.14}
+\contentsline {subsubsection}{Details of method}{43}{section*.17}
+\contentsline {subsubsection}{Magnetic Form Factor}{43}{section*.19}
+\contentsline {subsubsection}{ Dynamic Magnetic Susceptibility}{46}{section*.22}
+\contentsline {subsubsection}{Magnetic spectral Function $S(q,\omega )$}{47}{section*.24}
+\contentsline {subsubsection}{Conclusions}{48}{section*.25}
+\contentsline {subsection}{\numberline {6.2.2}The valence fluctuating ground state of Plutonium}{49}{subsection.6.2.2}
+\contentsline {subsubsection}{Introduction}{49}{section*.26}
+\contentsline {subsubsection}{Details of Method}{51}{section*.28}
+\contentsline {subsubsection}{Magnetic form factor}{51}{section*.29}
+\contentsline {subsubsection}{Dynamic Susceptibility and $S(q,\omega )$}{53}{section*.32}
+\contentsline {chapter}{\numberline {7}Spin State Transition in $\mathbf {LaCoO_3}$}{56}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{56}{section.7.1}
+\contentsline {section}{\numberline {7.2}Crystal Structure of LaCoO$_3$}{58}{section.7.2}
+\contentsline {section}{\numberline {7.3}Density of States}{60}{section.7.3}
+\contentsline {section}{\numberline {7.4}The spin state transition}{63}{section.7.4}
+\contentsline {section}{\numberline {7.5}Nature of the excited spin state}{64}{section.7.5}
+\contentsline {section}{\numberline {7.6}Contribution of Electronic Entropy}{67}{section.7.6}
+\contentsline {section}{\numberline {7.7}Summary}{68}{section.7.7}
+\contentsline {chapter}{\numberline {8}Investigation into the inadequacy of cRPA in reproducing screening in strongly correlated systems}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{69}{section.8.1}
+\contentsline {section}{\numberline {8.2}Models and Methods}{71}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Model Hamiltonians}{71}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}constrained Random Phase Approximation(cRPA)}{73}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}DMFT calculations}{75}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3}Results}{76}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Density of states}{76}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Quasiparticle Residue}{79}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3} Estimation of Screening using Local Polarization}{81}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}Discussion and Conclusion}{85}{section.8.4}
+\contentsline {chapter}{\numberline {9}Conclusion}{87}{chapter.9}
+\contentsline {chapter}{Bibliography}{90}{chapter.9}
+\contentsline {chapter}{\appnumberline {A}Details of the calculation of Local Screening}{102}{appendix.A}
