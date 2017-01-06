@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 DEC 2016 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 DEC 2016 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,7 +486,7 @@ he
 
  [12]
 Chapter 1.
-<Emergence.jpg, id=422, 541.02126pt x 256.96pt>
+<Emergence.jpg, id=424, 541.02126pt x 256.96pt>
 File: Emergence.jpg Graphic file (type jpg)
  <use Emergence.jpg>
 Package pdftex.def Info: Emergence.jpg used on input line 116.
@@ -499,13 +499,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--119
 [1
 
 ] [2 <./Emergence.jpg>]
-<Knetko-Smith.jpg, id=440, 430.60875pt x 223.83624pt>
+<Knetko-Smith.jpg, id=442, 430.60875pt x 223.83624pt>
 File: Knetko-Smith.jpg Graphic file (type jpg)
  <use Knetko-Smith.jpg>
 Package pdftex.def Info: Knetko-Smith.jpg used on input line 127.
 (pdftex.def)             Requested size: 433.62pt x 225.4068pt.
 
-<cuprate_phase.png, id=443, 354.57469pt x 258.9675pt>
+<cuprate_phase.png, id=445, 354.57469pt x 258.9675pt>
 File: cuprate_phase.png Graphic file (type png)
  <use cuprate_phase.png>
 Package pdftex.def Info: cuprate_phase.png used on input line 135.
@@ -521,7 +521,7 @@ Chapter 2.
 Chapter 3.
 [13
 
-] <dmft_image.jpg, id=546, 537.00626pt x 368.37625pt>
+] <dmft_image.jpg, id=548, 537.00626pt x 368.37625pt>
 File: dmft_image.jpg Graphic file (type jpg)
  <use dmft_image.jpg>
 Package pdftex.def Info: dmft_image.jpg used on input line 279.
@@ -547,7 +547,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 Chapter 4.
 [19
 
-] <Legendre.jpg, id=609, 1085.05376pt x 427.5975pt>
+] <Legendre.jpg, id=611, 1085.05376pt x 427.5975pt>
 File: Legendre.jpg Graphic file (type jpg)
  <use Legendre.jpg>
 Package pdftex.def Info: Legendre.jpg used on input line 424.
@@ -559,7 +559,7 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-[20 <./Legendre.jpg>] <Lw_func_exact.jpg, id=623, 930.47626pt x 498.86375pt>
+[20 <./Legendre.jpg>] <Lw_func_exact.jpg, id=625, 930.47626pt x 498.86375pt>
 File: Lw_func_exact.jpg Graphic file (type jpg)
 
 <use Lw_func_exact.jpg>
@@ -570,14 +570,14 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ¢ in font cmr10!
 
-<Lw_func_DMFT.jpg, id=637, 1042.89626pt x 460.72125pt>
+<Lw_func_DMFT.jpg, id=639, 1042.89626pt x 460.72125pt>
 File: Lw_func_DMFT.jpg Graphic file (type jpg)
  <use Lw_func_DMFT.jpg>
 Package pdftex.def Info: Lw_func_DMFT.jpg used on input line 483.
 (pdftex.def)             Requested size: 433.62pt x 191.56131pt.
 
 [22 <./Lw_func_exact.jpg>] [23 <./Lw_func_DMFT.jpg>] [24]
-<Dmft_loop.jpg, id=666, 716.6775pt x 348.30125pt>
+<Dmft_loop.jpg, id=668, 716.6775pt x 348.30125pt>
 File: Dmft_loop.jpg Graphic file (type jpg)
  <use Dmft_loop.jpg>
 Package pdftex.def Info: Dmft_loop.jpg used on input line 542.
@@ -594,14 +594,14 @@ Chapter 6.
 [34
 
 ] [35] [36] [37] [38] [39] [40]
-<Cerium_phase_diagram.jpg, id=850, 578.16pt x 393.3897pt>
+<Cerium_phase_diagram.jpg, id=852, 578.16pt x 393.3897pt>
 File: Cerium_phase_diagram.jpg Graphic file (type jpg)
 
 <use Cerium_phase_diagram.jpg>
 Package pdftex.def Info: Cerium_phase_diagram.jpg used on input line 910.
 (pdftex.def)             Requested size: 390.25534pt x 265.53258pt.
 
-<Vol_collapse.jpg, id=855, 1078.0275pt x 514.92375pt>
+<Vol_collapse.jpg, id=857, 1078.0275pt x 514.92375pt>
 File: Vol_collapse.jpg Graphic file (type jpg)
  <use Vol_collapse.jpg>
 Package pdftex.def Info: Vol_collapse.jpg used on input line 941.
@@ -626,7 +626,7 @@ Package epstopdf Info: Source file: <Fig1.eps>
 Fig1.eps>
 (epstopdf)             \includegraphics on input line 991.
 Package epstopdf Info: Output file is already uptodate.
-<Fig1-eps-converted-to.pdf, id=885, 578.16pt x 433.62pt>
+<Fig1-eps-converted-to.pdf, id=887, 578.16pt x 433.62pt>
 File: Fig1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig1-eps-converted-to.pdf>
@@ -644,19 +644,19 @@ Fig2.eps>
 (epstopdf)             \includegraphics on input line 1092.
 Package epstopdf Info: Output file is already uptodate.
 
-<Fig2-eps-converted-to.pdf, id=958, 578.16pt x 433.62pt>
+<Fig2-eps-converted-to.pdf, id=960, 578.16pt x 433.62pt>
 File: Fig2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Fig2-eps-converted-to.pdf>
 Package pdftex.def Info: Fig2-eps-converted-to.pdf used on input line 1092.
 (pdftex.def)             Requested size: 429.28616pt x 321.9655pt.
  [45 <./Fig2-eps-converted-to.pdf>] [46]
-<Sq_Ce.jpg, id=1032, 1012.78375pt x 588.1975pt>
+<Sq_Ce.jpg, id=1034, 1012.78375pt x 588.1975pt>
 File: Sq_Ce.jpg Graphic file (type jpg)
  <use Sq_Ce.jpg>
 Package pdftex.def Info: Sq_Ce.jpg used on input line 1210.
 (pdftex.def)             Requested size: 433.62pt x 251.834pt.
- [47] [48 <./Sq_Ce.jpg>] <Pu_phase_and_struct.jpg, id=1059, 1124.2pt x 624.3325
+ [47] [48 <./Sq_Ce.jpg>] <Pu_phase_and_struct.jpg, id=1061, 1124.2pt x 624.3325
 pt>
 File: Pu_phase_and_struct.jpg Graphic file (type jpg)
 
@@ -664,7 +664,7 @@ File: Pu_phase_and_struct.jpg Graphic file (type jpg)
 Package pdftex.def Info: Pu_phase_and_struct.jpg used on input line 1264.
 (pdftex.def)             Requested size: 433.62pt x 240.81174pt.
  [49] [50 <./Pu_phase_and_struct.jpg>]
-<formfactor_Pu.jpg, id=1080, 662.475pt x 544.0325pt>
+<formfactor_Pu.jpg, id=1082, 662.475pt x 544.0325pt>
 File: formfactor_Pu.jpg Graphic file (type jpg)
  <use formfactor_Pu.jpg>
 Package pdftex.def Info: formfactor_Pu.jpg used on input line 1301.
@@ -674,20 +674,20 @@ Overfull \hbox (30.10934pt too wide) in paragraph at lines 1301--1302
 [][] 
  []
 
-[51] <Susc_pu_cropped.jpg, id=1088, 495.8525pt x 642.4pt>
-File: Susc_pu_cropped.jpg Graphic file (type jpg)
+[51] <Pu_susc_cropped.jpg, id=1090, 508.90125pt x 654.445pt>
+File: Pu_susc_cropped.jpg Graphic file (type jpg)
 
-<use Susc_pu_cropped.jpg>
-Package pdftex.def Info: Susc_pu_cropped.jpg used on input line 1316.
-(pdftex.def)             Requested size: 247.92564pt x 321.19922pt.
- [52 <./formfactor_Pu.jpg>] [53 <./Susc_pu_cropped.jpg>] <Kondo_Pu.jpg, id=1105
+<use Pu_susc_cropped.jpg>
+Package pdftex.def Info: Pu_susc_cropped.jpg used on input line 1316.
+(pdftex.def)             Requested size: 254.45pt x 327.2217pt.
+ [52 <./formfactor_Pu.jpg>] [53 <./Pu_susc_cropped.jpg>] <Kondo_Pu.jpg, id=1108
 , 675.52374pt x 332.24126pt>
 File: Kondo_Pu.jpg Graphic file (type jpg)
  <use Kondo_Pu.jpg>
 Package pdftex.def Info: Kondo_Pu.jpg used on input line 1326.
 (pdftex.def)             Requested size: 433.62pt x 213.27243pt.
 
-<Sq_Pu_joined.jpg, id=1108, 1043.9pt x 678.535pt>
+<Sq_Pu_joined.jpg, id=1111, 1043.9pt x 678.535pt>
 File: Sq_Pu_joined.jpg Graphic file (type jpg)
  <use Sq_Pu_joined.jpg>
 Package pdftex.def Info: Sq_Pu_joined.jpg used on input line 1335.
@@ -709,7 +709,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [56
 
-] <Transition_figure.jpg, id=1186, 1284.8pt x 963.6pt>
+] <Transition_figure.jpg, id=1189, 1284.8pt x 963.6pt>
 File: Transition_figure.jpg Graphic file (type jpg)
 
 <use Transition_figure.jpg>
@@ -729,7 +729,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1370.
 
 
-<plots_final/supplement_plots/perovskite_struct.jpg, id=1221, 652.4375pt x 610.
+<plots_final/supplement_plots/perovskite_struct.jpg, id=1224, 652.4375pt x 610.
 28pt>
 File: plots_final/supplement_plots/perovskite_struct.jpg Graphic file (type jpg
 )
@@ -738,7 +738,7 @@ Package pdftex.def Info: plots_final/supplement_plots/perovskite_struct.jpg use
 d on input line 1376.
 (pdftex.def)             Requested size: 309.05487pt x 289.07999pt.
  [58]
-<plots_final/supplement_plots/a-a-a-_struct.jpg, id=1233, 715.67375pt x 638.385
+<plots_final/supplement_plots/a-a-a-_struct.jpg, id=1236, 715.67375pt x 638.385
 pt>
 File: plots_final/supplement_plots/a-a-a-_struct.jpg Graphic file (type jpg)
  <use plots_final/supplement_plots/a-a-a-_struct.jpg>
@@ -746,7 +746,7 @@ Package pdftex.def Info: plots_final/supplement_plots/a-a-a-_struct.jpg used on
  input line 1387.
 (pdftex.def)             Requested size: 324.08138pt x 289.07999pt.
  [59 <./plots_final/supplement_plots/perovskite_struct.jpg>]
-<New_Dos_flipped.png, id=1240, 341.58867pt x 521.13446pt>
+<New_Dos_flipped.png, id=1243, 341.58867pt x 521.13446pt>
 File: New_Dos_flipped.png Graphic file (type png)
 
 <use New_Dos_flipped.png>
@@ -757,14 +757,14 @@ Overfull \vbox (69.55705pt too high) has occurred while \output is active []
 
 
 [61 <./New_Dos_flipped.png>]
-<plots_final/output/fig2.png, id=1252, 618.6312pt x 429.2838pt>
+<plots_final/output/fig2.png, id=1255, 618.6312pt x 429.2838pt>
 File: plots_final/output/fig2.png Graphic file (type png)
 
 <use plots_final/output/fig2.png>
 Package pdftex.def Info: plots_final/output/fig2.png used on input line 1417.
 (pdftex.def)             Requested size: 433.62pt x 300.89618pt.
  [62 <./plots_final/output/fig2.png>] [63]
-<./plots_final/output/New_Sz.png, id=1270, 919.9971pt x 1047.915pt>
+<./plots_final/output/New_Sz.png, id=1273, 919.9971pt x 1047.915pt>
 File: ./plots_final/output/New_Sz.png Graphic file (type png)
 
 <use ./plots_final/output/New_Sz.png>
@@ -772,7 +772,7 @@ Package pdftex.def Info: ./plots_final/output/New_Sz.png used on input line 144
 7.
 (pdftex.def)             Requested size: 433.62pt x 493.91124pt.
  [64]
-<hist_final_flipped.png, id=1275, 366.9961pt x 539.76656pt>
+<hist_final_flipped.png, id=1278, 366.9961pt x 539.76656pt>
 File: hist_final_flipped.png Graphic file (type png)
 
 <use hist_final_flipped.png>
@@ -788,7 +788,7 @@ Overfull \vbox (35.77043pt too high) has occurred while \output is active []
 
 
 [66 <./hist_final_flipped.png>]
-<Entropy_swap.jpg, id=1287, 1206.5075pt x 425.59pt>
+<Entropy_swap.jpg, id=1290, 1206.5075pt x 425.59pt>
 File: Entropy_swap.jpg Graphic file (type jpg)
  <use Entropy_swap.jpg>
 Package pdftex.def Info: Entropy_swap.jpg used on input line 1475.
@@ -804,7 +804,7 @@ Chapter 8.
 [69
 
 ] [70]
-<./plotForpublishing/pd+dps_band_struc.png, id=1362, 544.9158pt x 575.9919pt>
+<./plotForpublishing/pd+dps_band_struc.png, id=1365, 544.9158pt x 575.9919pt>
 File: ./plotForpublishing/pd+dps_band_struc.png Graphic file (type png)
 
 <use ./plotForpublishing/pd+dps_band_struc.png>
@@ -812,14 +812,14 @@ Package pdftex.def Info: ./plotForpublishing/pd+dps_band_struc.png used on inpu
 t line 1541.
 (pdftex.def)             Requested size: 390.25534pt x 412.51662pt.
  [71] [72 <./plotForpublishing/pd+dps_band_struc.png>] [73]
-<Polarization_bubble.jpg, id=1392, 903.375pt x 387.4475pt>
+<Polarization_bubble.jpg, id=1395, 903.375pt x 387.4475pt>
 File: Polarization_bubble.jpg Graphic file (type jpg)
 
 <use Polarization_bubble.jpg>
 Package pdftex.def Info: Polarization_bubble.jpg used on input line 1590.
 (pdftex.def)             Requested size: 260.17464pt x 111.58833pt.
 
-<./plotForpublishing/RPA.png, id=1393, 1046.91125pt x 224.84pt>
+<./plotForpublishing/RPA.png, id=1396, 1046.91125pt x 224.84pt>
 File: ./plotForpublishing/RPA.png Graphic file (type png)
 
 <use ./plotForpublishing/RPA.png>
@@ -836,7 +836,7 @@ Overfull \hbox (3.31128pt too wide) in paragraph at lines 1644--1647
  it-er-at-ing our equa-tions to self-consistency.
  []
 
-[75] <./plotForpublishing/pd+dpssigma.png, id=1425, 578.16pt x 433.62pt>
+[75] <./plotForpublishing/pd+dpssigma.png, id=1428, 578.16pt x 433.62pt>
 File: ./plotForpublishing/pd+dpssigma.png Graphic file (type png)
 
 <use ./plotForpublishing/pd+dpssigma.png>
@@ -844,7 +844,7 @@ Package pdftex.def Info: ./plotForpublishing/pd+dpssigma.png used on input line
  1682.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [76]
-<./plotForpublishing/dp+pds_Udduw.png, id=1433, 578.16pt x 433.62pt>
+<./plotForpublishing/dp+pds_Udduw.png, id=1436, 578.16pt x 433.62pt>
 File: ./plotForpublishing/dp+pds_Udduw.png Graphic file (type png)
 
 <use ./plotForpublishing/dp+pds_Udduw.png>
@@ -852,7 +852,7 @@ Package pdftex.def Info: ./plotForpublishing/dp+pds_Udduw.png used on input lin
 e 1693.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [77 <./plotForpublishing/pd+dpssigma.png>] <./plotForpublishing/doscmp_barecRP
-A.png, id=1440, 578.16pt x 433.62pt>
+A.png, id=1443, 578.16pt x 433.62pt>
 File: ./plotForpublishing/doscmp_barecRPA.png Graphic file (type png)
 
 <use ./plotForpublishing/doscmp_barecRPA.png>
@@ -860,7 +860,7 @@ Package pdftex.def Info: ./plotForpublishing/doscmp_barecRPA.png used on input
 line 1705.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
  [78 <./plotForpublishing/dp+pds_Udduw.png>]
-<./plotForpublishing/dp+dps_qpw.png, id=1448, 527.571pt x 415.5525pt>
+<./plotForpublishing/dp+dps_qpw.png, id=1451, 527.571pt x 415.5525pt>
 File: ./plotForpublishing/dp+dps_qpw.png Graphic file (type png)
 
 <use ./plotForpublishing/dp+dps_qpw.png>
@@ -869,7 +869,7 @@ Package pdftex.def Info: ./plotForpublishing/dp+dps_qpw.png used on input line
 (pdftex.def)             Requested size: 411.93767pt x 324.47205pt.
  [79 <./plotForpublishing/doscmp_barecRPA.png>] [80 <./plotForpublishing/dp+dps
 _qpw.png>]
-<./plotForpublishing/nd_obto_dp.png, id=1466, 578.16pt x 433.62pt>
+<./plotForpublishing/nd_obto_dp.png, id=1469, 578.16pt x 433.62pt>
 File: ./plotForpublishing/nd_obto_dp.png Graphic file (type png)
 
 <use ./plotForpublishing/nd_obto_dp.png>
@@ -877,7 +877,7 @@ Package pdftex.def Info: ./plotForpublishing/nd_obto_dp.png used on input line
 1731.
 (pdftex.def)             Requested size: 368.57964pt x 276.43074pt.
  [81 <./plotForpublishing/nd_obto_dp.png>]
-<./plotForpublishing/ExactWUrpaWU/tbUdd3.png, id=1478, 578.16pt x 433.62pt>
+<./plotForpublishing/ExactWUrpaWU/tbUdd3.png, id=1481, 578.16pt x 433.62pt>
 File: ./plotForpublishing/ExactWUrpaWU/tbUdd3.png Graphic file (type png)
 
 <use ./plotForpublishing/ExactWUrpaWU/tbUdd3.png>
@@ -885,7 +885,7 @@ Package pdftex.def Info: ./plotForpublishing/ExactWUrpaWU/tbUdd3.png used on in
 put line 1764.
 (pdftex.def)             Requested size: 368.57964pt x 276.43074pt.
 
-<./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png, id=1479, 578.16pt x 433.62pt>
+<./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png, id=1482, 578.16pt x 433.62pt>
 File: ./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png Graphic file (type png)
 
 <use ./plotForpublishing/ExactWUrpaWU/tbUdd4p5.png>
@@ -898,7 +898,7 @@ Overfull \vbox (0.23177pt too high) has occurred while \output is active []
 
 [83 <./plotForpublishing/ExactWUrpaWU/tbUdd3.png> <./plotForpublishing/ExactWUr
 paWU/tbUdd4p5.png>]
-<./plotForpublishing/pddoscmpUdd3_locW.png, id=1493, 578.16pt x 433.62pt>
+<./plotForpublishing/pddoscmpUdd3_locW.png, id=1496, 578.16pt x 433.62pt>
 File: ./plotForpublishing/pddoscmpUdd3_locW.png Graphic file (type png)
 
 <use ./plotForpublishing/pddoscmpUdd3_locW.png>
@@ -906,7 +906,7 @@ Package pdftex.def Info: ./plotForpublishing/pddoscmpUdd3_locW.png used on inpu
 t line 1776.
 (pdftex.def)             Requested size: 346.89731pt x 260.17401pt.
 
-<./plotForpublishing/pddoscmpUdd4p5_locW.png, id=1494, 578.16pt x 433.62pt>
+<./plotForpublishing/pddoscmpUdd4p5_locW.png, id=1497, 578.16pt x 433.62pt>
 File: ./plotForpublishing/pddoscmpUdd4p5_locW.png Graphic file (type png)
 
 <use ./plotForpublishing/pddoscmpUdd4p5_locW.png>
@@ -962,7 +962,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\hbox' on input line 1814.
 
-<P_loc_bubble.jpg, id=1581, 1051.93pt x 280.04625pt>
+<P_loc_bubble.jpg, id=1584, 1051.93pt x 280.04625pt>
 File: P_loc_bubble.jpg Graphic file (type jpg)
  <use P_loc_bubble.jpg>
 Package pdftex.def Info: P_loc_bubble.jpg used on input line 1834.
@@ -971,7 +971,7 @@ Package pdftex.def Info: P_loc_bubble.jpg used on input line 1834.
 [102
 
  <./P_loc_bubble.jpg>] [103]
-<W_loc_rpa.jpg, id=1598, 1276.77pt x 341.275pt>
+<W_loc_rpa.jpg, id=1601, 1276.77pt x 341.275pt>
 File: W_loc_rpa.jpg Graphic file (type jpg)
  <use W_loc_rpa.jpg>
 Package pdftex.def Info: W_loc_rpa.jpg used on input line 1893.
@@ -994,11 +994,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1909.
 Here is how much of TeX's memory you used:
  9162 strings out of 493089
  139346 string characters out of 6134842
- 236006 words of memory out of 5000000
+ 236316 words of memory out of 5000000
  11981 multiletter control sequences out of 15000+600000
  16251 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,18n,44p,3097b,972s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,19n,44p,3097b,972s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.10} has been referenced b
 ut does not exist, replaced by a fixed one
 
@@ -1055,10 +1055,10 @@ onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on thesis.pdf (117 pages, 3528998 bytes).
+Output written on thesis.pdf (117 pages, 3559830 bytes).
 PDF statistics:
- 1802 PDF objects out of 2073 (max. 8388607)
- 1499 compressed objects within 15 object streams
+ 1806 PDF objects out of 2073 (max. 8388607)
+ 1502 compressed objects within 16 object streams
  494 named destinations out of 1000 (max. 500000)
  501 words of extra memory for PDF output out of 10000 (max. 10000000)
 

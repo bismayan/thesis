@@ -423,15 +423,15 @@
              \ifjoint{in partial fulfillment of the requirements 
                 for the\\ Joint Degree of}
                 \else %
-                  in partial fulfillment of the requirements \\
-                  for the degree of\\ 
+                  In partial fulfillment of the requirements \\
+                  For the degree of\\ 
              \fi 
              \@degree\\
              Graduate Program in \@program\\
              \vskip 1ex
-             written under the direction of\\
+             Written under the direction of\\
              \@director\\
-             and approved by\\ 
+             And approved by\\ 
              \vskip 2ex plus 1ex minus 2ex
 
              \newcount\@aplines

@@ -26,8 +26,8 @@
 \program{Physics and Astronomy}
 \director{Prof. Kristjan Haule}
 \approvals{5}
-\submissionyear{2016}
-\submissionmonth{December} 
+\submissionyear{2017}
+\submissionmonth{January} 
 \setcounter{tocdepth}{1}
 \abstract{ The study of strongly correlated materials is currently perhaps one of the most active areas of research in condensed matter physics. Strongly correlated materials contain localized electronic states which are often hybridized with more itinerant electrons. This interplay between localized and delocalized degrees of freedom means that these compounds have highly complex phase diagrams which makes these compounds very challenging to understand from a theoretical standpoint. Computer simulations have proved to be an invaluable tool in this regard with state of the art ab-initio simulation techniques harnessing the ever-increasing power of modern computers to produce highly accurate descriptions of a variety of strongly correlated materials. One of the most powerful simulation techniques currently in existence is Dynamical Mean Field Theory (DMFT). This thesis describes this powerful simulation technique and its applications to various material systems, as well as addressing some theoretical questions concerning particular implementations of DMFT.
 
@@ -49,7 +49,7 @@ I have gained most of my expertise in physics from the courses taught here at Ru
 
 Over the course of my dissertation, I have had the opportunity to work with a number of highly talented post-doctoral scholars and doctoral students whom I have collaborated closely with. Dr. Maria Pezzoli was a great help during my initial research on magnetic properties of materials. Dr. Turan Birol has been a constant source of help and support over the last three years of my research and I have gained a lot from his knowledge of physics and life in general. Dr. Chuck Hou Yee has also been a trusted friend and colleague who has always been available whenever I had a question about physics, science or computation in general. Qiang Han and I had a great experience working on the project estimating screening in correlated systems and I wish him the best in all his future endeavors. 
 
-In addition to this,the Rutgers has also provided me with a valuable set of friends who have made my experience as a graduate student a lot more enjoyable. To Aniket, Juho,Patrick, Conan, Upamanyu, Dinesh, Kartik, Rahul, Hitesh, Kinnari, Shree, Samruddhi and all the other friends I have been fortunate enough to make at Rutgers, I would like to thank all of you for all the immensely enjoyable experiences which have made my time at Rutgers some of the best years of my life.
+In addition to this, Rutgers has also provided me with a valuable set of friends who have made my experience as a graduate student a lot more enjoyable. To Aniket, Juho, Patrick, Conan, Upamanyu, Dinesh, Kartik, Rahul, Hitesh, Kinnari, Shree, Samruddhi and all the other friends I have been fortunate enough to make at Rutgers, I would like to thank all of you for the immensely enjoyable experiences which have made my time at Rutgers some of the best years of my life.
 
 Finally, I would like to thank my parents, my sister and my entire extended family for always being there for me whenever I have needed them. Your love and support inspires me to always strive for excellence in whatever I do and I am truly lucky to have been been born into a family which has such kind and loving individuals.  
 }
@@ -784,7 +784,7 @@ and
   }
  ,which leads us to:
 \begin{align} \label{Fm1}
-\vec{F}_{M}(\vec q)= \left \langle \sum_{j} \left \lbrace \hat{q} \times (\vec{s}_{j} \times \hat{q}) + \dfrac{i}{\hslash q}(\vec{p}_{j} \times \hat{q}) \right \rbrace e^{-i \vec{q} .\vec{r}_{j}} \right \rangle _{ unit \hspace{0.5mm} cell}
+\vec{F}_{M}(\vec q)= \left \langle \sum_{j} \left \lbrace \hat{q} \times (\vec{s}_{j} \times \hat{q}) + \dfrac{i}{q}(\vec{p}_{j} \times \hat{q}) \right \rbrace e^{-i \vec{q} .\vec{r}_{j}} \right \rangle _{ unit \hspace{0.5mm} cell}
 \end{align} 
 
 In the calculations carried out in this section for Cerium and Plutonium,we only have one atom per unit cell. However in general we shall have multiple atoms in the unit cell (which might be enlarged due to to magnetic order). So in general we can decompose the exponential as
@@ -801,7 +801,7 @@ j_k(x)= \frac{x}{2k+1} \left( j_{k-1}(x) +j_{k+1}(x)\right)
 \end{equation}
 to recast odd bessel functions in terms of even bessel functions. Finally under the dipole approximation, we only retain terms upto dipole order in the expansion. Under these assumptions, we can derive 
 \begin{align}
-\vec{F}_M(q)=  \left\langle \sum_{j}  e^{i\vec{q}.\vec{R_j}} \left( \hat{q} \times (\vec{s}_{j} \times \hat{q}) \right) j_{0}(qr)+ e^{i\vec{q}.\vec{R}_j}\left( \hat{q}\times (\vec{l}_{j} \times \hat{q}) \right) \left \lbrace j_{0}(qr) +j_{2}(qr) \right \rbrace \right\rangle _ {unit \hspace{0.5 mm} cell}
+\vec{F}_M(q)=  \left\langle \sum_{j}  e^{i\vec{q}.\vec{R_j}} \left( \hat{q} \times (\vec{s}_{j} \times \hat{q}) \right) j_{0}(qr)+ \dfrac{e^{i\vec{q}.\vec{R}_j}}{2}\left( \hat{q}\times (\vec{l}_{j} \times \hat{q}) \right) \left \lbrace j_{0}(qr) +j_{2}(qr) \right \rbrace \right\rangle _ {unit \hspace{0.5 mm} cell}
 \end{align}
 
 Now within our implementation LDA+DMFT we use the LAPW basis set (a comprehensive review of which can be found in \cite{LAPW_Book}) so within the atomic spheres we can write the Kohn-Sham states as solutions to atomic-like Schrodinger Equations:
@@ -828,7 +828,7 @@ where $\overline{\Sigma}$ is the self energy after it has been embedded into the
 
 Now we can write the expression for the form factor as:
 \begin{align}
-\vec{F}_{M}(q)=\sum_{\mathcal{L}^{'}\kappa^{'}\sigma^{'} \mathcal{L}\kappa\sigma} \hat{n}^{DMFT}_{\mathcal{L}^{'}\kappa^{'}\sigma^{'} \mathcal{L}\kappa\sigma} \langle \mathcal{L}^{'}\kappa^{'}\sigma^{'} | \sum_{j} e^{-i\vec{q}.\vec{R_j}} \hat{q} \times\left( l^{j}_{z} \left \lbrace j_{0}(qr) +j_{2}(qr) \right \rbrace + s^{j}_{z} j_0(qr) |\mathcal{L}\kappa\sigma \rangle  \right) \times \hat{q}
+\vec{F}_{M}(q)=\sum_{\mathcal{L}^{'}\kappa^{'}\sigma^{'} \mathcal{L}\kappa\sigma} \hat{n}^{DMFT}_{\mathcal{L}^{'}\kappa^{'}\sigma^{'} \mathcal{L}\kappa\sigma} \langle \mathcal{L}^{'}\kappa^{'}\sigma^{'} | \sum_{j} e^{-i\vec{q}.\vec{R_j}} \hat{q} \times\left( \dfrac{\vec{l^{j}}}{2} \left \lbrace j_{0}(qr) +j_{2}(qr) \right \rbrace + \vec{s^{j}} j_0(qr) |\mathcal{L}\kappa\sigma \rangle  \right) \times \hat{q}
 \end{align}
 where 
 \begin{align}
@@ -840,7 +840,7 @@ There explicitly writing out the expression for the form factor we get:
 \begin{equation} \label{F_M_final}
 \begin{split}
 \vec{F}_{M}(q)= & \sum_{j} e^{-i\vec{q}.\vec{R_j}}   \sum_{k\alpha \beta \mathcal{L}^{'} \kappa^{'} \mathcal{L}\kappa} n^{DMFT}_{\alpha \beta} A^{* \kappa^{'}}_{\alpha \mathcal{L}^{'} \sigma^{'}}(\vec{k}) A^{ \kappa}_{\beta \mathcal{L}\sigma}(\vec{k}) \int d \vec{r}u_{\mathcal{L^{'}}}^{*\kappa^{'} }(r)u_{\mathcal{L}}^{\kappa}(r) \\
-& \times \hat{q} \times\left( \langle\mathcal{L^{'}}|l^j|\mathcal{L}\rangle  \left\lbrace  j_{0}(qr) +j_{2}(qr) \right \rbrace +   \sum_{\sigma^{'} \sigma} \langle \sigma^{'} |s^j|\sigma \rangle
+& \times \hat{q} \times\left( \langle\mathcal{L^{'}}| \dfrac{\vec{l^j}}{2}|\mathcal{L}\rangle  \left\lbrace  j_{0}(qr) +j_{2}(qr) \right \rbrace +   \sum_{\sigma^{'} \sigma} \langle \sigma^{'} |\vec{s^j}|\sigma \rangle
  j_0(qr) \right) \times \hat{q} 
 \end{split}
 \end{equation}
@@ -852,7 +852,7 @@ Under these assumptions, the form factor (which we no longer treat as a vector) 
 \begin{equation} \label{eq 19}
 \begin{split}
 F_{M}(q)= & \sum_{j} e^{-i\vec{q}.\vec{R_j}}   \sum_{k\alpha \beta \mathcal{L}^{'} \kappa^{'} \mathcal{L}\kappa} n^{DMFT}_{\alpha \beta} A^{* \kappa^{'}}_{\alpha \mathcal{L}^{'} \sigma^{'}}(\vec{k}) A^{ \kappa}_{\beta \mathcal{L}\sigma}(\vec{k}) \int d \vec{r}u_{\mathcal{L^{'}}}^{*\kappa^{'} }(r)u_{\mathcal{L}}^{\kappa}(r) \\
-& \times\left( \langle\mathcal{L^{'}}|l_{z}^j|\mathcal{L}\rangle \left\lbrace  j_{0}(qr) +j_{2}(qr) \right \rbrace + \sum_{\sigma^{'} \sigma} \langle \sigma^{'} |s_{z}^j|\sigma \rangle 
+& \times\left( \langle\mathcal{L^{'}}|\dfrac{l_{z}^j}{2}|\mathcal{L}\rangle \left\lbrace  j_{0}(qr) +j_{2}(qr) \right \rbrace + \sum_{\sigma^{'} \sigma} \langle \sigma^{'} |s_{z}^j|\sigma \rangle 
  j_0(qr) \right) 
 \end{split}
 \end{equation}
@@ -1313,13 +1313,13 @@ DMFT ($\%$) & 12 & 66 & 21 & 5.12 \\
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.5]{Susc_pu_cropped.jpg}
-\caption{ The imaginary part of the local dynamic susceptibility for $\delta$-Pu compared to neutron scattering experiment \cite{Me_Pu} }
+\includegraphics[scale=0.5]{Pu_susc_cropped.jpg}
+\caption{ The imaginary part of the local dynamic susceptibility for $\delta$-Pu compared to neutron scattering experiment. The red line shows an experimental fit performed by the experimental collaborators. To location of the Kondo peak is marked by the dashed black line. (Taken from \cite{Me_Pu}) }
 \label{Susc_Pu}
 \end{center}
 \end{figure}
 
-The dynamic magnetic susceptibility calculated for $\delta$-Pu is given in Fig 6.7. In the figure, we also see the experimental results from \cite{Me_Pu} (the actual reference contains multiple experimental results omitted here for clarity). As we see, DMFT is able to capture the correct location of the peak in the dynamic susceptibility at ~84 meV, which gives us the relevant scale for spin excitations. It is to be noted that these results predict a Kondo Temperature of $\sim$800 K (in agreement with results obtained by Haule et. al \cite{Haule_Pu} )  which explains why at room temperature the moment of the 5f state is screened by the Kondo screening cloud of antiparallely aligned conduction electrons , which screen the magnetic moment (see Fig. \ref{Kondo_fig}).This is central to the resolving the problem of missing magnetism and is perhaps the most important result in the paper. By using the sum rule in Eq. \ref{sum rule} we obtain a fluctuating moment of $\sim$ 0.8 $\mu_B$ per atom which is also in good agreement with experiment \cite{Me_Pu}. Finally we note that for any static local moment phase, we would have seen a Curie-like susceptibility which is characterized by a peak in the imaginary part of $\chi(\omega)$ at very low frequencies, analogous to $\gamma$-Cerium. However no such peak is observed. Therefore we can see that we have no local moment behavior in this material, further strengthening our claims.
+The dynamic magnetic susceptibility calculated for $\delta$-Pu is given in \ref{Susc_Pu}. In the figure, we also see the experimental results from \cite{Me_Pu}. As we see, DMFT is able to capture the correct location of the peak in the dynamic susceptibility at ~84 meV, which gives us the relevant scale for spin excitations. It is to be noted that these results predict a Kondo Temperature of $\sim$800 K (in agreement with results obtained by Haule et. al \cite{Haule_Pu} )  which explains why at room temperature the moment of the 5f state is screened by the Kondo screening cloud of antiparallely aligned conduction electrons , which screen the magnetic moment (see Fig. \ref{Kondo_fig}).This is central to the resolving the problem of missing magnetism and is perhaps the most important result in the paper. By using the sum rule in Eq. \ref{sum rule} we obtain a fluctuating moment of $\sim$ 0.8 $\mu_B$ per atom which is also in good agreement with experiment \cite{Me_Pu}. Finally we note that for any static local moment phase, we would have seen a Curie-like susceptibility which is characterized by a peak in the imaginary part of $\chi(\omega)$ at very low frequencies, analogous to $\gamma$-Cerium. However no such peak is observed. Therefore we can see that we have no local moment behavior in this material, further strengthening our claims.
 
 \begin{figure}[H]
 \begin{center}
